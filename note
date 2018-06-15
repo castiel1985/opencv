@@ -1,0 +1,53 @@
+#读取图像
+img=cv2.imread('test.jpg',0)
+plt.imshow(img,cmap='gray',interpolation='bicubic')
+plt.xticks([]),plt.yticks([])
+plt.show()
+
+
+
+读取视频文件,显示视频,保存视频文件
+从摄像头获取并显示视频
+
+Cv2.VideoCapture()
+Cv2.VdeoWrite()
+
+#使用默认的内置设像头
+cap = cv2.VideoCapture(0)
+while (True):
+    #检查是否初始化成功,不成功就调用cap.open()
+    #cap.isOpened()
+
+    # 一帧一帧的捕获图像
+    #ret返回布尔值,检查帧是否读取正确
+    ret, frame = cap.read()
+
+    #读取视频的一些信息参数,
+    for i in range(0, 18 ,1):
+        print(cap.get(i))
+
+# 修改一帧数据
+gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+# 显示返回的一帧图像
+cv2.imshow('frame', gray)
+
+
+
+#按下q键退出程序
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+# 所有操作完成,后释放资源
+cap.release()
+cv2.destroyAllWindows()
+
+
+#从文件中播放视频
+直接修改上面的程序
+
+将cap = cv2.VideoCapture(0)改为文件名
+
+#播放视频文件
+cap = cv2.VideoCapture('output.avi')
+
+

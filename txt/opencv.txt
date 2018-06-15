@@ -1,0 +1,20 @@
+ 人脸图片识别处理：（opencv）
+	先读取图片并将图片转为灰色（降低为一维的灰度，减低计算强度）
+	img = cv2.imread(filepath)
+	gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+	
+	使用opencv 的 cv2.rectangle()绘制矩形,cv2.circle()绘制圆圈
+	定义绘制颜色  color = (0,255,0)	
+	pass
+
+	使用分类器查找人脸,并产生一个对象
+	classifier = cv2.CascadeClassifier("/home/castiel/code/part5/faceai/opencv-xml/haarcascade_frontalface_default.xml")   注明：此文件直接来自于 opencv
+	将此对象调用cv2的识别函数
+	classifier.detectMultiScale()
+
+	画出人脸的相关部分
+	pass
+	
+	销毁对象释放所有窗体资源
+	cv2.waitkey(0)
+	cv2.destoryAllwindows()

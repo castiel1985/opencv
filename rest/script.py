@@ -9,7 +9,7 @@ manager = Manager(app)
 
 class toimg(Command):
     def run(self):
-        img.test()
+        img.totest()
 
 class tovideo(Command):
     def run(self):

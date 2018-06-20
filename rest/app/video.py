@@ -1,3 +1,4 @@
 
-def show():
-    print("this is a video")
+class video():
+    def show(self):
+        print("this is a video")

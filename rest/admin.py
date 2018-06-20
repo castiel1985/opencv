@@ -26,5 +26,10 @@ def img():
     image.totest()
     print("*************")
 
+
+@manage.command
+def togray():
+    image.togray()
+
 if __name__ == "__main__":
     manage.run()

@@ -2,4 +2,7 @@ python 3.6.5
 opencv 3.4.1
 tensorflow 1.8
 
-address: https://blog.csdn.net/retacn_yue/article/month/2016/11
+address:
+https://blog.csdn.net/retacn_yue/article/month/2016/11
+
+https://blog.csdn.net/bigbzheng/article/category/6142613

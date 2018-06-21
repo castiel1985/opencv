@@ -31,5 +31,9 @@ def img():
 def togray():
     image.togray()
 
+@manage.command
+def toshow():
+    image.toshow()
+
 if __name__ == "__main__":
     manage.run()

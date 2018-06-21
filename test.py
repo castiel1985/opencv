@@ -1,21 +1,8 @@
-from flask_script import Manager, Command
+import numpy as np
+import cv2
+from matplotlib import pyplot as plt
 
-from flask import Flask
-
-app = Flask(__name__)
-manage = Manager(app)
-
-@manage.command
-def hello():
-    print("hello cmd")
-
-@manage.command
-def video():
-    print("this is video area")
-
-@manage.command
-def img():
-    print("*************")
-
-if __name__ == "__main__":
-    manage.run()
+# 读取图像
+img = cv2.imread('img/1.jpg',0)
+plt.imshow(img)
+plt.show()

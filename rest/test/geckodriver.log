@@ -1,0 +1,13 @@
+1530088749112	geckodriver	INFO	geckodriver 0.21.0
+1530088749115	geckodriver	INFO	Listening on 127.0.0.1:37701
+1530088750121	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.4R8VIfukBEXT"
+1530088751500	Marionette	INFO	Listening on port 45143
+1530088751530	Marionette	WARN	TLS certificate errors will be ignored for this session
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1530088801612	geckodriver	INFO	geckodriver 0.21.0
+1530088801616	geckodriver	INFO	Listening on 127.0.0.1:59909
+1530088802625	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ldsn5jmCGTQE"
+1530088803965	Marionette	INFO	Listening on port 44961
+1530088804031	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping

@@ -14,6 +14,11 @@ https://github.com/dennybritz/cnn-text-classification-tf
 https://kb.cnblogs.com/page/522513/
 
 
+
+
+https://blog.csdn.net/fgf00/article/details/52949973
+
+
 QQ:
 sudo dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/Release.key

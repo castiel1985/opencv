@@ -1,0 +1,13 @@
+pip install requests
+
+方法：
+requests.get()
+requests.post()
+requests.put()
+requests.delete()
+requests.head()
+requests.options()
+参数：parms , timeout ,proxies(代理)
+以上返回值:
+status_code , url , json()前提必须要引入 ,history ， headers ,text ,content以字节方式显示 ，encoding 
+

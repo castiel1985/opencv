@@ -1,0 +1,278 @@
+1.flask中的数据模型关系
+一对一关系
+class Identification(db.Model):  
+    """ 
+    身份证 
+    """  
+    __tablename__='idents'  
+    id=db.Column(db.Integer,primary_key=True)  
+    address=db.Column(db.String(64),unique=True)  
+    user=db.relationship('User',backref='ident',uselist=False)  
+  
+    def __repr__(self):  
+        return '<Identification %s>'%self.id 
+
+class User(db.Model):  
+    """ 
+    用户 
+    """  
+    __tablename__='users'  
+    id = db.Column(db.Integer,primary_key=True)  
+    name = db.Column(db.String(64),unique=True)  
+    ident_id=db.Column(db.Integer,db.ForeignKey('idents.id'))  
+  
+    def __repr__(self):  
+        return '<User %s>'%self.name  
+验证：
+>>> i=Identification(id=123)  
+>>> u=User(name='Hyman')  
+>>> i.user=u  
+>>> u.ident  
+<Identification 123>  
+
+
+
+
+一对多关系
+class Role(db.Model):    
+      __tablename__='roles'    
+      id = db.Column(db.Integer,primary_key=True)    
+      name = db.Column(db.String(64),unique=True)    
+      users = db.relationship('User',backref='role')  
+      
+      def __repr__(self):    
+          return '<Role %s>'%self.name    
+ class User(db.Model):    
+      __tablename__='users'    
+      id=db.Column(db.Integer,primary_key=True)    
+      name=db.Column(db.String(64),unique=True)    
+      role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))  
+      def __repr__(self):    
+          return '<User %s>'%self.name   
+
+验证：
+>>>from test.py import Role,User  
+>>>r=Role(id=1,name='admin')  
+>>>u=User(id=10,name='Hyman',role_id=1)  
+>>>r.users.append(u)  
+>>>print u.role  
+   <Role admin>  
+
+
+
+
+多对多关系
+多对多关系，需要借助第三个表来实现。通过第三个表，将多对多关系分解成两个一对多关系。以我们常见的Student类和Class类为例，一个Student可以选择多个Class，
+而一门Class也可以被多个Student选择，我们创建一个Relation表来关联Student和Class。
+
+relation=db.Table('relations',db.Column('student_id',db.Integer,db.ForeignKey('students.id')),db.Column('class_id',db.Integer,db.ForeignKey('classes.id')))  
+    
+class Student(db.Model):  
+    __tablename__='students'  
+    id=db.Column(db.Integer,primary_key=True)  
+    name=db.Column(db.String)  
+    classes=db.relationship('Class',secondary=relation,backref=db.backref('students',lazy='dynamic'),lazy='dynamic')  
+      
+    def __repr__(self):  
+        return '<Student %s>'%self.name  
+  
+class Class(db.Model):  
+    __tablename__='classes'  
+    id=db.Column(db.Integer,primary_key=True)  
+    name=db.Column(db.String)  
+  
+    def __repr__(self):  
+        return '<CLass %s>'%self.name  
+
+第一行，我们创建了一个Table叫做relation。之所以在这里创建，是因为我不想创建数据库，而是利用db.Table，将这个表创建到内存中。relation表中含有两个字段分别作为外键关联到Student类和Class类的主键id中。紧接着创建两个表Student和Class，在Student表中我们创建了一个db.relationship，用backref在Class类中添加反向引用students。并用secondary指定作为中间表的relation。
+
+https://blog.csdn.net/hyman_c/article/details/53647116
+
+
+2.lask中使用Flask_Mail发送电子邮件
+(1)配置SMTP服务器的信息
+     import os
+
+     app.config['MAIL_SERVER']='smtp.qq.com'
+
+     app.config['MAIL_PORT']=587
+     
+     app.config['MAIL_USE_TLS']=True
+    
+    ?app.config['MAIL_USERNAME']=os.environ.get('MAIL_USERNAME')
+
+     app.config['MAIL_PASSWORD']=os.environ.get('MAIL_PASSWORD')
+
+(2)创建电子邮件Mail实例
+from flask_mail import Mail  
+mail=Mail(app)
+
+(3)配置所需要的环境变量
+export MAIL_USERNAME=XXX@qq.com  
+export MAIL_PASSWORD=XXXXX  
+
+(4)在python shell中发送电子邮件
+from flask.ext.mail import Message  
+from test import mail  
+msg=Message('My Subject',sender='879651072@qq.com',recipients=['879651072@qq.com'])  
+msg.body='text body'  
+msg.html='<b>HTML</b> body'  
+with app.app_context():  
+    mail.send(msg)  
+
+
+
+3.利用config.py配置文件动态的创建不同的Flask对象
+import os  
+basedir = os.path.abspath(os.path.dirname(__file__))  
+  
+class Config:  
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'  
+    SQLALCHEMY_COMMIT_ON_TEARDOWN = True  
+    FLASKY_MAIL_SUBJECT_PREFIX='[Flasky]'  
+    FLASKY_MAIL_SENDER = '879651072@qq.com'  
+    FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')  
+ 
+    @staticmethod  
+    def init_app(app):  
+        pass  
+  
+class DevelopmentConfig(Config):  
+    DEBUG = True  
+    MAIL_SERVER = 'smtp.qq.com'  
+    MAIL_PORT = 587  
+    MAIL_USE_TLS = True  
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')  
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')  
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URI') or \  
+            'sqlite:///' + os.path.join(basedir,'data-dev.sqlite')  
+  
+class TestingConfig(Config):  
+    TESTING = True  
+    SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URI') or \  
+            'sqlite:///' + os.path.join(basedir,'data-test.sqlite')  
+  
+class ProductionConfig(Config):  
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI') or \  
+            'sqlite:///' + os.path.join(basedir,'data.sqlite')  
+  
+config={  
+        'development':DevelopmentConfig,  
+        'testing':TestingConfig,  
+        'Production':ProductionConfig,  
+        'default':DevelopmentConfig  
+        }  
+首先定义了一个基类Config，该类中包含了在开发，测试和生产配置都需要的基本配置，其中包包括预防CSRF的密钥、设置数据库自动commit的选项等等，其他开发、测试和生产配置分别从Config继承，主要区别在于配置的数据库路径不一样。
+
+最后定义了一个config的字典，作为外部调用这些配置的接口。
+
+看下怎么去调用这些配置，这里我先引入了app/__init__.py这个app包的构造文件：
+from flask import Flask,render_template  
+from flask.ext.bootstrap import Bootstrap  
+from flask.ext.mail import Mail  
+from flask.ext.moment import Moment  
+from flask.ext.sqlalchemy import SQLAlchemy  
+from config import config  
+  
+bootstrap=Bootstrap()  
+mail=Mail()  
+moment=Moment()  
+db=SQLAlchemy()  
+  
+def create_app(config_name):  
+    app=Flask(__name__)  
+    app.config.from_object(config[config_name])  
+    config[config_name].init_app(app)  
+  
+    bootstrap.init_app(app)  
+    mail.init_app(app)  
+    moment.init_app(app)  
+    db.init_app(app)  
+  
+    from .main import main as main_blueprint  
+    app.register_blueprint(main_blueprint)  
+    return app  
+
+第一行是从我们定义的config.py中引入config这个字典;第二行是通过config_name获取不同的Config子类对象，app.config的from_object函数会对返回的Config对象的子类提取相关属性和值，稍后我会详细分析下这个方法;第三行调用init_app()这个静态方法对app进行其他的操作，但是我们这里用了pass，并没有做实际的操作。
+
+
+
+
+
+
+
+
+4.利用程序工厂函数创建Flask程序对象并注册蓝本
+__init__.py的代码中的create_app()函数就是工厂函数。
+
+开始创建并没有传入app的参数，而是分别采用Bootstrap等无参构造方式，然后再create_app())中利用init_app成员函数进行a与pp对象的关联
+并引入了一个蓝本的类对象main_blueprint 
+    from .main import main as main_blueprint  
+    app.register_blueprint(main_blueprint)  
+    return app  
+
+https://blog.csdn.net/hyman_c/article/details/52882256
+
+
+
+5.利用unittest进行单元测试
+
+
+
+
+manager.py中调用单元测试的代码：
+test_basic.py的代码：
+import unittest  
+from flask import current_app  
+from app import create_app,db  
+  
+class BasicTestCase(unittest.TestCase):  
+    def setup(self):  
+        self.app=create_app('testing')  
+        self.app_context=self.app.app_context()  
+        self.app_context.push()  
+        db.create_all()  
+  
+    def teardown(self):  
+        db.session.remove()  
+        db.drop_all()  
+        self.app_context.pop()  
+  
+    def test_app_exits(self):  
+        self.assertFalse(current_app is None)  
+  
+    def test_app_is_testing(self):  
+        self.assertFalse(current_app.config['TESTING'])  
+
+
+
+@manager.command  
+def test():  
+    """Run the unit tests"""  
+    import unittest  
+    tests=unittest.TestLoader().discover('test')  
+    unittest.TextTestRunner(verbosity=2).run(tests)
+
+
+https://blog.csdn.net/hyman_c/article/details/52886805
+
+
+6.
+app/main/__int__.py
+包初始化模块，定义了一个蓝本对象main，以在views.py和errors.py中使用
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

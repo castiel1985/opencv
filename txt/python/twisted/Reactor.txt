@@ -1,3 +1,0 @@
-Reactor是twisted框架中很重要的概念，事件驱动。他负责监测所有事件。
-最常用的是run(), stop(), callLater()
-    callLater()实际是实例化了一个DelayedCall()类，并将实例的句柄返回。可进行cancel(), reset(), delay()等操作。

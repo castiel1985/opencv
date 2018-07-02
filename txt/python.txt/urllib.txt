@@ -1,0 +1,47 @@
+urllib和urllib2
+
+(1)urllib 和urllib2都是接受URL请求的相关模块，但是urllib2可以接受一个Request类的实例来设置URL请求的headers，urllib仅可以接受URL。
+
+这意味着，不可以伪装User Agent字符串等。
+
+(2)urllib提供urlencode方法用来GET查询字符串的产生，而urllib2没有。这是为何urllib常和urllib2一起使用的原因。
+
+目前的大部分http请求都是通过urllib2来访问的
+
+
+
+
+get方式
+import urllib   
+import urllib2    
+url = 'http://www.baidu.com/s'   
+values = {'wd':'D_in'}     
+data = urllib.urlencode(values)       
+print data   
+url2 = url+'?'+data  
+response = urllib2.urlopen(url2)    
+the_page = response.read()   
+print the_page  
+
+
+post方式
+import urllib  
+import urllib2  
+url = 'http://www.someserver.com/cgi-bin/register.cgi'  
+user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)' //将user_agent写入头信息  
+values = {'name' : 'who','password':'123456'}      //post数据  
+headers = { 'User-Agent' : user_agent }  
+data = urllib.urlencode(values)                   //对post数据进行url编码  
+req = urllib2.Request(url, data, headers)  
+response = urllib2.urlopen(req)  
+the_page = response.read() 
+
+注明1：先通过urllib的urlencode()将参数封装
+注明2：通过urllib2的urlope（）打开地址，如果是post的话就要带 data和 headers参数封装到request中去
+注明3：urlopen 后，都要通过read()进行读取
+urllib函数:  urlencode
+urllib2函数：Request() , urlopen() 
+
+
+
+

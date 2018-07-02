@@ -1,0 +1,4 @@
+from twisted.internet import task
+
+task1 = task.LoopingCall(hello, 'ding')    #hello为函数名，ding为函数的参数,task为定时任务
+task1.start(10)

@@ -1,0 +1,44 @@
+1. md5模块
+md5.new([arg])     返回一个md5对象，如果给出参数，则相当于调用了update(arg)
+md5.update(arg)   用string参数arg更新md5对象
+md5.digest()         返回16字节的摘要，由传给update的string生成，摘要没有ascii字符
+md5.hexdigest()    以16进制的形式返回摘要
+import md5
+a = md5.new('passwd')
+a.digest()
+  'v\xa2\x17;\xe692T\xe7/\xfaMm\xf1\x03\n'
+a.hexdigest()
+  '76a2173be6393254e72ffa4d6df1030a'
+a.update('hello world')
+a.digest()
+  '\xb2\x83f\xb8\x14\xc9\xc6\x19k\x01\xfe\xd8\xd9\x8f\xe0H'
+a.hexdigest()
+  'b28366b814c9c6196b01fed8d98fe048'
+
+
+2.sha 模块
+用法同md5一样
+
+import sha
+b=sha.new('passwd')
+b.digest()
+ "0'LG\x90;\xd1\xba\xc7c;\xbf\tt1I\xeb\xab\x80_"
+b.hexdigest()
+ '30274c47903bd1bac7633bbf09743149ebab805f'
+b.update('hello')
+b.digest()
+ 'c\xc19\xb4]YGz\x85\xe8C\x8fF\xfe\x9e\xc3|\xb16\xba'
+b.hexdigest()
+ '63c139b45d59477a85e8438f46fe9ec37cb136ba
+
+
+
+3.crypt
+crypt模块中就一个函数，crypt(str,salt) --> string
+from crypt import crypt
+crypt('passwd','a')
+ 'aaIslqfNH03LA'
+crypt('passwd','abc')
+ 'ab8RogIKnX0og'
+crypt('passwd','a')
+ 'aaIslqfNH03LA'

@@ -1,0 +1,329 @@
+1、创建flask程序实例
+from flask import Flask  
+app=Flask(__name__)
+
+2、创建路由映射
+@app.route('/')  
+def index():  
+    return 'hello world'
+
+3、开启app
+if __name__=='__main__':  
+    app.run(debug=True)  
+
+4,Flask中的请求对象request
+from flask import request  
+user_agent=request.headers.get('User_Agent')  
+
+5,flask中的请求和视图函数映射
+from test import app  
+app.url_map 
+
+6,激活程序上下文
+from test import app  
+from flask import current_app  
+ctx=app.app_context()  
+ctx.push() 
+回收上下文,用ctx.pop()
+
+7,g变量作为flask程序全局的一个临时变量
+ from flask import g  
+g.name='Hyman'  
+
+8, session
+session['name']=form.name.data 
+name=session.get('name')
+
+
+9,flask中的四种响应类型
+(1)响应字符串。
+ return 'bad request',400  
+（2）响应Response对象
+from flask import make_response  
+    response=make_response('set cookies!')  
+    response.set_cookie('hyman','123')  
+    return response 
+（3）返回重定向类型redirect
+from flask import redirect  
+ return redirect('http://www.baidu.com')  
+
+（4）返回处理错误码
+from flask import abort 
+  abort(404)  
+
+10，为flask程序添加命令行解释器
+from flask_script import Manager   
+manager=Manager(app)  
+
+if __name__=='__main__':  
+    manager.run()  
+
+python test.py runserver --host 0.0.0.0  
+
+
+ 增加自定义命令：
+@manager.command  
+def print_str():  
+    print 'hello world' 
+
+
+python test.py print_str  
+
+
+
+11，flask中设置和获取cookie
+（1）设置cookie
+response=make_response('Hello World');  
+    response.set_cookie('Name','Hyman') 
+
+（2）获取cookie
+ name=request.cookies.get('Name')  
+
+
+12， flask中的模板
+from flask import render_template  
+
+return render_template('user.html',name=name)  
+
+13，Jinja2模板中的变量
+    mydict={'key1':'123','key':'hello'}  
+    mylist=(123,234,345,789)  
+    myintvar=0  
+    myobj=Myobj('Hyman')  
+    return render_template('param.html',mydict=mydict,mylist=mylist,myintvar=0,myobj=myobj) 
+
+添加过滤器：
+给变量的数据首字母大写：{{ name|capitalize }}
+把变量的值改成大写形式：{{ name|upper }}
+
+
+14，Jinja2模板中的控制结构
+条件判断if语句：
+{% if  condition %}  
+     ...  
+{% else %}  
+     ...  
+{% endif %}
+
+for循环语句：
+<ul>  
+    {% for comment in comments %}  
+            <li>{{ comment}}</li>  
+    {% endfor %}  
+</ul>  
+
+宏macro：
+定义格式如下：
+{% macro render_comment(comment) %}  
+     <li>{{ comment }}</li>  
+{% endmacro %}  
+
+使用宏方法如下：
+<ul>  
+    {% for comment in comments %}  
+            {{ render_comment(comment) }}  
+    {% endfor %}  
+</ul>  
+
+宏的定义放到单独文件中，并在代码中引用：
+{% import 'macro.html' as macros %}  
+<ul>  
+    {% for comment in comments %}  
+            {{ macros.render_comment(comment) }}  
+    {% endfor %}  
+</ul>  
+
+
+15， flask中四种请求钩子
+（1）before_first_request 注册一个函数,在处理第一个请求之前运行.
+@app.before_first_request  
+def bf_first_request():  
+    g.string = 'before_first_request' 
+
+
+（2）before_request   注册一个函数,在处理每次请求之前运行.
+@app.before_request  
+def bf_request():  
+    g.string = 'before_request'  
+
+（3） after_request   注册一个函数,在每次请求之后运行，注册的函数至少需要含有一个参数,这个参数实际上为服务器的响应,且函数中需要返回这个响应参数.
+@app.after_request  
+def af_request(param):  
+    return param 
+
+（4）teardown_request    注册一个函数,同样在每次请求之后运行.注册的函数至少需要含有一个参数,这个参数实际上为服务器的响应,且函数中需要返回这个响应参数.
+
+16，表单类的使用
+from flask_wtf import FlaskForm  
+from wtforms import StringField,SubmitField  
+from wtforms.validators import Required 
+
+class NameForm(FlaskForm):  
+    name=StringField('your name',validators=[Required()])  
+    submit=SubmitField('Submit') 
+
+
+html文档中,我们可以这样使用form:
+<form method="POST">  
+    {{form.hidden_tag()}}  
+    {{form.name.label}}{{form.name()}}  
+    {{form.submit }}  
+</form>  
+
+
+视图函数中这样进行渲染:
+@app.route('/', methods=['GET','POST'])  
+ def index():  
+     form=NameForm()  
+     return render_template('index.html',form=form)  
+
+
+17，Flash消息
+HTML:
+<form method="POST">    
+    {{form.hidden_tag()}}    
+    <p>{{form.name.label}}</p>  
+    {{form.name()}}    
+    <br>{{form.submit }}    
+</form>    
+<h6>flashed message</h6>  
+ <p>  
+    {% for message in get_flashed_messages() %}  
+        {{ message }}  
+    {% endfor %}   
+    </p> 
+视图函数：
+@app.route('/',methods=['GET','POST'])  
+def index():  
+    form = NameForm()  
+    if form.validate_on_submit():  
+        old_name=session.get('name')  
+        if old_name is not None and old_name != form.name.data:  
+            flash('name has been changed')  
+            return redirect(url_for('index'))  
+        session['name']=form.name.data  
+        return render_template('index.html',form=form)  
+    return render_template('index.html',form=form)
+
+
+
+18，数据库模型的创建
+from flask_sqlalchemy import SQLAlchemy  
+import os  
+basedir=os.path.abspath(os.path.dirname(__file__))  
+app=Flask(__name__)  
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///'+os.path.join(basedir+'data.sqlite')  
+app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN']=True  
+db=SQLAlchemy(app)
+
+以上就是引入了一个SQLAlchemy对象实例,下面要做的就是利用该实例对数据库进行建模.所谓建模就是将数据库的表格映射成一个类,
+而类中的属性就是表中的字段,同时这个类必须从SQLAlchemy的Model进行继承.
+
+class Role(db.Model):  
+      __tablename__='roles'  
+      id = db.Column(db.Integer,primary_key=True)  
+      name = db.Column(db.String(64),unique=True)  
+      def __repr__(self):  
+          return '<Role %s>'%self.name  
+ class User(db.Model):  
+      __tablename__='users'  
+      id=db.Column(db.Integer,primary_key=True)  
+      name=db.Column(db.String(64),unique=True)  
+      def __repr__(self):  
+          return '<User %s>'%self.name  
+
+上面两个类分别建立roles表和users表两个模型,两个模型中分别声明了id和name两个字段,同时设置了主键和唯一性约束,以后操作Role或者User对象就相当与操作roles表和users表.
+
+
+
+19，数据模型的外键关系
+class Role(db.Model):    
+      __tablename__='roles'    
+      id = db.Column(db.Integer,primary_key=True)    
+      name = db.Column(db.String(64),unique=True)    
+      users = db.relationship('User',backref='role')  
+      
+      def __repr__(self):    
+          return '<Role %s>'%self.name    
+ class User(db.Model):    
+      __tablename__='users'    
+      id=db.Column(db.Integer,primary_key=True)    
+      name=db.Column(db.String(64),unique=True)    
+      role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))  
+      def __repr__(self):    
+          return '<User %s>'%self.name    
+
+
+https://blog.csdn.net/hyman_c/article/details/52729744
+
+
+20，利用模型创建数据库
+from test import db 
+
+创建表:db.create_all()  
+删除表:db.drop_all()  
+插入行：
+>>> from test import Role,User
+>>> admin_role = Role(name='admin',id=1)
+>>> user_hyman = User(name='Hyman',role_id=1)
+>>> db.session.add(admin_role)
+>>> db.session.add(user_hyman)
+>>> db.session.commit()
+>>> db.session.commit()
+
+修改行：
+>>> admin_role.name='Adminstrator'
+>>> db.session.add(admin_role)
+>>> db.session.commit()
+>>> print admin_role.name
+Adminstrator
+
+
+查询行
+查询所有:User.query.all()  
+为查询增加过滤器: User.query.filter_by(name='hyman').all()  
+
+21 ，在视图函数中操作数据库
+https://blog.csdn.net/hyman_c/article/details/52740658
+
+22，使用Flask-Migrate实现数据库的更新
+（1）创建数据仓库
+from flask_migrate import Migrate,MigrateCommand
+from fask_script import Manager
+...
+manager=Manager(app)
+migrate=Migrate(app,db)
+manager.add_command('db',MigrateCommand)
+
+python test.py db init  
+
+（2）创建迁移脚本
+class User(db.Model):  
+      __tablename__='users'  
+      id=db.Column(db.Integer,primary_key=True)  
+      name=db.Column(db.String(64),unique=True)  
+      role_id=db.Column(db.Integer,db.ForeignKey('roles.id'))  
+      age=db.Column(db.Integer) 
+
+python test.py db migrate -m "inition migrate"  
+
+（3）更新数据
+  使用upgrade和downgrade命令分别向数据库更新数据和从数据库更新数据,使用upgrade命令将本次的改动更新到数据库中:
+python test.py db upgrade  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

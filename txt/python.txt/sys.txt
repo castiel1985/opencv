@@ -1,0 +1,14 @@
+import sys
+
+
+
+sys.exit(1) 安全离开
+
+getuid()=0  当前为root用户
+
+sys.argv[0]   当前程序名
+sys.argv[1]	第一个参数
+sys.argv[2]	第2个参数
+
+sys.path 	目录列表
+

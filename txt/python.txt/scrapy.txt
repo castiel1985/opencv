@@ -1,0 +1,47 @@
+spider
+
+继承类:(from scrapy.spiders import Spider)
+属性：name(字符串),allowed_domains（列表）,parse(函数，参数 self,response)
+
+
+
+scrapy命令
+
+scrapy startproject <project_name>    创建项目
+
+scrapy genspider [-t template] <name> <domain>   创建spider的一种快捷方法。该方法可以使用提前定义好的模板来生成spider。您也可以自己创建spider的源码文件。
+
+scrapy crawl <spider>	使用spider进行爬取
+
+scrapy check [-l] <spider> 	运行contract检查。
+
+
+scrapy list		列出当前项目中所有可用的spider。每行输出一个spider。
+
+scrapy view <url>      在浏览器中打开给定的URL，并以Scrapy spider获取到的形式展现。 
+
+
+scrapy parse <url> [options] 		获取给定的URL并使用相应的spider分析处理。
+
+
+scrapy settings （--get BOT_NAME）
+
+scrapy runspider <spider_file.py>    在未创建项目的情况下，运行一个编写在Python文件中的spider。
+
+
+scrapy bench		运行benchmark测试。
+
+scrapy deploy [ <target:project> | -l <target> | -L ]			将项目部署到Scrapyd服务。
+
+
+
+
+
+
+
+
+
+
+
+
+

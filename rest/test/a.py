@@ -11,7 +11,7 @@ driver = webdriver.Firefox()
 #自定义浏览器的宽和高
 # driver.set_window_size(666,555)
 
-url = "http://www.cnblogs.com/hanxiaobei/"
+url = "https://www.dingdiann.com/ddk38807/2519173.html"
 #打开url链接
 driver.get(url)
 time.sleep(5)

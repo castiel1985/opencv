@@ -20,6 +20,9 @@ https://kb.cnblogs.com/page/522513/
 https://blog.csdn.net/fgf00/article/details/52949973
 
 
+https://blog.csdn.net/feit2417/article/category/7556956
+
+
 QQ:
 sudo dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/Release.key
@@ -31,3 +34,6 @@ sudo apt-get install --install-recommends winehq-devel
 
 
 tar xvf wineQQ8.9_19990.tar.xz -C ~/
+
+
+https://blog.csdn.net/eric_key/article/category/6838646

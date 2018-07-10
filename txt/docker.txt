@@ -26,3 +26,8 @@ docker attach container-id     进入容器
 
 
 docker run -d -p 8888:80 --name webserver nginx      -d 后台运行 -p 宿主机端口：容器端口
+ 
+安装docker
+(1) sudo apt-get remove docker docker-engine docker.io
+(2) curl -fsSL get.docker.com -o get-docker.sh
+(3) sudo sh get-docker.sh

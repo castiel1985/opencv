@@ -1,0 +1,161 @@
+官方提供了一个 yaml Docker Compose 配置文件的标准例子:
+/*
+version: "3"
+services:
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379"
+    networks:
+      - frontend
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+  db:
+    image: postgres:9.4
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - backend
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+  vote:
+    image: dockersamples/examplevotingapp_vote:before
+    ports:
+      - 5000:80
+    networks:
+      - frontend
+    depends_on:
+      - redis
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+      restart_policy:
+        condition: on-failure
+
+  result:
+    image: dockersamples/examplevotingapp_result:before
+    ports:
+      - 5001:80
+    networks:
+      - backend
+    depends_on:
+      - db
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+  worker:
+    image: dockersamples/examplevotingapp_worker
+    networks:
+      - frontend
+      - backend
+    deploy:
+      mode: replicated
+      replicas: 1
+      labels: [APP=VOTING]
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 3
+        window: 120s
+      placement:
+        constraints: [node.role == manager]
+
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    stop_grace_period: 1m30s
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+networks:
+  frontend:
+  backend:
+
+volumes:
+  db-data:
+
+*/
+
+配置选项
+
+１.bulid: 可以指定 Dockerfile 所在文件夹的路径
+build: /path/to/build/dir
+也可以是相对路径
+build: ./dir
+
+2. context : 可以是 Dockerfile 的文件路径，也可以是到链接到 git 仓库的 url
+build:
+  context: ./dir
+
+
+３. dockerfile: 使用此 dockerfile 文件来构建，必须指定构建路径
+build:
+  context: .
+  dockerfile: Dockerfile-alternate
+
+４. args
+添加构建参数，这些参数是仅在构建过程中可访问的环境变量
+首先， 在Dockerfile中指定参数：
+ARG buildno
+ARG password
+RUN echo "Build number: $buildno"
+RUN script-requiring-password.sh "$password"
+
+然后指定 build 下的参数,可以传递映射或列表
+build:
+  context: .
+  args:
+    buildno: 1
+    password: secret
+
+
+５. cache_from
+编写缓存解析镜像列表
+build:
+  context: .
+  cache_from:
+    - alpine:latest
+    - corp/web_app:3.14
+
+
+6. labels
+使用 Docker标签 将元数据添加到生成的镜像中，可以使用数组或字典。
+建议使用反向 DNS 标记来防止签名与其他软件所使用的签名冲突
+build:
+  context: .
+  labels:
+    com.example.description: "Accounting webapp"
+    com.example.department: "Finance"
+    com.example.label-with-empty-value: ""
+或
+build:
+  context: .
+  labels:
+    - "com.example.description=Accounting webapp"
+    - "com.example.department=Finance"
+    - "com.example.label-with-empty-value"
+
+7.shm_size
+设置容器 /dev/shm 分区的大小，值为表示字节的整数值或表示字符的字符串
+build:
+  context: .
+  shm_size: '2gb'

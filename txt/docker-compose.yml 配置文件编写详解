@@ -159,3 +159,29 @@ build:
 build:
   context: .
   shm_size: '2gb'
+
+8. target
+根据对应的 Dockerfile 构建指定 Stage
+
+build:
+    context: .
+    target: prod
+
+9. cap_add、cap_drop
+添加或删除容器功能，可查看 man 7 capabilities
+
+cap_add:
+  - ALL
+
+cap_drop:
+  - NET_ADMIN
+  - SYS_ADMIN
+
+10. command   覆盖容器启动后默认执行的命令
+command: bundle exec thin -p 3000
+该命令也可以是一个列表，方法类似于 dockerfile:
+command: ["bundle", "exec", "thin", "-p", "3000"]
+
+11. configs
+使用服务 configs 配置为每个服务赋予相应的访问权限，支持两种不同的语法。
+Note: 配置必须存在或在 configs 此堆栈文件的顶层中定义，否则堆栈部署失效

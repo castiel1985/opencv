@@ -37,3 +37,10 @@ tar xvf wineQQ8.9_19990.tar.xz -C ~/
 
 
 https://blog.csdn.net/eric_key/article/category/6838646
+
+
+
+https://morvanzhou.github.io/tutorials/machine-learning/keras/1-3-backend/  莫烦
+
+
+https://blog.csdn.net/zdy0_2004/article/details/74736656  keras

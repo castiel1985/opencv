@@ -1,0 +1,54 @@
+安装方式 ：pip install keras
+后端：tensorflow
+
+from keras.layers import Dense, Activation  #导入相关函数
+
+(1)导入选择模型
+model = Sequential()
+
+(2)指定输入数据的shape
+将一个个的将layer加入模型中：
+model.add(Dense(32, input_shape=(784,)))   #Dense 为全连接层，input_shape 为一个元祖
+model.add(Activation('relu'))     #使用激活函数 relu
+或者  model.add(Dense(32, input_dim=784))   #input_dim 用来隐含的指定输入数据shape,是一个Int类型的数据
+
+(3)编译
+需要通过compile来对学习过程进行配置。
+compile接收三个参数：
+*优化器optimizer:  如rmsprop、adagrad，或一个Optimizer类的对象
+*损失函数loss:      如ategorical_crossentropy、mse，也可以为一个损失函数。
+*指标列表metrics    一般将该列表设置为metrics=['accuracy']。指标可以是一个预定义指标的名字,也可以是一个用户定制的函数
+/*
+# For a multi-class classification problem
+model.compile(optimizer='rmsprop',
+              loss='categorical_crossentropy',
+              metrics=['accuracy'])
+# For a binary classification problem
+model.compile(optimizer='rmsprop',
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+# For a mean squared error regression problem
+model.compile(optimizer='rmsprop',
+              loss='mse')
+# For custom metrics
+import keras.backend as K
+def mean_pred(y_true, y_pred):
+    return K.mean(y_pred)
+model.compile(optimizer='rmsprop',
+              loss='binary_crossentropy',
+              metrics=['accuracy', mean_pred])
+
+*/
+
+(4)训练：Keras以Numpy数组作为输入数据和标签的数据类型。训练模型一般使用fit函数。
+# Generate dummy data
+import numpy as np
+data = np.random.random((1000, 100))
+labels = np.random.randint(10, size=(1000, 1))
+
+# Convert labels to categorical one-hot encoding
+one_hot_labels = keras.utils.to_categorical(labels, num_classes=10)
+# Train the model, iterating on the data in batches of 32 samples
+model.fit(data, one_hot_labels, epochs=10, batch_size=32)
+
+

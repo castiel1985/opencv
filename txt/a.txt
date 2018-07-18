@@ -24,6 +24,7 @@ https://blog.csdn.net/feit2417/article/category/7556956
 
 
 QQ:
+/*
 sudo dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/Release.key
 sudo apt-key add Release.key
@@ -34,7 +35,7 @@ sudo apt-get install --install-recommends winehq-devel
 
 
 tar xvf wineQQ8.9_19990.tar.xz -C ~/
-
+*/
 
 https://blog.csdn.net/eric_key/article/category/6838646
 
@@ -47,3 +48,6 @@ https://blog.csdn.net/zdy0_2004/article/details/74736656  keras
 
 
 https://github.com/liyu001989
+
+
+php 新特性 ： https://blog.csdn.net/qq_16885135/article/details/79755713

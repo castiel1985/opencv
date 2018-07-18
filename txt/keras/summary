@@ -1,0 +1,19 @@
+激活函数 和 网路层：
+(1)基于多层感知器的softmax多分类:
+relu,relu -> softmax
+编译损失函数用  ‘categorical_crossentropy’
+
+基于多层感知器的二分类:
+relu,relu   ->  sigmod
+编译损失函数用 ‘binnary_crossentropy’
+
+(2)类似VGG的卷积神经网络：
+二维卷积层   Conv2D
++ 池化层 MaxPooling2D(pool_size=(2, 2))
++ Dropout层  正则化层
++ Flatten层
+relu,relu -> softmax
+
+
+
+

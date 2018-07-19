@@ -1,8 +1,0 @@
-常用层， 应用于核心模块 core
-（1）Dense 层  ： 全连接层
-model.add(Dense(32, input_shape=(16,)))
-
-
-（2）Activation层，激活层对一个层的输出施加激活函数
-keras.layers.core.Activation(activation)
-

@@ -1,0 +1,138 @@
+常用层， 应用于核心模块 core
+（1）Dense 层  ： 全连接层
+model.add(Dense(32, input_shape=(16,)))  如果是第一层
+
+
+model.add(Dense(32))    如果不是第一层
+
+（2）Activation层，激活层对一个层的输出施加激活函数
+keras.layers.core.Activation(activation)
+输入shape
+任意，当使用激活层作为第一层时，要指定input_shape
+输出shape
+与输入shape相同
+
+
+(3)Dropout层
+ keras.layers.core.Dropout(rate, noise_shape=None, seed=None)
+ Dropout将在训练过程中每次更新参数时按一定概率（rate）随机断开输入神经元，Dropout层用于防止过拟合.
+过拟合是指为了得到一致假设而使假设变得过度严格。避免过拟合是分类器设计中的一个核心任务。通常采用增大数据量和测试样本集的方法对分类器性能进行评价。
+
+(4)Flatten层
+keras.layers.core.Flatten()
+Flatten层用来将输入“压平”，即把多维的输入一维化，常用在从卷积层到全连接层的过渡。Flatten不影响batch的大小。
+/*
+model = Sequential()
+model.add(Convolution2D(64, 3, 3,
+            border_mode='same',
+            input_shape=(3, 32, 32)))       # now: model.output_shape == (None, 64, 32, 32)
+model.add(Flatten())                        # now: model.output_shape == (None, 65536)
+*/
+
+
+(5)Reshape层  : 层用来将输入shape转换为特定的shape
+keras.layers.core.Reshape(target_shape)
+/*
+# as first layer in a Sequential model
+model = Sequential()
+model.add(Reshape((3, 4), input_shape=(12,)))
+# now: model.output_shape == (None, 3, 4)
+# note: `None` is the batch dimension
+
+# as intermediate layer in a Sequential model
+model.add(Reshape((6, 2)))
+# now: model.output_shape == (None, 6, 2)
+
+# also supports shape inference using `-1` as dimension
+model.add(Reshape((-1, 2, 2)))
+# now: model.output_shape == (None, 3, 2, 2)
+*/
+
+(6)Permute层  :  将输入的维度按照给定模式进行重排，例如，当需要将RNN和CNN网络连接时，可能会用到该层。
+/*
+model = Sequential()
+model.add(Permute((2, 1), input_shape=(10, 64)))
+# now: model.output_shape == (None, 64, 10)
+# note: `None` is the batch dimension
+*/
+
+
+(7) RepeatVector层
+keras.layers.core.RepeatVector(n)    将输入重复n次
+/*
+model = Sequential()
+model.add(Dense(32, input_dim=32))
+# now: model.output_shape == (None, 32)
+# note: `None` is the batch dimension
+
+model.add(RepeatVector(3))
+# now: model.output_shape == (None, 3, 32)
+*/
+
+
+
+(8)Lambda层   :  用以对上一层的输出施以任何Theano/TensorFlow表达式
+keras.layers.core.Lambda(function, output_shape=None, mask=None, arguments=None)
+/*
+# add a x -> x^2 layer
+model.add(Lambda(lambda x: x ** 2))
+# add a layer that returns the concatenation
+# of the positive part of the input and
+# the opposite of the negative part
+
+def antirectifier(x):
+    x -= K.mean(x, axis=1, keepdims=True)
+    x = K.l2_normalize(x, axis=1)
+    pos = K.relu(x)
+    neg = K.relu(-x)
+    return K.concatenate([pos, neg], axis=1)
+
+def antirectifier_output_shape(input_shape):
+    shape = list(input_shape)
+    assert len(shape) == 2  # only valid for 2D tensors
+    shape[-1] *= 2
+    return tuple(shape)
+
+model.add(Lambda(antirectifier,
+         output_shape=antirectifier_output_shape))
+*/
+
+
+(9)ActivityRegularizer层  :  经过本层的数据不会有任何变化，但会基于其激活值更新损失函数值
+keras.layers.core.ActivityRegularization(l1=0.0, l2=0.0)
+
+
+(10)Masking层  : 使用给定的值对输入的序列信号进行“屏蔽”，用以定位需要跳过的时间步
+keras.layers.core.Masking(mask_value=0.0)
+/*
+考虑输入数据x是一个形如(samples,timesteps,features)的张量，现将其送入LSTM层。因为你缺少时间步为3和5的信号，所以你希望将其掩盖。这时候应该：
+赋值x[:,3,:] = 0.，x[:,5,:] = 0.
+在LSTM层之前插入mask_value=0.的Masking层
+model = Sequential()
+model.add(Masking(mask_value=0., input_shape=(timesteps, features)))
+model.add(LSTM(32))
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

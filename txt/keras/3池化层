@@ -1,0 +1,38 @@
+最大值池化：
+MaxPooling1D层：对时域1D信号进行最大值池化
+MaxPooling2D层：为空域信号施加最大值池化
+MaxPooling3D层：为3D信号（空域或时空域）施加最大值池化
+
+keras.layers.pooling.MaxPooling1D(pool_size=2, strides=None, padding='valid')
+keras.layers.pooling.MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid', data_format=None)
+keras.layers.pooling.MaxPooling3D(pool_size=(2, 2, 2), strides=None, padding='valid', data_format=None)
+
+
+
+平均值池化：
+AveragePooling1D层：对时域1D信号进行平均值池化
+AveragePooling2D层：为空域信号施加平均值池化
+AveragePooling3D层：为3D信号（空域或时空域）施加平均值池化（本层目前只能在使用Theano为后端时可用）。
+
+keras.layers.pooling.AveragePooling1D(pool_size=2, strides=None, padding='valid')
+keras.layers.pooling.AveragePooling2D(pool_size=(2, 2), strides=None, padding='valid', data_format=None)
+keras.layers.pooling.AveragePooling3D(pool_size=(2, 2, 2), strides=None, padding='valid', data_format=None)
+
+
+全局平均池化：
+GlobalAveragePooling1D层：为时域信号施加全局平均值池化
+GlobalAveragePooling2D层：为空域信号施加全局平均值池化
+
+keras.layers.pooling.GlobalAveragePooling1D()
+keras.layers.pooling.GlobalAveragePooling2D(dim_ordering='default')
+
+
+
+全局最大池化：
+GlobalMaxPooling1D层：对于时间信号的全局最大池化
+GlobalMaxPooling2D层:为空域信号施加全局最大值池化
+
+keras.layers.pooling.GlobalMaxPooling1D()
+keras.layers.pooling.GlobalMaxPooling2D(dim_ordering='default')
+
+

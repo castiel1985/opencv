@@ -1,0 +1,72 @@
+三层卷积函数：
+（1）Conv1D层
+一维卷积层（即时域卷积），用以在一维输入信号上进行邻域滤波。当使用该层作为首层时，需要提供关键字参数input_shape。
+例如(10,128)代表一个长为10的序列，序列中每个信号为128向量。而(None, 128)代表变长的128维向量序列。
+
+（2）Conv2D层
+二维卷积层，即对图像的空域卷积。该层对二维输入进行滑动窗卷积，当使用该层作为第一层时，应提供input_shape参数。
+例如input_shape = (128,128,3)代表128*128的彩色RGB图像（data_format='channels_last'）
+
+（3）三维卷积对三维的输入进行滑动窗卷积，当使用该层作为第一层时，应提供input_shape参数。
+例如input_shape = (3,10,128,128)代表对10帧128*128的彩色RGB图像进行卷积。数据的通道位置仍然有data_format参数指定。
+
+keras.layers.convolutional.Conv1D(filters, kernel_size, strides=1, padding='valid', dilation_rate=1, activation=None, use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, bias_constraint=None)
+keras.layers.convolutional.Conv2D(filters, kernel_size, strides=(1, 1), padding='valid', data_format=None, dilation_rate=(1, 1), activation=None, use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, bias_constraint=None)
+keras.layers.convolutional.Conv3D(filters, kernel_size, strides=(1, 1, 1), padding='valid', data_format=None, dilation_rate=(1, 1, 1), activation=None, use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, bias_constraint=None)
+
+
+裁剪函数：
+Cropping1D层：在时间轴（axis1）上对1D输入（即时间序列）进行裁剪
+Cropping2D层：对2D输入（图像）进行裁剪，将在空域维度，即宽和高的方向上裁剪
+Cropping3D层：对2D输入（图像）进行裁剪
+
+keras.layers.convolutional.Cropping1D(cropping=(1, 1))
+keras.layers.convolutional.Cropping2D(cropping=((0, 0), (0, 0)), data_format=None)
+keras.layers.convolutional.Cropping3D(cropping=((1, 1), (1, 1), (1, 1)), data_format=None)
+
+
+
+重复函数：
+UpSampling1D层：在时间轴上，将每个时间步重复length次
+UpSampling2D层：将数据的行和列分别重复size[0]和size[1]次
+UpSampling3D层：将数据的三个维度上分别重复size[0]、size[1]和ize[2]次
+
+keras.layers.convolutional.UpSampling1D(size=2)
+keras.layers.convolutional.UpSampling2D(size=(2, 2), data_format=None)
+keras.layers.convolutional.UpSampling3D(size=(2, 2, 2), data_format=None)
+
+
+
+
+
+填0函数：
+ZeroPadding1D层：对1D输入的首尾端（如时域序列）填充0，以控制卷积以后向量的长度
+ZeroPadding2D层：对2D输入（如图片）的边界填充0，以控制卷积以后特征图的大小
+ZeroPadding3D层：将数据的三个维度上填充0（本层目前只能在使用Theano为后端时可用）
+
+keras.layers.convolutional.ZeroPadding1D(padding=1)
+keras.layers.convolutional.ZeroPadding2D(padding=(1, 1), data_format=None)
+keras.layers.convolutional.ZeroPadding3D(padding=(1, 1, 1), data_format=None)
+
+
+
+
+SeparableConv2D层:   该层是在深度方向上的可分离卷积。(可分离卷积首先按深度方向进行卷积（对每个输入通道分别卷积），
+然后逐点进行卷积，将上一步的卷积结果混合到输出通道中。)直观来说，可分离卷积可以看做讲一个卷积核分解为两个小的卷积核，或看作Inception模块的一种极端情况。
+keras.layers.convolutional.SeparableConv2D(filters, kernel_size, strides=(1, 1), padding='valid', data_format=None, depth_multiplier=1, activation=None, use_bias=True, depthwise_initializer='glorot_uniform', pointwise_initializer='glorot_uniform', bias_initializer='zeros', depthwise_regularizer=None, pointwise_regularizer=None, bias_regularizer=None, activity_regularizer=None, depthwise_constraint=None, pointwise_constraint=None, bias_constraint=None)
+
+
+Conv2DTranspose层:该层是转置的卷积操作（反卷积）。需要反卷积的情况通常发生在用户想要对一个普通卷积的结果做反方向的变换。
+例如，将具有该卷积层输出shape的tensor转换为具有该卷积层输入shape的tensor。同时保留与卷积层兼容的连接模式。
+keras.layers.convolutional.Conv2DTranspose(filters, kernel_size, strides=(1, 1), padding='valid', data_format=None, activation=None, use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, bias_constraint=None)
+
+
+
+
+
+
+
+
+
+
+

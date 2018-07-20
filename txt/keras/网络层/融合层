@@ -1,0 +1,77 @@
+Merge(融合)层提供了一系列用于融合两个层或两个张量的层对象和方法。
+以大写首字母开头的是Layer类，以小写字母开头的是张量的函数。
+小写字母开头的张量函数在内部实际上是调用了大写字母开头的层。
+
+（1）Add ： 添加输入列表的图层。
+keras.layers.Add()
+
+（2）SubStract ：两个输入的层相减。
+keras.layers.Subtract()
+
+（3）Multiply：    该层接收一个列表的同shape张量，并返回它们的逐元素积的张量，shape不变。
+keras.layers.Multiply()
+
+（4）Average：     该层接收一个列表的同shape张量，并返回它们的逐元素均值，shape不变。
+keras.layers.Average()
+
+（5）Maximum :    该层接收一个列表的同shape张量，并返回它们的逐元素最大值，shape不变。
+keras.layers.Maximum()
+
+(6)Concatenate  :   该层接收一个列表的同shape张量，并返回它们的按照给定轴相接构成的向量。
+keras.layers.Concatenate(axis=-1)
+
+(7)Dot: 计算两个tensor中样本的张量乘积。例如，如果两个张量a和b的shape都为（batch_size, n），则输出为形如（batch_size,1）的张量，
+结果张量每个batch的数据都是a[i,:]和b[i,:]的矩阵（向量）点积。
+keras.layers.Dot(axes, normalize=False)
+
+************************************************************************************************************************
+
+(8)add :Add层的函数式包装
+keras.layers.add(inputs)
+/*
+import keras
+
+input1 = keras.layers.Input(shape=(16,))
+x1 = keras.layers.Dense(8, activation='relu')(input1)
+input2 = keras.layers.Input(shape=(32,))
+x2 = keras.layers.Dense(8, activation='relu')(input2)
+added = keras.layers.add([x1, x2])
+
+out = keras.layers.Dense(4)(added)
+model = keras.models.Model(inputs=[input1, input2], outputs=out)
+*/
+
+(9)subtract: Subtract层的函数式包装
+keras.layers.subtract(inputs)
+/*
+import keras
+
+input1 = keras.layers.Input(shape=(16,))
+x1 = keras.layers.Dense(8, activation='relu')(input1)
+input2 = keras.layers.Input(shape=(32,))
+x2 = keras.layers.Dense(8, activation='relu')(input2)
+subtracted = keras.layers.subtract([x1, x2])
+
+out = keras.layers.Dense(4)(subtracted)
+model = keras.models.Model(inputs=[input1, input2], outputs=out)
+*/
+
+(10)multiply    :   Multiply的函数式包装
+keras.layers.multiply(inputs)
+
+(11)average:    Average的函数包装
+keras.layers.average(inputs)
+
+(12)maximum :   Maximum的函数包装
+keras.layers.maximum(inputs)
+
+（13）concatenate ：   Concatenate的函数包装
+keras.layers.concatenate(inputs, axis=-1)
+
+（14）dot ：   Dot的函数包装
+keras.layers.dot(inputs, axes, normalize=False)
+
+
+
+
+

@@ -1,0 +1,72 @@
+
+
+Recurrent层：这是循环层的抽象类，请不要在模型中直接应用该层（因为它是抽象类，无法实例化任何对象）。
+keras.layers.recurrent.Recurrent(return_sequences=False, go_backwards=False, stateful=False, unroll=False, implementation=0)
+/*
+# as the first layer in a Sequential model
+model = Sequential()
+model.add(LSTM(32, input_shape=(10, 64)))
+# now model.output_shape == (None, 32)
+# note: `None` is the batch dimension.
+
+# the following is identical:
+model = Sequential()
+model.add(LSTM(32, input_dim=64, input_length=10))
+
+# for subsequent layers, no need to specify the input size:
+         model.add(LSTM(16))
+
+# to stack recurrent layers, you must use return_sequences=True
+# on any recurrent layer that feeds into another recurrent layer.
+# note that you only need to specify the input size on the first layer.
+model = Sequential()
+model.add(LSTM(64, input_dim=64, input_length=10, return_sequences=True))
+model.add(LSTM(32, return_sequences=True))
+model.add(LSTM(10))
+*/
+
+
+（1）SimpleRNN层：全连接RNN网络，RNN的输出会被回馈到输入
+keras.layers.GRU(units, activation='tanh', recurrent_activation='hard_sigmoid', use_bias=True, kernel_initializer='glorot_uniform', recurrent_initializer='orthogonal', bias_initializer='zeros', kernel_regularizer=None, recurrent_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, recurrent_constraint=None, bias_constraint=None, dropout=0.0, recurrent_dropout=0.0, implementation=1, return_sequences=False, return_state=False, go_backwards=False, stateful=False, unroll=False)
+
+（2）GRU层：门限循环单元
+keras.layers.recurrent.GRU(units, activation='tanh', recurrent_activation='hard_sigmoid', use_bias=True, kernel_initializer='glorot_uniform', recurrent_initializer='orthogonal', bias_initializer='zeros', kernel_regularizer=None, recurrent_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, recurrent_constraint=None, bias_constraint=None, dropout=0.0, recurrent_dropout=0.0)
+
+
+（3）LSTM层：Keras长短期记忆模型
+keras.layers.ConvLSTM2D(filters, kernel_size, strides=(1, 1), padding='valid', data_format=None, dilation_rate=(1, 1), activation='tanh', recurrent_activation='hard_sigmoid', use_bias=True, kernel_initializer='glorot_uniform', recurrent_initializer='orthogonal', bias_initializer='zeros', unit_forget_bias=True, kernel_regularizer=None, recurrent_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, recurrent_constraint=None, bias_constraint=None, return_sequences=False, go_backwards=False, stateful=False, dropout=0.0, recurrent_dropout=0.0)
+
+
+（4）SimpleRNNCell层：SinpleRNN的Cell类
+keras.layers.SimpleRNNCell(units, activation='tanh', use_bias=True, kernel_initializer='glorot_uniform', recurrent_initializer='orthogonal', bias_initializer='zeros', kernel_regularizer=None, recurrent_regularizer=None, bias_regularizer=None, kernel_constraint=None, recurrent_constraint=None, bias_constraint=None, dropout=0.0, recurrent_dropout=0.0)
+
+（5）GRUCell层：GRU的Cell类
+keras.layers.GRUCell(units, activation='tanh', recurrent_activation='hard_sigmoid', use_bias=True, kernel_initializer='glorot_uniform', recurrent_initializer='orthogonal', bias_initializer='zeros', kernel_regularizer=None, recurrent_regularizer=None, bias_regularizer=None, kernel_constraint=None, recurrent_constraint=None, bias_constraint=None, dropout=0.0, recurrent_dropout=0.0, implementation=1)
+
+（6）LSTMCell层：LSTM层的Cell类
+keras.layers.LSTMCell(units, activation='tanh', recurrent_activation='hard_sigmoid', use_bias=True, kernel_initializer='glorot_uniform', recurrent_initializer='orthogonal', bias_initializer='zeros', unit_forget_bias=True, kernel_regularizer=None, recurrent_regularizer=None, bias_regularizer=None, kernel_constraint=None, recurrent_constraint=None, bias_constraint=None, dropout=0.0, recurrent_dropout=0.0, implementation=1)
+
+
+
+（7）StackedRNNCells层：这是一个wrapper，用于将多个recurrent cell包装起来，使其行为类型单个cell。该层用于实现搞笑的stacked RNN
+keras.layers.StackedRNNCells(cells)
+/*
+cells = [
+    keras.layers.LSTMCell(output_dim),
+    keras.layers.LSTMCell(output_dim),
+    keras.layers.LSTMCell(output_dim),
+]
+
+inputs = keras.Input((timesteps, input_dim))
+x = keras.layers.StackedRNNCells(cells)(inputs)
+*/
+
+
+（8）CuDNNGRU层：基于CuDNN的快速GRU实现，只能在GPU上运行，只能使用tensoflow为后端
+keras.layers.CuDNNGRU(units, kernel_initializer='glorot_uniform', recurrent_initializer='orthogonal', bias_initializer='zeros', kernel_regularizer=None, recurrent_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, recurrent_constraint=None, bias_constraint=None, return_sequences=False, return_state=False, stateful=False)
+
+
+（9）CuDNNLSTM层：基于CuDNN的快速LSTM实现，只能在GPU上运行，只能使用tensoflow为后端
+keras.layers.CuDNNLSTM(units, kernel_initializer='glorot_uniform', recurrent_initializer='orthogonal', bias_initializer='zeros', unit_forget_bias=True, kernel_regularizer=None, recurrent_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, recurrent_constraint=None, bias_constraint=None, return_sequences=False, return_state=False, stateful=False)
+
+

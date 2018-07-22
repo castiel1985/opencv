@@ -15,5 +15,17 @@ relu,relu   ->  sigmod
 relu,relu -> softmax
 
 
+Dropout(0.5),参数基本上几个层加起来为1
 
 
+model.save(filepath) 将 Keras 模型保存到单个 HDF5 文件中，该文件将包含：
+（1）模型的结构，允许重新创建模型
+（2）模型的权重
+（3）训练配置项（损失函数，优化器）
+（4）优化器状态，允许准确地从你上次结束的地方继续训练。
+
+使用 keras.models.load_model(filepath) 重新实例化模型。load_model 还将负责使用保存的训练配置项来编译模型（除非模型从未编译过）。
+
+
+
+address : 	https://blog.csdn.net/u012162613/article/details/45397033

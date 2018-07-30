@@ -26,7 +26,7 @@ def create_model(optimizer='adam', init='glorot_uniform'):
     return model
 
 model = KerasClassifier(build_fn=create_model, epochs=200, batch_size=5, verbose=0)
-kfold = KFold(n_splitss=10, shuffle=True, random_state=seed)
+kfold = KFold(n_splits=10, shuffle=True, random_state=seed)
 results = cross_val_score(model, x,y,cv=kfold)
 
 print('Accuracy: %.2f%% (%.2f)' % (results.mean()*100, results.std()))

@@ -1,0 +1,11 @@
+kears 提供的包装器Wrapper
+
+(1)KearscClassifier 用于分类模型
+#创建模型 for scikit-learn
+from keras.wrappers.scikit_learn import KerasClassifier
+
+model = KerasClassifier(build_fn=create_model, epochs=150, batch_size=10, verbose=0)
+
+
+
+(2)KearsRegressor 用于回归模型

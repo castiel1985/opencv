@@ -6,6 +6,8 @@ np.random.seed(7)
 
 # 导入数据
 dataset = np.loadtxt('pima-indians-diabetes.csv', delimiter=',')
+
+
 # 分割输入x和输出Y
 x = dataset[:, 0 : 8]
 Y = dataset[:, 8]
@@ -22,6 +24,8 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 # 训练模型
 model.fit(x=x, y=Y, epochs=150, batch_size=10)
 
-# 评估模型
+# 评估模型cd py3
+
 scores = model.evaluate(x=x, y=Y)
 print('\n%s : %.2f%%' % (model.metrics_names[1], scores[1]*100))
+print(scores)

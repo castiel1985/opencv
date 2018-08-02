@@ -78,3 +78,33 @@ verbose：含义同fit的同名参数，但只能取0或1
 sample_weight：numpy array，含义同fit的同名参数
 
 
+
+
+
+参数值：
+categorical_crossentropy -> 多分类
+
+binary_crossentropy   ->  二分类
+
+
+
+
+kernel_initializer:
+一个初始化器可以由字符串指定（必须是下面的预定义初始化器之一），或一个callable的函数，例如:
+from keras import initializers
+(1)model.add(Dense(64, kernel_initializer=initializers.random_normal(stddev=0.01)))
+
+(2)model.add(Dense(64, kernel_initializer='random_normal'))
+
+注明：Initializer是所有初始化方法的父类，不能直接使用，如果想要定义自己的初始化方法，请继承此类。
+
+
+
+
+
+
+
+
+
+
+

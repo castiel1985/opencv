@@ -1,0 +1,16 @@
+# 模型保存成Json文件
+model_json = model.to_json()
+with open('model.json', 'w') as file:
+    file.write(model_json)
+
+# 保存模型的权重值
+model.save_weights('model.json.h5')
+
+
+# 从Json加载模型
+with open('model.json', 'r') as file:
+    model_json = file.read()
+
+# 加载模型
+new_model = model_from_json(model_json)
+new_model.load_weights('model.json.h5')

@@ -1,0 +1,20 @@
+Dropout
+
+功能：解决模型中的过度拟合。(只能在模型的构建过程中使用)
+
+（1）在输入层中使用；
+# 构建模型
+    model = Sequential()
+    model.add(Dropout(rate=0.2, input_shape=(4,)))
+意味着每个更新周期中20%的输入将被随机排除。
+
+（2）在隐藏层使用：
+ # 构建模型
+    model = Sequential()
+    model.add(Dense(units=4, activation='relu', input_dim=4, kernel_initializer=init, kernel_constraint=maxnorm(3)))
+    model.add(Dropout(rate=0.2))
+
+
+数值设置：通常设置为 20%~50%
+
+

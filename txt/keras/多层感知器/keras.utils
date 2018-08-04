@@ -1,0 +1,4 @@
+keras.utils
+
+keras.utils.to_categorical(y, num_classes=None)
+将类向量（整数）转换为二进制类矩阵。

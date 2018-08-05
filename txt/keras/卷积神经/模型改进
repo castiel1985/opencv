@@ -1,0 +1,21 @@
+模型改进
+
+设置回调函数，实现学习率衰减
+
+def scheduler(epoch):
+    if epoch <= 60:
+        return 0.05
+    if epoch <= 120:
+        return 0.01
+    if epoch <= 160:
+        return 0.002
+    return 0.0004
+
+
+ # set callback
+    tb_cb = TensorBoard(log_dir=log_filepath, histogram_freq=0)
+    change_lr = LearningRateScheduler(scheduler)
+    cbks = [change_lr, tb_cb]
+
+模型训练
+ model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, callbacks=cbks,validation_data=(x_validation, y_validation), verbose=2)

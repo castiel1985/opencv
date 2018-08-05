@@ -1,0 +1,33 @@
+图像增强
+
+from keras.preprocessing.image import ImageDataGenerator
+
+
+过程：
+（1）imgGen= ImageDataGenerator（）
+（2）imgGen.fit(train_dataset)
+（3）X_batch, y_batch = imgGen.flow(X_train, y_train, batch_size = 16)  配置batch_size,并准备数据生成器且生成图像
+（4）model.fit_generator(imgGen, stepe_per_epoch=len(train), epochs=10)
+
+
+功能类别
+1.图像ZCA白化
+imgGen = ImageDataGenerator(zca_whitening=True)
+
+
+2.图像旋转
+imgGen = ImageDataGenerator(rotation_range=90)
+
+
+3.图像移动
+imgGen = ImageDataGenerator(width_shift_range=0.2, height_shift_range=0.2)
+
+
+4.图像剪切
+imgGen = ImageDataGenerator(horizontal_flip=True, vertical_flip=True)
+
+
+5.图像特征化
+imgGen = ImageDataGenerator(featurewise_center=True, featurewise_std_normalization=True)
+
+

@@ -23,7 +23,8 @@ for i in range(0, len(alphabet) - seq_length, 1):
 # reshape X to be [samples, time steps, features]
 X = numpy.reshape(dataX, (len(dataX), 1, seq_length))
 # normalize
-X = X / float(len(alphabet))
+X = X / float(len(alphabet))cd py3
+
 # one hot encode the output variable
 y = np_utils.to_categorical(dataY)
 # create and fit the model

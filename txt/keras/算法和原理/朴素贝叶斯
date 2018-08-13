@@ -1,0 +1,63 @@
+   1.贝叶斯公式：
+
+          P(A|B)=P(AB)/P(B)
+
+        2.贝叶斯推断：
+
+          P(A|B)=P(A)×P(B|A)/P(B)
+
+          用文字表述：
+
+          后验概率=先验概率×相似度/标准化常量
+
+         而贝叶斯算法要解决的问题就是如何求出相似度，即：P(B|A)的值
+
+
+
+
+ 1）高斯朴素贝叶斯：假设属性/特征是服从正态分布的(如下图)，主要应用于数值型特征。
+>>>from sklearn import datasets   ##导入包中的数据
+>>> iris=datasets.load_iris()     ##加载数据
+>>> iris.feature_names            ##显示特征名字
+    ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)']
+>>> iris.data                     ##显示数据
+    array([[ 5.1, 3.5, 1.4, 0.2],[ 4.9, 3. , 1.4, 0.2],[ 4.7, 3.2, 1.3, 0.2]............
+>>> iris.data.size                ##数据大小 ---600个
+>>> iris.target_names             ##显示分类的名字
+    array(['setosa', 'versicolor', 'virginica'], dtype='<U10')
+
+ clf.predict(iris.data[0].reshape(1,-1))       ##验证分类。标红部分特别说明：因为predict的参数是数组，data[0]是列表，所以需要转换一下
+array([0])
+
+>>> data=np.array([6,4,6,2])                      ##验证分类
+>>> clf.predict(data.reshape(1,-1))
+array([2])
+
+
+
+
+2）多项式分布朴素贝叶斯：常用于文本分类，特征是单词，值是单词出现的次数。
+
+##示例来在官方文档，详细说明见第一个例子
+>>> import numpy as np
+>>> X = np.random.randint(5, size=(6, 100))    ##返回随机整数值：范围[0,5) 大小6*100 6行100列
+>>> y = np.array([1, 2, 3, 4, 5, 6])
+>>> from sklearn.naive_bayes import MultinomialNB
+>>> clf = MultinomialNB()
+>>> clf.fit(X, y)
+MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+>>> print(clf.predict(X[2]))
+
+
+
+3）伯努力朴素贝叶斯：每个特征都是是布尔型，得出的结果是0或1，即出现没出现
+
+>>> import numpy as np
+>>> X = np.random.randint(2, size=(6, 100))
+>>> Y = np.array([1, 2, 3, 4, 4, 5])
+>>> from sklearn.naive_bayes import BernoulliNB
+>>> clf = BernoulliNB()
+>>> clf.fit(X, Y)
+BernoulliNB(alpha=1.0, binarize=0.0, class_prior=None, fit_prior=True)
+>>> print(clf.predict(X[2]))
+

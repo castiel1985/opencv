@@ -1,0 +1,346 @@
+SVM
+支持向量机（Support Vector Machines,SVM）
+支持向量机是一项借助于最优化方法来解决机器学习问题的新工具，最初由 V.Vapnik 等人提出，近几年来其在理论研究和算法实现等方面都取得了很大的进展，
+开始成为克服“维数灾难”和过学习等困难的强有力的手段。
+
+
+
+
+
+(一) 最大间隔分隔数据
+分类的目的是学会一个分类器，将数据库中的数据映射到给定类别中的某一个，实现对未知数据类别的预测。
+
+对于二维数据集，将数据集分隔开的直线称为分隔超平面，如果分隔的是三维的，分类的就是面，如果是更高维的就是超平面。将分类的决策边界统称为超平面，分布在超平面一侧的所有数据都属于某个类别，而分布在另一侧的所有数据都属于另一个类别。
+
+那么对于分类而言，合理的构建分类器就尤为重要了，怎样才能构造分类器使得分类结果更为可信。
+
+
+
+(二)支持向量机
+用于分类的SVM本质上是一个二类分类模型。SVM属于监督学习，目的是在给定一个包含正例和反例的样本集合中寻找一个超平面对样本中
+的正例和反例进行分割，同时保证正例和反例之间的间隔最大。这样使得分类结果更为可信，而且对于未知的新样本才能有更好的分类预测能力。
+为了达到类别之间间隔最大，我们不需要考虑所有点，
+只需要让离分隔超平面最近的点距离分隔面的距离尽可能远即可，想想也是很有道理的，这里距离分隔超平面最近的那些点就是支持向量。
+
+SVM的原理：
+   首先，需要给定N个训练样本：{(x1,y1),(x2,y2)…(xn,yn)},其中x是d维向量，表明了每个样本具有d个属性；yi指的是类别，并
+且yi属于{-1,1}。目的是寻找一个实值函数g(x),使得可以用分类函数f(x) = sgn(g(x))推断任意一个样本x所对应的y值。
+
+
+
+
+硬间隔支持向量机（线性可分支持向量机）：当训练数据线性可分时，可通过硬间隔最大化学得一个线性可分支持向量机。
+软间隔支持向量机：当训练数据近似线性可分时，可通过软间隔最大化学得一个线性支持向量机。
+非线性支持向量机：当训练数据线性不可分时，可通过核方法以及软间隔最大化学得一个非线性支持向量机。
+
+（1）线性可分支持向量机（硬间隔支持向量机）
+线性可分SVM就是用上述的N个样本去训练学习得到一个线性分类器，也就是得到一个超平面：f(x) = sgn(w•x+b),线性可分表明当w•x+b>0时，对应的f(x) = 1,相应的当w•x+b<0时，对应的f(x) = -1,而w•x+b = 0就是所要寻找的超平面，
+此时对应的超平面为硬间隔超平面。
+
+先从线性可分的数据讲起，如果需要分类的数据都是线性可分的，那么只需要一根直线f(x)=wx+b就可以分开了.
+线性分类器，一个线性分类器的学习目标便是要在n维的数据空间中找到一个超平面（hyper plane）。也就是说，数据不总是二维的，比如，三维的超平面是面。
+
+
+（2）线性支持向量分类机（软间隔支持向量机）
+
+
+
+
+（3） 核函数（非线性支持向量机）
+线性支持向量分类机，其中允许一定程度上的离群点，那若是样本点真的是线型不可分呢，那就得采用核函数进行处理
+T.M.Cover的模式可分性定理：一个复杂的模式分析问题映射到高维空间后，会比在低维空间线性可分。核方法就是通过非线性映射将原始数据通过特征映射嵌入到新的特征空间（Hilbert空间），
+发现数据在特征空间上的线性模式，进而选取相应的核函数利用输入计算内积。根据对偶解法可得算法所需要的信息位于特征空间上数据点之间的内积，
+维数过大时会影响算法的高效性，所以，将内积作为输入特征的直接函数，更高效的计算内积，减少了算法的时间复杂度。
+
+
+们会经常遇到线性不可分的样例，此时，我们的常用做法是把样例特征映射到高维空间中去。但进一步，如果凡是遇到线性不可分的样例，一律映射到高维空间，那么这个维度大小是会高到可怕的，而且内积方式复杂度太大。此时，核函数就隆重登场了，核函数的价值在于它虽然也是讲特征进行从低维到高维的转换，但核函数绝就绝在它事先在低维上进行计算，而将实质上的分类效果表现在了高维上，也就如上文所说的避免了直接在高维空间中的复杂计算。
+
+几种常用核函数：
+h度多项式核函数（Polynomial Kernel of Degree h）
+高斯径向基和函数（Gaussian radial basis function Kernel）
+S型核函数（Sigmoid function Kernel）
+图像分类，通常使用高斯径向基和函数，因为分类较为平滑，文字不适用高斯径向基和函数。
+没有标准的答案，可以尝试各种核函数，根据精确度判定。
+
+Python实现方式：
+from sklearn import svm
+
+x = [[2,0,1],[1,1,2],[2,3,3]]
+y = [0,0,1] #分类标记
+clf = svm.SVC(kernel = 'linear') #SVM模块，svc,线性核函数
+clf.fit(x,y)
+
+print(clf)
+
+print(clf.support_vectors_) #支持向量点
+
+print(clf.support_) #支持向量点的索引
+
+print(clf.n_support_) #每个class有几个支持向量点
+
+print(clf.predict([2,0,3])) #预测
+
+线性，展示图：
+from sklearn import svm
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(0)
+x = np.r_[np.random.randn(20,2)-[2,2],np.random.randn(20,2)+[2,2]] #正态分布来产生数字,20行2列*2
+y = [0]*20+[1]*20 #20个class0，20个class1
+
+clf = svm.SVC(kernel='linear')
+clf.fit(x,y)
+
+w = clf.coef_[0] #获取w
+a = -w[0]/w[1] #斜率
+#画图划线
+xx = np.linspace(-5,5) #(-5,5)之间x的值
+yy = a*xx-(clf.intercept_[0])/w[1] #xx带入y，截距
+
+#画出与点相切的线
+b = clf.support_vectors_[0]
+yy_down = a*xx+(b[1]-a*b[0])
+b = clf.support_vectors_[-1]
+yy_up = a*xx+(b[1]-a*b[0])
+
+print("W:",w)
+print("a:",a)
+
+print("support_vectors_:",clf.support_vectors_)
+print("clf.coef_:",clf.coef_)
+
+plt.figure(figsize=(8,4))
+plt.plot(xx,yy)
+plt.plot(xx,yy_down)
+plt.plot(xx,yy_up)
+plt.scatter(clf.support_vectors_[:,0],clf.support_vectors_[:,1],s=80)
+plt.scatter(x[:,0],x[:,1],c=y,cmap=plt.cm.Paired) #[:，0]列切片，第0列
+
+plt.axis('tight')
+
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+SVM的优缺点
+优点：
+SVM在中小量样本规模的时候容易得到数据和特征之间的非线性关系，可以避免使用神经网络结构选择和局部极小值问题，可解释性强，
+可以解决高维问题。
+缺点：
+SVM对缺失数据敏感，对非线性问题没有通用的解决方案，核函数的正确选择不容易，计算复杂度高，主流的算法可以达到O(n2)的复杂度，
+这对大规模的数据是吃不消的。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Python中的支持向量机SVM的使用（有实例）
+　Scikit-Learn库已经实现了所有基本机器学习的算法，具体使用详见官方文档说明：http://scikit-learn.org/stable/auto_examples/index.html#support-vector-machines。
+
+　　skleran中集成了许多算法，其导入包的方式如下所示，
+
+　　逻辑回归：from sklearn.linear_model import LogisticRegression
+
+      朴素贝叶斯：from sklearn.naive_bayes import GaussianNB
+
+ 　　K-近邻：from sklearn.neighbors import KNeighborsClassifier
+
+ 　　决策树：from sklearn.tree import DecisionTreeClassifier
+
+ 　　支持向量机：from sklearn import svm
+
+
+
+代码1：
+from sklearn import svm
+import numpy as np
+import matplotlib.pyplot as plt
+
+#准备训练样本
+x=[[1,8],[3,20],[1,15],[3,35],[5,35],[4,40],[7,80],[6,49]]
+y=[1,1,-1,-1,1,-1,-1,1]
+
+##开始训练
+clf=svm.SVC()  ##默认参数：kernel='rbf'     kernel='rbf',这个参数是SVM的核心：核函数
+clf.fit(x,y)
+
+#print("预测...")
+#res=clf.predict([[2,2]])  ##两个方括号表面传入的参数是矩阵而不是list
+
+##根据训练出的模型绘制样本点
+for i in x:
+    res=clf.predict(np.array(i).reshape(1, -1))
+    if res > 0:
+        plt.scatter(i[0],i[1],c='r',marker='*')
+    else :
+        plt.scatter(i[0],i[1],c='g',marker='*')
+
+##生成随机实验数据(15行2列)
+rdm_arr=np.random.randint(1, 15, size=(15,2))
+##回执实验数据点
+for i in rdm_arr:
+    res=clf.predict(np.array(i).reshape(1, -1))
+    if res > 0:
+        plt.scatter(i[0],i[1],c='r',marker='.')
+    else :
+        plt.scatter(i[0],i[1],c='g',marker='.')
+##显示绘图结果
+plt.show()
+
+
+
+代码2：
+from sklearn import svm
+import numpy as np
+import matplotlib.pyplot as plt
+
+##设置子图数量
+fig, axes = plt.subplots(nrows=2, ncols=2,figsize=(7,7))
+ax0, ax1, ax2, ax3 = axes.flatten()
+
+#准备训练样本
+x=[[1,8],[3,20],[1,15],[3,35],[5,35],[4,40],[7,80],[6,49]]
+y=[1,1,-1,-1,1,-1,-1,1]
+'''
+    说明1：
+       核函数(这里简单介绍了sklearn中svm的四个核函数，还有precomputed及自定义的)
+
+    LinearSVC：主要用于线性可分的情形。参数少，速度快，对于一般数据，分类效果已经很理想
+    RBF:主要用于线性不可分的情形。参数多，分类结果非常依赖于参数
+    polynomial:多项式函数,degree 表示多项式的程度-----支持非线性分类
+    Sigmoid：在生物学中常见的S型的函数，也称为S型生长曲线
+
+    说明2：根据设置的参数不同，得出的分类结果及显示结果也会不同
+
+'''
+##设置子图的标题
+titles = ['LinearSVC (linear kernel)',
+          'SVC with polynomial (degree 3) kernel',
+          'SVC with RBF kernel',      ##这个是默认的
+          'SVC with Sigmoid kernel']
+##生成随机试验数据(15行2列)
+rdm_arr=np.random.randint(1, 15, size=(15,2))
+
+def drawPoint(ax,clf,tn):
+    ##绘制样本点
+    for i in x:
+        ax.set_title(titles[tn])
+        res=clf.predict(np.array(i).reshape(1, -1))
+        if res > 0:
+           ax.scatter(i[0],i[1],c='r',marker='*')
+        else :
+           ax.scatter(i[0],i[1],c='g',marker='*')
+     ##绘制实验点
+    for i in rdm_arr:
+        res=clf.predict(np.array(i).reshape(1, -1))
+        if res > 0:
+           ax.scatter(i[0],i[1],c='r',marker='.')
+        else :
+           ax.scatter(i[0],i[1],c='g',marker='.')
+
+if __name__=="__main__":
+    ##选择核函数
+    for n in range(0,4):
+        if n==0:
+            clf = svm.SVC(kernel='linear').fit(x, y)
+            drawPoint(ax0,clf,0)
+        elif n==1:
+            clf = svm.SVC(kernel='poly', degree=3).fit(x, y)
+            drawPoint(ax1,clf,1)
+        elif n==2:
+            clf= svm.SVC(kernel='rbf').fit(x, y)
+            drawPoint(ax2,clf,2)
+        else :
+            clf= svm.SVC(kernel='sigmoid').fit(x, y)
+            drawPoint(ax3,clf,3)
+    plt.show()
+
+
+代码3：在svm模块中还有一个较为简单的线性分类函数：LinearSVC()，其不支持kernel参数，因为设计思想就是线性分类。如果确定数据
+
+可以进行线性划分，可以选择此函数。跟kernel='linear'用法对比如下：
+
+
+from sklearn import svm
+import numpy as np
+import matplotlib.pyplot as plt
+
+##设置子图数量
+fig, axes = plt.subplots(nrows=1, ncols=2,figsize=(7,7))
+ax0, ax1 = axes.flatten()
+
+#准备训练样本
+x=[[1,8],[3,20],[1,15],[3,35],[5,35],[4,40],[7,80],[6,49]]
+y=[1,1,-1,-1,1,-1,-1,1]
+
+##设置子图的标题
+titles = ['SVC (linear kernel)',
+          'LinearSVC']
+
+##生成随机试验数据(15行2列)
+rdm_arr=np.random.randint(1, 15, size=(15,2))
+
+##画图函数
+def drawPoint(ax,clf,tn):
+    ##绘制样本点
+    for i in x:
+        ax.set_title(titles[tn])
+        res=clf.predict(np.array(i).reshape(1, -1))
+        if res > 0:
+           ax.scatter(i[0],i[1],c='r',marker='*')
+        else :
+           ax.scatter(i[0],i[1],c='g',marker='*')
+    ##绘制实验点
+    for i in rdm_arr:
+        res=clf.predict(np.array(i).reshape(1, -1))
+        if res > 0:
+           ax.scatter(i[0],i[1],c='r',marker='.')
+        else :
+           ax.scatter(i[0],i[1],c='g',marker='.')
+
+if __name__=="__main__":
+    ##选择核函数
+    for n in range(0,2):
+        if n==0:
+            clf = svm.SVC(kernel='linear').fit(x, y)
+            drawPoint(ax0,clf,0)
+        else :
+            clf= svm.LinearSVC().fit(x, y)
+            drawPoint(ax1,clf,1)
+    plt.show()
+
+

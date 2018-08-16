@@ -1,0 +1,172 @@
+
+YOLO
+物体检测算法:
+
+实时物体检测的主要三环节
+搜集数据
+面对成千上万的物体种类与名称，必须预先搜集我们期望机器了解的种类的图像数据，通常需要上千张类似的图片作为资料库，面对庞大的量我们将会选择使用简单爬虫的方法，利用常见的搜寻引擎如 Google 或是 Baidu 作为主要手段。
+标记数据
+搜集好数据后，接下来的步骤就是手把手的教导机器 “什么是什么” 环节。面对每张涵盖了相关信息内容的图片，我们将基于这些图片生成一个 xml 文档来记录相关物体的坐标信息，并以此 xml 文档与对应图片作为输入要件，进入到下一个步骤。
+训练模型
+下载好相关的 YOLO 文件（它们都是检测算法里面重要的部件），并在 Terminal 或是 CMD 里面告诉计算机前面两个环节生成好的文件所在路径，最后开始让计算机去根据我们搜集来的数据训练，等到 Loss Value 降低到一个极限的时候，
+基本上就可以认定它被训练好了，并可以作为一个更新的模型辨认出我们希望它辨认的物体。
+
+
+
+
+
+
+
+
+demo:
+/*
+"""Demo for use yolo v3
+"""
+import os
+import time
+import cv2
+import numpy as np
+from model.yolo_model import YOLO
+
+
+def process_image(img):
+    """Resize, reduce and expand image.
+
+    # Argument:
+        img: original image.
+
+    # Returns
+        image: ndarray(64, 64, 3), processed image.
+    """
+    image = cv2.resize(img, (416, 416),
+                       interpolation=cv2.INTER_CUBIC)
+    image = np.array(image, dtype='float32')
+    image /= 255.
+    image = np.expand_dims(image, axis=0)
+
+    return image
+
+
+def get_classes(file):
+    """Get classes name.
+
+    # Argument:
+        file: classes name for database.
+
+    # Returns
+        class_names: List, classes name.
+
+    """
+    with open(file) as f:
+        class_names = f.readlines()
+    class_names = [c.strip() for c in class_names]
+
+    return class_names
+
+
+def draw(image, boxes, scores, classes, all_classes):
+    """Draw the boxes on the image.
+
+    # Argument:
+        image: original image.
+        boxes: ndarray, boxes of objects.
+        classes: ndarray, classes of objects.
+        scores: ndarray, scores of objects.
+        all_classes: all classes name.
+    """
+    for box, score, cl in zip(boxes, scores, classes):
+        x, y, w, h = box
+
+        top = max(0, np.floor(x + 0.5).astype(int))
+        left = max(0, np.floor(y + 0.5).astype(int))
+        right = min(image.shape[1], np.floor(x + w + 0.5).astype(int))
+        bottom = min(image.shape[0], np.floor(y + h + 0.5).astype(int))
+
+        cv2.rectangle(image, (top, left), (right, bottom), (255, 0, 0), 2)
+        cv2.putText(image, '{0} {1:.2f}'.format(all_classes[cl], score),
+                    (top, left - 6),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.6, (0, 0, 255), 1,
+                    cv2.LINE_AA)
+
+        print('class: {0}, score: {1:.2f}'.format(all_classes[cl], score))
+        print('box coordinate x,y,w,h: {0}'.format(box))
+
+    print()
+
+
+def detect_image(image, yolo, all_classes):
+    """Use yolo v3 to detect images.
+
+    # Argument:
+        image: original image.
+        yolo: YOLO, yolo model.
+        all_classes: all classes name.
+
+    # Returns:
+        image: processed image.
+    """
+    pimage = process_image(image)
+
+    start = time.time()
+    boxes, classes, scores = yolo.predict(pimage, image.shape)
+    end = time.time()
+
+    print('time: {0:.2f}s'.format(end - start))
+
+    if boxes is not None:
+        draw(image, boxes, scores, classes, all_classes)
+
+    return image
+
+
+def detect_vedio(video, yolo, all_classes):
+    """Use yolo v3 to detect video.
+
+    # Argument:
+        video: video file.
+        yolo: YOLO, yolo model.
+        all_classes: all classes name.
+    """
+    camera = cv2.VideoCapture(video)
+    cv2.namedWindow("detection", cv2.WINDOW_NORMAL)
+
+    while True:
+        res, frame = camera.read()
+
+        if not res:
+            break
+
+        image = detect_image(frame, yolo, all_classes)
+        cv2.imshow("detection", image)
+
+        if cv2.waitKey(110) & 0xff == 27:
+                break
+
+    camera.release()
+
+
+if __name__ == '__main__':
+    yolo = YOLO(0.6, 0.5)
+    file = 'data/coco_classes.txt'
+    all_classes = get_classes(file)
+
+    # detect images in test floder.
+    for (root, dirs, files) in os.walk('images/test'):
+        if files:
+            for f in files:
+                print(f)
+                path = os.path.join(root, f)
+                image = cv2.imread(path)
+                image = detect_image(image, yolo, all_classes)
+                cv2.imwrite('images/res/' + f, image)
+
+    # detect vedio.
+    video = 'E:/video/car.flv'
+    detect_vedio(video, yolo, all_classes)
+
+作者：洛荷
+链接：https://www.jianshu.com/p/3943be47fe84
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+*/

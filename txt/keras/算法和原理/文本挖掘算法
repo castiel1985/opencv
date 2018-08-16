@@ -1,0 +1,255 @@
+
+文本挖掘:
+文本挖掘是从大量文本中，比如微博评论，知乎评论，JD，天猫淘宝大量评论中，文本中，抽取出有价值的知识，
+并利用这些知识创造出价值，实现变现的过程。
+
+1.语料库(Corpus):
+语料库就是我们要分析的所有文档的集合
+
+把语料数据作为语料库导入到内存中:
+/*
+# -*- coding:utf-8 -*-
+import os
+import os.path
+import codecs
+filePaths=[]
+fileContents=[]
+for root,dirs,files in os.walk('Users/apple/Documents/Iphone8'):
+    for name in files:
+        filePath=os.path.join(root,name)
+        filePaths.append(filePath)
+        f=codecs.open(filePath,'r','utf-8')
+        fileContent=f.read()
+        f.close()
+        fileContents.append(fileContent)
+
+import pandas
+corpos=pandas.DataFrame({
+    'filePath':filePaths,
+    'fileContent':fileContents
+})
+*/
+解释：
+把一个文件夹中，包括嵌套文件夹的全路径，读入到一个内存变量中，我们定义为filePaths数组变量，接着使用os中walk方法，传入这个目录作为参数，就可以遍历该文件中的所有文件了
+for root,dirs,files in os.walk中root为文件目录，dirs为root目录下的所有子目录，root目录下的所有文件，我们命名为files，然后进行遍历。
+为了拿到root目录下的所有文件，我们再次便利所有的文件（代码：for name in files:）把它追加到filePaths变量中去即可。
+os.path.join是拼接文件路径的方法，因为文件路径在windows,mac,linux中的写法是不同的，使用这个方法可以解决在不同系统中使用文件路径要使用不同方法的问题。
+最后组建数据框pandas.DataFrame
+
+
+
+2.中文分词（Chinese Word Segmentation）
+中文分词：将一个汉字序列切分成一个一个单独的词
+例如：是数据分析部落的发起人 —-> 我／是／数据／分析／部落／的／发起人（@数据分析-jacky）
+
+停用词（Stop Words）
+泛滥的词：如web,网站等；
+语气助词、副词、介词、连接词等：如的、地、得
+
+分词模块－jieba分词包：
+（1）jieba基本使用方法－cut方法：
+import jieba
+for w in jieba.cut('我是数据分析－jacky'):
+    print(w)
+
+(2)导入词库
+import jieba
+jieba.add_word('天马流星拳')
+jieba.add_word('庐山升龙霸')
+jieba.add_word('牛逼')
+seg_list = jieba.cut('天马流星拳和庐山升龙霸哪个更牛逼呢？')
+for w in seg_list:
+    print(w)
+
+或者:
+ 可以使用load_userdict方法一次导入用户自定义词库中
+ jieba.load_userdict('路径／圣斗士招数.txt')
+
+
+ (3)与语料库结合的实操案例
+ /*
+ # -*- coding:utf-8 -*-
+#搭建预料库
+import os
+import os.path
+import codecs
+filePaths=[]
+fileContents=[]
+for root,dirs,files in os.walk('Iphone8'):
+    for name in files:
+        filePath=os.path.join(root,name)
+        filePaths.append(filePath)
+        f=codecs.open(filePath,'r','GB2312')
+        fileContent=f.read()
+        f.close()
+        fileContents.append(fileContent)
+
+import pandas
+corpos=pandas.DataFrame({
+    'filePath':filePaths,
+    'fileContent':fileContents
+})
+
+#每个分词后面都要跟着一个信息，那就是这个分词来源是哪篇文章
+#因此，我们的结果除了分词，还需要指明分词的出处，以便进行后续的分析
+import jieba
+segments=[]
+filePaths=[]
+#接下来，遍历所有文章,使用数据框的方法，我们获取到语料库的每行数据，这样遍历得到的行是一个字典，
+#列名index作为key,于是我们可以通过列名，使用字典的值的获取方法，获取到文件路径filePath，和文件内容fileContent
+
+for index,row in corpos.iterrows():
+    filePath=row['filePath']
+    fileContent=row['fileContent']
+    #接着调用cut方法，对文件内容进行分词
+    segs=jieba.cut(fileContent)
+    #接着遍历每个分词，和分词对应的文件路径一起，把它加到两列中
+    for seg in segs:
+        segments.append(seg)
+        filePaths.append(filePath)
+
+#最后我们把得到的结果存在一个数据框中
+segmentDataFrame=pandas.DataFrame({
+    'segment':segments,
+    'filePath':filePaths
+})
+
+print(segmentDataFrame)
+ */
+
+
+3.文本挖掘的入口－词频统计
+词频：某个词在该文档中出现的次数
+词频统计：
+/*
+import numpy
+#进行词频统计
+segStat=segmentDataFrame.groupby(
+    by='segment'
+)['segment'].agg({'计数':numpy.size}).reset_index().sort(
+    columns=['计数']，
+    ascending=False
+)
+*/
+
+过滤停用词：
+/*
+首先判断分词列里面是否包含这些停用词
+stopwords=pandas.read_csv(
+"路径.txt",
+encoding='utf-8',
+index_col=False
+)
+#用isin方法，包含停用词就过滤词，用～符号取反
+fSegStat=segStat[
+~segStat.segment.isin(stopwords.stopword)
+]
+
+*/
+
+4.生词词云
+/*
+#导入WordCloud和matplotlib包
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+#生成一个matplot对象，传入一个字体位置的路径和背景颜色即可
+wordcloud=WordCloud(
+        font_path='字体路径\simhei.ttf',
+        background_color='black'
+)
+#WordCloud方法接受一个字典结构的输入，我们前面整理出来的词频统计结果是数据框的形式，因此需要转换，转换的方法，首先把分词设置为数据框的索引，然后在调用一个to_dict()的方法，就可以转换为字典的机构
+words=fSegStat.set_index('segment').to_dict()
+
+#接着调用fit_words方法来调用我们的词频
+wordcloud.fit_words(words['计数'])
+
+#绘图
+plt.imshow(wordcloud)
+plt.close()
+*/
+
+
+
+5.完整代码：
+/*
+# -*- coding:utf-8 -*-
+import os
+import os.path
+import codecs
+filePaths=[]
+fileContents=[]
+for root,dirs,files in os.walk('Users/apple/Documents/Iphone8'):
+    for name in files:
+        filePath=os.path.join(root,name)
+        filePaths.append(filePath)
+        f=codecs.open(filePath,'r','utf-8')
+        fileContent=f.read()
+        f.close()
+        fileContents.append(fileContent)
+
+import pandas
+corpos=pandas.DataFrame({
+    'filePath':filePaths,
+    'fileContent':fileContents
+})
+
+import jieba
+segments=[]
+filePaths=[]
+for index,row in corpos.iterrows():
+    filePath=row['filePath']
+    fileContent=row['fileContent']
+    segs=jieba.cut(fileContent)
+    for seg in segs:
+        segments.append(seg)
+        filePaths.append(filePath)
+segmentDataFrame=pandas.DataFrame({
+    'segment':segments,
+    'filePath':filePaths
+})
+
+import numpy
+segStat=segmentDataFrame.groupby(
+    by='segment'
+)['segment'].agg({'计数':numpy.size}).reset_index().sort(
+    columns=['计数']，
+    ascending=False
+)
+
+stopwords=pandas.read_csv(
+"路径.txt",
+encoding='utf-8',
+index_col=False
+)
+fSegStat=segStat[
+~segStat.segment.isin(stopwords.stopword)
+]
+
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+wordcloud=WordCloud(
+        font_path='字体路径\simhei.ttf',
+        background_color='black'
+)
+words=fSegStat.set_index('segment').to_dict()
+wordcloud.fit_words(words['计数'])
+plt.imshow(wordcloud)
+plt.close()
+*/
+
+
+
+总结：
+数据存储于读取数据：xlrd
+中文分词及词性标注：jieba
+分句：自己编写，可参见该日志使用 Python 实现中文分句
+文本相似度计算：gensim
+自然语言处理：nltk
+情感分析（词典方法）：自己编写词典匹配
+情感分类（机器学习方法）：nltk + scikit-learn
+机器学习：scikit-learn
+
+
+
+

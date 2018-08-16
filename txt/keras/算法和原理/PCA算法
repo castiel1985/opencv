@@ -1,0 +1,74 @@
+PCA主成分分析（principal component analysis）
+是一种常见的数据降维方法，其目的是在“信息”损失较小的前提下，将高维的数据转换到低维，从而减小计算量。
+
+PCA的本质就是找一些投影方向，使得数据在这些投影方向上的方差最大，而且这些投影方向是相互正交的。这其实就是找新的正交基的过程，计算原始数据在这些正交基上投影的方差，方差越大，就说明在对应正交基上包含了更多的信息量。
+后面会证明，原始数据协方差矩阵的特征值越大，对应的方差越大，在对应的特征向量上投影的信息量就越大。
+反之，如果特征值较小，则说明数据在这些特征向量上投影的信息量很小，可以将小特征值对应方向的数据删除，从而达到了降维的目的。
+
+PCA的全部工作简单点说，就是对原始的空间中顺序地找一组相互正交的坐标轴，第一个轴是使得方差最大的，第二个轴是在与第一个轴正交的平面中使得方差最大的，第三个轴是在与第1、2个轴正交的平面中方差最大的，这样假设在N维空间中，
+我们可以找到N个这样的坐标轴，我们取前r个去近似这个空间，这样就从一个N维的空间压缩到r维的空间了，但是我们选择的r个坐标轴能够使得空间的压缩使得数据的损失最小。
+
+一般步骤来实现PCA算法:
+1）零均值化
+假如原始数据集为矩阵dataMat，dataMat中每一行代表一个样本，每一列代表同一个特征。零均值化就是求每一列的平均值，然后该列上的所有数都减去这个均值。也就是说，这里零均值化是对每一个特征而言的，零均值化都，每个特征的均值变成0。
+
+2）求协方差矩阵
+covMat即所求的协方差矩阵。
+
+3）求特征值、特征矩阵
+调用numpy中的线性代数模块linalg中的eig函数，可以直接由covMat求得特征值和特征向量
+
+4）保留主要的成分[即保留值比较大的前n个特征]
+第三步得到了特征值向量eigVals，假设里面有m个特征值，我们可以对其排序，排在前面的n个特征值所对应的特征向量就是我们要保留的，它们组成了新的特征空间的一组基n_eigVect。
+将零均值化后的数据乘以n_eigVect就可以得到降维后的数据。
+说明一下，首先argsort对特征值是从小到大排序的，那么最大的n个特征值就排在后面，
+所以eigValIndice[-1:-(n+1):-1]就取出这个n个特征值对应的下标。
+
+python实现:
+/*
+#coding=utf-8
+from numpy import *
+
+'''通过方差的百分比来计算将数据降到多少维是比较合适的，
+函数传入的参数是特征值和百分比percentage，返回需要降到的维度数num'''
+def eigValPct(eigVals,percentage):
+    sortArray=sort(eigVals) #使用numpy中的sort()对特征值按照从小到大排序
+    sortArray=sortArray[-1::-1] #特征值从大到小排序
+    arraySum=sum(sortArray) #数据全部的方差arraySum
+    tempSum=0
+    num=0
+    for i in sortArray:
+        tempSum+=i
+        num+=1
+        if tempsum>=arraySum*percentage:
+            return num
+
+'''pca函数有两个参数，其中dataMat是已经转换成矩阵matrix形式的数据集，列表示特征；
+其中的percentage表示取前多少个特征需要达到的方差占比，默认为0.9'''
+def pca(dataMat,percentage=0.9):
+    meanVals=mean(dataMat,axis=0)  #对每一列求平均值，因为协方差的计算中需要减去均值
+    meanRemoved=dataMat-meanVals
+    covMat=cov(meanRemoved,rowvar=0)  #cov()计算方差
+    eigVals,eigVects=linalg.eig(mat(covMat))  #利用numpy中寻找特征值和特征向量的模块linalg中的eig()方法
+    k=eigValPct(eigVals,percentage) #要达到方差的百分比percentage，需要前k个向量
+    eigValInd=argsort(eigVals)  #对特征值eigVals从小到大排序
+    eigValInd=eigValInd[:-(k+1):-1] #从排好序的特征值，从后往前取k个，这样就实现了特征值的从大到小排列
+    redEigVects=eigVects[:,eigValInd]   #返回排序后特征值对应的特征向量redEigVects（主成分）
+    lowDDataMat=meanRemoved*redEigVects #将原始数据投影到主成分上得到新的低维数据lowDDataMat
+    reconMat=(lowDDataMat*redEigVects.T)+meanVals   #得到重构数据reconMat
+    return lowDDataMat,reconMat
+
+*/
+
+
+
+
+
+
+
+PCA算法是如何实现的？
+简单来说，就是将数据从原始的空间中转换到新的特征空间中，例如原始的空间是三维的(x,y,z)，x、y、z分别是原始空间的三个基，我们可以通过某种方法，用新的坐标系(a,b,c)来表示原始的数据，
+那么a、b、c就是新的基，它们组成新的特征空间。在新的特征空间中，可能所有的数据在c上的投影都接近于0，即可以忽略，那么我们就可以直接用(a,b)来表示数据，这样数据就从三维的(x,y,z)降到了二维的(a,b)。
+
+问题是如何求新的基(a,b,c)?
+一般步骤是这样的：先对原始数据零均值化，然后求协方差矩阵，接着对协方差矩阵求特征向量和特征值，这些特征向量组成了新的特征空间。具体的细节，推荐Andrew Ng的网页教程：Ufldl 主成分分析 ，写得很详细。

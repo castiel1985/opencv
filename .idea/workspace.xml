@@ -3,225 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4234b31f-350e-4710-aa4e-be58dc4b98d8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/face/basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/face/basic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gaotongluboqi.py" beforeDir="false" afterPath="$PROJECT_DIR$/gaotongluboqi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imageread.py" beforeDir="false" afterPath="$PROJECT_DIR$/imageread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiance/Laplacian.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/Laplacian.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiance/Sobel.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/Sobel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiance/canny.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/canny.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiance/circles.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/circles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiance/line.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/line.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiance/tuluokuo.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/tuluokuo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiance/zuixiaolunkuo.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/zuixiaolunkuo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/app/img.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/app/img.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/model.increment.json.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/model.json.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/model.yaml.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-00-0.23.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-01-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-02-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-03-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-04-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-05-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-06-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-07-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-08-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-09-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-10-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-100-0.77.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-101-0.77.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-102-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-103-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-104-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-105-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-106-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-107-0.77.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-108-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-109-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-11-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-110-0.83.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-111-0.77.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-112-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-113-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-114-0.90.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-115-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-116-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-117-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-118-0.77.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-119-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-12-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-120-0.83.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-121-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-122-0.77.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-123-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-124-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-125-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-126-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-127-0.77.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-128-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-129-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-13-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-130-0.77.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-131-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-132-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-133-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-134-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-135-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-136-0.77.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-137-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-138-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-139-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-14-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-140-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-141-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-142-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-143-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-144-0.80.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-145-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-146-0.87.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-147-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-148-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-149-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-15-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-150-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-151-0.83.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-152-0.83.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-153-0.80.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-154-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-155-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-156-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-157-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-158-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-159-0.80.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-16-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-160-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-161-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-162-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-163-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-164-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-165-0.83.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-166-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-167-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-168-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-169-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-17-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-170-0.80.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-171-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-172-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-173-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-174-0.80.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-175-0.80.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-176-0.83.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-177-0.80.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-178-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-179-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-18-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-180-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-181-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-182-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-183-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-184-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-185-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-186-0.80.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-187-0.80.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-188-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-189-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-19-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-190-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-191-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-192-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-193-0.80.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-194-0.83.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-195-0.83.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-196-0.87.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-197-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-198-0.80.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-199-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-20-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-21-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-22-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-23-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-24-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-25-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-26-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-27-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-28-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-29-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-30-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-31-0.00.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-32-0.33.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-33-0.40.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-34-0.43.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-35-0.43.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-36-0.40.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-37-0.40.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-38-0.40.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-39-0.43.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-40-0.60.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-41-0.53.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-42-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-43-0.60.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-44-0.47.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-45-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-46-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-47-0.60.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-48-0.60.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-49-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-50-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-51-0.60.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-52-0.60.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-53-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-54-0.53.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-55-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-56-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-57-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-58-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-59-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-60-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-61-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-62-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-63-0.63.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-64-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-65-0.63.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-66-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-67-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-68-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-69-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-70-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-71-0.53.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-72-0.63.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-73-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-74-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-75-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-76-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-77-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-78-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-79-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-80-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-81-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-82-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-83-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-84-0.77.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-85-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-86-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-87-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-88-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-89-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-90-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-91-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-92-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-93-0.77.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-94-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-95-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-96-0.67.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-97-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-98-0.70.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-99-0.73.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights.best.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/txt/keras/算法和原理/NLP" beforeDir="false" afterPath="$PROJECT_DIR$/txt/keras/算法和原理/NLP" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gaotongluboqi.py" beforeDir="false" afterPath="$PROJECT_DIR$/face/gaotongluboqi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageread.py" beforeDir="false" afterPath="$PROJECT_DIR$/face/imageread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localcamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/face/localcamera.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -239,17 +23,7 @@
     <SUITE FILE_PATH="coverage/git$lunkuo.coverage" NAME="lunkuo Coverage Results" MODIFIED="1529031958676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jiance" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Untitled.ipynb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Untitled.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -348,11 +122,6 @@
               <item name="git" type="b2602c69:ProjectViewProjectNode" />
               <item name="git" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="git" type="462c0819:PsiDirectoryNode" />
-              <item name=".ipynb_checkpoints" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -366,16 +135,16 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/rest/app/user" />
-      <recent name="$PROJECT_DIR$/rest/app" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/face" />
       <recent name="$PROJECT_DIR$/txt/keras/算法和原理" />
       <recent name="$PROJECT_DIR$/txt/keras/BASE" />
       <recent name="$PROJECT_DIR$/txt/keras/循环神经网络" />
       <recent name="$PROJECT_DIR$/txt/keras" />
-      <recent name="$PROJECT_DIR$/txt/AI" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rest/app/user" />
+      <recent name="$PROJECT_DIR$/rest/app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -513,7 +282,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27954668" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -545,29 +313,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rest/test/keras/deep/chapter10/yaml_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="55" column="39" selection-start-line="40" selection-end-line="55" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/结构图/1.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/结构图/3.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/结构图/2.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/test/keras/deep/chapter18/mlp_regression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/txt/keras/循环神经网络/循环神经网络理论">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -673,9 +418,6 @@
           <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/txt/keras/example/VGG.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -840,6 +582,30 @@
           <selected id="0" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face/data/retacn/3.pgm">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face/gaotongluboqi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face/localcamera.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face/imageread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

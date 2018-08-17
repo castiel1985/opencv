@@ -5,7 +5,7 @@ NLP（自然语言处理）
 这里讨论一些自然语言处理(NLP)的实际应用例子，如语音识别、语音翻译、理解完整的句子、理解匹配词的同义词，以及生成语法正确完整句子和段落。
 
 NLP库
-下面是一些开源的自然语言处理库(NLP)：
+下面是一些开源的自然语言处理库(NLP)：cd
 Natural language toolkit (NLTK);
 Apache OpenNLP;
 Stanford NLP suite;

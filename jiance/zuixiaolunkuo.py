@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.pyrDown(cv2.imread('../img/2.jpg', cv2.IMREAD_UNCHANGED))
+img = cv2.pyrDown(cv2.imread('../结构图/2.jpg', cv2.IMREAD_UNCHANGED))
 
 ret, thresh = cv2.threshold(cv2.cvtColor(img.copy(),
                                          cv2.COLOR_BGR2GRAY),

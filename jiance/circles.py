@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 #读入图像
-img=cv2.imread('../img/2.jpg')
+img=cv2.imread('../结构图/2.jpg')
 #更换颜色空间
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 #中值边滤

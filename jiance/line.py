@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 #读入图像
-img=cv2.imread('../img/5.jpg')
+img=cv2.imread('../结构图/5.jpg')
 #转换颜色空间
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 #边缘检测

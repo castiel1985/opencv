@@ -2,17 +2,226 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4234b31f-350e-4710-aa4e-be58dc4b98d8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/rest/app/auth/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/app/auth/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/app/auth/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/app/auth/timeline.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/app/test/20170704.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/rest/test/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/a.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/test/a.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest/test/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/rest/test/geckodriver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/txt/a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/a.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/face/basic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gaotongluboqi.py" beforeDir="false" afterPath="$PROJECT_DIR$/gaotongluboqi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageread.py" beforeDir="false" afterPath="$PROJECT_DIR$/imageread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiance/Laplacian.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/Laplacian.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiance/Sobel.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/Sobel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiance/canny.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/canny.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiance/circles.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/circles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiance/line.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/line.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiance/tuluokuo.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/tuluokuo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiance/zuixiaolunkuo.py" beforeDir="false" afterPath="$PROJECT_DIR$/jiance/zuixiaolunkuo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/app/img.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/app/img.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/model.increment.json.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/model.json.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/model.yaml.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-00-0.23.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-01-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-02-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-03-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-04-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-05-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-06-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-07-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-08-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-09-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-10-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-100-0.77.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-101-0.77.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-102-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-103-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-104-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-105-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-106-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-107-0.77.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-108-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-109-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-11-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-110-0.83.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-111-0.77.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-112-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-113-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-114-0.90.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-115-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-116-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-117-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-118-0.77.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-119-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-12-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-120-0.83.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-121-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-122-0.77.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-123-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-124-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-125-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-126-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-127-0.77.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-128-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-129-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-13-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-130-0.77.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-131-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-132-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-133-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-134-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-135-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-136-0.77.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-137-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-138-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-139-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-14-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-140-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-141-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-142-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-143-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-144-0.80.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-145-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-146-0.87.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-147-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-148-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-149-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-15-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-150-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-151-0.83.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-152-0.83.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-153-0.80.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-154-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-155-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-156-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-157-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-158-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-159-0.80.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-16-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-160-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-161-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-162-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-163-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-164-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-165-0.83.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-166-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-167-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-168-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-169-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-17-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-170-0.80.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-171-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-172-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-173-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-174-0.80.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-175-0.80.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-176-0.83.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-177-0.80.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-178-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-179-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-18-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-180-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-181-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-182-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-183-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-184-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-185-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-186-0.80.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-187-0.80.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-188-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-189-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-19-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-190-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-191-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-192-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-193-0.80.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-194-0.83.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-195-0.83.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-196-0.87.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-197-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-198-0.80.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-199-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-20-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-21-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-22-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-23-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-24-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-25-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-26-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-27-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-28-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-29-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-30-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-31-0.00.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-32-0.33.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-33-0.40.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-34-0.43.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-35-0.43.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-36-0.40.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-37-0.40.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-38-0.40.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-39-0.43.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-40-0.60.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-41-0.53.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-42-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-43-0.60.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-44-0.47.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-45-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-46-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-47-0.60.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-48-0.60.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-49-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-50-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-51-0.60.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-52-0.60.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-53-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-54-0.53.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-55-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-56-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-57-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-58-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-59-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-60-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-61-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-62-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-63-0.63.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-64-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-65-0.63.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-66-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-67-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-68-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-69-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-70-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-71-0.53.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-72-0.63.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-73-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-74-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-75-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-76-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-77-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-78-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-79-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-80-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-81-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-82-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-83-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-84-0.77.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-85-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-86-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-87-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-88-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-89-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-90-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-91-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-92-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-93-0.77.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-94-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-95-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-96-0.67.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-97-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-98-0.70.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights-improvement-99-0.73.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/test/keras/deep/chapter10/weights.best.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/txt/keras/算法和原理/NLP" beforeDir="false" afterPath="$PROJECT_DIR$/txt/keras/算法和原理/NLP" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,11 +240,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="a.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/txt/a.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+      <file leaf-file-name="Untitled.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Untitled.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="0" />
             </state>
           </provider>
         </entry>
@@ -55,53 +264,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/img/capyure.py" />
-        <option value="$PROJECT_DIR$/12.py" />
-        <option value="$PROJECT_DIR$/savevideo.py" />
-        <option value="$PROJECT_DIR$/gaotongluboqi.py" />
-        <option value="$PROJECT_DIR$/lbq/__init__.py" />
-        <option value="$PROJECT_DIR$/bianyuanjiance.py" />
-        <option value="$PROJECT_DIR$/bianyuanjiance/Laplacian.py" />
-        <option value="$PROJECT_DIR$/bianyuanjiance/Sobel.py" />
-        <option value="$PROJECT_DIR$/bianyuanjiance/canny.py" />
-        <option value="$PROJECT_DIR$/lbq/Managers.py" />
-        <option value="$PROJECT_DIR$/lbq/cameo.py" />
-        <option value="$PROJECT_DIR$/lbq/capture.py" />
-        <option value="$PROJECT_DIR$/lbq/utils.py" />
-        <option value="$PROJECT_DIR$/lbq/filters.py" />
-        <option value="$PROJECT_DIR$/jiance/lunkuo.py" />
-        <option value="$PROJECT_DIR$/jiance/zuixiaolunkuo.py" />
-        <option value="$PROJECT_DIR$/jiance/tuluokuo.py" />
-        <option value="$PROJECT_DIR$/jiance/line.py" />
-        <option value="$PROJECT_DIR$/jiance/circles.py" />
-        <option value="$PROJECT_DIR$/face/basic.py" />
-        <option value="$PROJECT_DIR$/face/face_detect.py" />
-        <option value="$PROJECT_DIR$/a.txt" />
-        <option value="$PROJECT_DIR$/face/face_generate.py" />
-        <option value="$PROJECT_DIR$/face/eignfaces.py" />
-        <option value="$PROJECT_DIR$/note" />
-        <option value="$PROJECT_DIR$/rest/script.py" />
-        <option value="$PROJECT_DIR$/rest/app/video.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/rest/admin.py" />
-        <option value="$PROJECT_DIR$/rest/app/img.py" />
-        <option value="$PROJECT_DIR$/txt/note2" />
-        <option value="$PROJECT_DIR$/rest/app/dept/view.py" />
-        <option value="$PROJECT_DIR$/rest/app/user/view.py" />
-        <option value="$PROJECT_DIR$/rest/app/user/views.py" />
-        <option value="$PROJECT_DIR$/rest/app/user/__init__.py" />
-        <option value="$PROJECT_DIR$/rest/test/__init__.py" />
-        <option value="$PROJECT_DIR$/rest/app/__init__.py" />
-        <option value="$PROJECT_DIR$/rest/app/dept/__init__.py" />
-        <option value="$PROJECT_DIR$/rest/run2.py" />
-        <option value="$PROJECT_DIR$/rest/app/dept/views.py" />
-        <option value="$PROJECT_DIR$/rest/test/a.py" />
-        <option value="$PROJECT_DIR$/rest/app/user/sql.py" />
-        <option value="$PROJECT_DIR$/rest/app/auth.py" />
-        <option value="$PROJECT_DIR$/rest/app/auth/index.html" />
-        <option value="$PROJECT_DIR$/rest/app/auth/timeline.html" />
-        <option value="$PROJECT_DIR$/rest/app/test/20170704.py" />
+        <option value="$PROJECT_DIR$/txt/keras/网络层" />
+        <option value="$PROJECT_DIR$/txt/keras/卷积层" />
+        <option value="$PROJECT_DIR$/txt/keras/池化层" />
+        <option value="$PROJECT_DIR$/txt/keras/局部连接层" />
+        <option value="$PROJECT_DIR$/txt/keras/5循环层" />
+        <option value="$PROJECT_DIR$/txt/keras/网络层/6嵌入层" />
+        <option value="$PROJECT_DIR$/txt/keras/网络层/融合层" />
+        <option value="$PROJECT_DIR$/txt/keras/keras层" />
+        <option value="$PROJECT_DIR$/rest/test/k2.py" />
+        <option value="$PROJECT_DIR$/rest/test/k3.py" />
+        <option value="$PROJECT_DIR$/rest/test/k1.py" />
+        <option value="$PROJECT_DIR$/rest/test/keras/model.py" />
+        <option value="$PROJECT_DIR$/rest/test/keras/deep/chapter03/sequential_sample.py" />
         <option value="$PROJECT_DIR$/txt/a.txt" />
+        <option value="$PROJECT_DIR$/txt/keras/名词解释" />
+        <option value="$PROJECT_DIR$/txt/keras/模型" />
+        <option value="$PROJECT_DIR$/txt/keras/网络层/sklearn" />
+        <option value="$PROJECT_DIR$/txt/keras/参数" />
+        <option value="$PROJECT_DIR$/txt/keras/算法/算法小结" />
+        <option value="$PROJECT_DIR$/txt/keras/Cross-Validation（交叉验证）详解" />
+        <option value="$PROJECT_DIR$/txt/keras/sklearn" />
+        <option value="$PROJECT_DIR$/txt/keras/json序列化模型" />
+        <option value="$PROJECT_DIR$/txt/keras/YAML序列化模型" />
+        <option value="$PROJECT_DIR$/txt/keras/循环神经网络/循环神经网络理论" />
+        <option value="$PROJECT_DIR$/txt/keras/BASE/sklearn" />
+        <option value="$PROJECT_DIR$/txt/keras/循环神经网络/LSTM" />
+        <option value="$PROJECT_DIR$/txt/keras/循环神经网络/test.py" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/结构图" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/RNN 原理" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/LSTM" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/GRU" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/CNN原理" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/MLP" />
+        <option value="$PROJECT_DIR$/txt/keras/example/VGG.py" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/K-邻近算法" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/K-均值算法" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/朴素贝叶斯" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/支持向量机" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/AlexNet" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/VGG" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/决策树" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/梯度下降（Gradient Descent）算法" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/分类算法" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/线性回归算法" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/文本挖掘算法" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/GAN" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/PCA算法" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/YoLo" />
+        <option value="$PROJECT_DIR$/txt/keras/算法和原理/NLP" />
+        <option value="$PROJECT_DIR$/work/server_dtu.py" />
+        <option value="$PROJECT_DIR$/Untitled.ipynb" />
       </list>
     </option>
   </component>
@@ -128,7 +341,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,34 +351,13 @@
             <path>
               <item name="git" type="b2602c69:ProjectViewProjectNode" />
               <item name="git" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="git" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="git" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="git" type="462c0819:PsiDirectoryNode" />
-              <item name="txt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name=".ipynb_checkpoints" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,13 +366,16 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/rest/app/auth" />
-      <recent name="$PROJECT_DIR$/txt" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/rest/app/user" />
       <recent name="$PROJECT_DIR$/rest/app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/txt/keras/算法和原理" />
+      <recent name="$PROJECT_DIR$/txt/keras/BASE" />
+      <recent name="$PROJECT_DIR$/txt/keras/循环神经网络" />
+      <recent name="$PROJECT_DIR$/txt/keras" />
+      <recent name="$PROJECT_DIR$/txt/AI" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -196,8 +390,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.20170704">
-    <configuration name="20170704" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.VGG">
+    <configuration name="VGG" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="git-opencv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -205,17 +399,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rest/app/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/txt/keras/example" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rest/app/test/20170704.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/txt/keras/example/VGG.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="a" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lstm_regression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="git-opencv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -223,18 +417,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rest/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rest/test/keras/deep/chapter19" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rest/test/a.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rest/test/keras/deep/chapter19/lstm_regression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="auth" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lstm_regression_batchmemory" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="git-opencv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -242,17 +435,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rest/app" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rest/test/keras/deep/chapter19" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rest/app/auth/auth.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rest/test/keras/deep/chapter19/lstm_regression_batchmemory.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="run2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="mlp_regression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="git-opencv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -260,18 +453,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rest/test/keras/deep/chapter18" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rest/run2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rest/test/keras/deep/chapter18/mlp_regression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="sql" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="git-opencv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -279,31 +471,30 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rest/app/user" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/txt/keras/循环神经网络" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rest/app/user/sql.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/txt/keras/循环神经网络/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.run2" />
-      <item itemvalue="Python.a" />
-      <item itemvalue="Python.sql" />
-      <item itemvalue="Python.auth" />
-      <item itemvalue="Python.20170704" />
+      <item itemvalue="Python.lstm_regression" />
+      <item itemvalue="Python.mlp_regression" />
+      <item itemvalue="Python.lstm_regression_batchmemory" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.VGG" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.20170704" />
-        <item itemvalue="Python.auth" />
-        <item itemvalue="Python.sql" />
-        <item itemvalue="Python.a" />
-        <item itemvalue="Python.run2" />
+        <item itemvalue="Python.VGG" />
+        <item itemvalue="Python.lstm_regression" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.lstm_regression_batchmemory" />
+        <item itemvalue="Python.mlp_regression" />
       </list>
     </recent_temporary>
   </component>
@@ -324,16 +515,16 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29843497" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27954668" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28691983" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28691983" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
@@ -344,7 +535,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32973558" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,294 +545,299 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lbq/screenshot.png">
+    <entry file="file://$PROJECT_DIR$/rest/test/keras/deep/chapter10/yaml_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="55" column="39" selection-start-line="40" selection-end-line="55" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/结构图/1.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lbq/Managers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1694">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lbq/cameo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lbq/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lbq/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jiance/Laplacian.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jiance/canny.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jiance/circles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jiance/tuluokuo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jiance/zuixiaolunkuo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikings.jpg" />
-    <entry file="file://$PROJECT_DIR$/face/data/retacn/4.pgm">
+    <entry file="file://$PROJECT_DIR$/txt/keras/结构图/3.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/face/data/retacn/87.pgm">
+    <entry file="file://$PROJECT_DIR$/txt/keras/结构图/2.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jiance/line.py">
+    <entry file="file://$PROJECT_DIR$/rest/test/keras/deep/chapter18/mlp_regression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        <state relative-caret-position="176">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jiance/lunkuo.py">
+    <entry file="file://$PROJECT_DIR$/txt/keras/循环神经网络/循环神经网络理论">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="298">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/config.py">
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/Dropout">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/video.py">
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/json序列化模型">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/keras.utils">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/keras层">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/summary">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/多 GPU">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/名词解释">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/参数">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/YAML序列化模型">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/学习过程">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/目标">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/模型">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/sklearn">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="98" column="54" lean-forward="true" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/test/keras/deep/chapter19/lstm_regression_window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/test/keras/deep/chapter19/lstm_regression_batchmemory.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
-          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a.txt" />
-    <entry file="file://$PROJECT_DIR$/test.txt" />
-    <entry file="file://$PROJECT_DIR$/rest/script.py">
+    <entry file="file://$PROJECT_DIR$/txt/keras/循环神经网络/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="440">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/admin.py">
+    <entry file="file://$PROJECT_DIR$/rest/test/keras/deep/chapter19/international-airline-passengers.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        <state relative-caret-position="220">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/img.py">
+    <entry file="file://$PROJECT_DIR$/rest/test/keras/deep/chapter19/lstm_regression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+        <state relative-caret-position="264">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/txt/note2">
+    <entry file="file://$PROJECT_DIR$/txt/keras/循环神经网络/LSTM">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="477" column="23" lean-forward="true" selection-start-line="477" selection-start-column="23" selection-end-line="477" selection-end-column="23" />
+        <state relative-caret-position="418">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/txt/note">
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/结构图">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12852">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="44">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/MLP">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/face/face_generate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/face/face_detect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/face/eignfaces.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="854">
-          <caret line="104" column="44" selection-start-line="104" selection-start-column="44" selection-end-line="104" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/face/basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/test/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/user/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/dept/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/run2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/dept/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/test/1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/test/geckodriver.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/user/sql.py">
+    <entry file="file://$PROJECT_DIR$/txt/keras/example/VGG.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/txt/python/FILE.txt" />
-    <entry file="file://$PROJECT_DIR$/txt/python/logging.txt" />
-    <entry file="file://$PROJECT_DIR$/rest/app/auth/auth.py">
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/GRU">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="748">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/auth/timeline.html">
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/CNN原理">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="768">
+          <caret line="43" column="67" lean-forward="true" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/auth/index.html">
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/LSTM">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="754">
+          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/test/a.py">
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/RNN 原理">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="858">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/test/20170704.py">
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/K-均值算法">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        <state relative-caret-position="2354">
+          <caret line="107" column="3" lean-forward="true" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/app/auth/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/a.txt">
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/朴素贝叶斯">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+        <state relative-caret-position="1386">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/支持向量机">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/AlexNet">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2594">
+          <caret line="283" column="18" selection-start-line="283" selection-start-column="18" selection-end-line="283" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/VGG">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/梯度下降（Gradient Descent）算法">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1670">
+          <caret line="213" lean-forward="true" selection-start-line="213" selection-end-line="213" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/决策树">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="344" column="3" selection-start-line="344" selection-start-column="3" selection-end-line="344" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/线性回归算法">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="223" column="2" selection-start-line="223" selection-start-column="2" selection-end-line="223" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/文本挖掘算法">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="232" column="27" lean-forward="true" selection-start-line="232" selection-start-column="27" selection-end-line="232" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/K-邻近算法(KNN)">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/分类算法">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/GAN">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="856">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/PCA算法">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/YoLo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/NLP">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/work/server_dtu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#2138#7133#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Untitled.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,7 @@
 import cv2
 import  numpy as np
 
-img = cv2.imread('img/1.jpg')
+img = cv2.imread('结构图/1.jpg')
 img[:, :, 1] = 0
 
 print(img.shape)

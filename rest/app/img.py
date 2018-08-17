@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 img_truename = '1.jpg'
-path = '/home/castiel/git/img/' + img_truename
+path = '/home/castiel/git/结构图/' + img_truename
 
 class img():
     def totest(self):

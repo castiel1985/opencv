@@ -17,7 +17,7 @@ class tovideo(Command):
 
 
 #manager.add_command('hello', set())
-manager.add_command('img', toimg())
+manager.add_command('结构图', toimg())
 manager.add_command('video', tovideo())
 
 if __name__ == '__main__':

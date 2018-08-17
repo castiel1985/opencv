@@ -2,7 +2,7 @@ import numpy
 import argparse
 import cv2
 
-image = cv2.imread('../img/4.jpg')
+image = cv2.imread('../结构图/4.jpg')
 cv2.imshow("Original", image)
 
 

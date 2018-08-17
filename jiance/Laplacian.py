@@ -2,7 +2,7 @@ import numpy
 import argparse
 import cv2
 
-image = cv2.imread('../img/1.jpg')
+image = cv2.imread('../结构图/1.jpg')
 cv2.imshow("Original", image)
 
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

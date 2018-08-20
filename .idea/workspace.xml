@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4234b31f-350e-4710-aa4e-be58dc4b98d8" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/NLP/BASE/NLP中的中文分词" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NLP/BASE/Word2Vec and Doc2Vec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NLP/BASE/address" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NLP/BASE/情感分析" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NLP/BASE/文本分类" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NLP/BASE/结构" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NLP/project_1/cnn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NLP/project_1/lstm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NLP/project_1/nn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLP/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/Untitled.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,12 +30,30 @@
     <SUITE FILE_PATH="coverage/git$lunkuo.coverage" NAME="lunkuo Coverage Results" MODIFIED="1529031958676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jiance" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="NLP" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/txt/keras/算法和原理/NLP">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="NLP中的中文分词" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NLP/BASE/NLP中的中文分词">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            <state relative-caret-position="-132">
+              <caret column="58" selection-start-column="58" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="结构" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NLP/BASE/结构">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="address" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NLP/BASE/address">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -45,15 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/txt/keras/网络层" />
-        <option value="$PROJECT_DIR$/txt/keras/卷积层" />
-        <option value="$PROJECT_DIR$/txt/keras/池化层" />
-        <option value="$PROJECT_DIR$/txt/keras/局部连接层" />
-        <option value="$PROJECT_DIR$/txt/keras/5循环层" />
-        <option value="$PROJECT_DIR$/txt/keras/网络层/6嵌入层" />
-        <option value="$PROJECT_DIR$/txt/keras/网络层/融合层" />
-        <option value="$PROJECT_DIR$/txt/keras/keras层" />
-        <option value="$PROJECT_DIR$/rest/test/k2.py" />
         <option value="$PROJECT_DIR$/rest/test/k3.py" />
         <option value="$PROJECT_DIR$/rest/test/k1.py" />
         <option value="$PROJECT_DIR$/rest/test/keras/model.py" />
@@ -96,6 +115,15 @@
         <option value="$PROJECT_DIR$/txt/keras/算法和原理/NLP" />
         <option value="$PROJECT_DIR$/work/server_dtu.py" />
         <option value="$PROJECT_DIR$/Untitled.ipynb" />
+        <option value="$PROJECT_DIR$/NLP/nn.py" />
+        <option value="$PROJECT_DIR$/NLP/lstm.py" />
+        <option value="$PROJECT_DIR$/NLP/cnn.py" />
+        <option value="$PROJECT_DIR$/NLP/BASE/情感分析" />
+        <option value="$PROJECT_DIR$/NLP/BASE/Word2Vec and Doc2Vec" />
+        <option value="$PROJECT_DIR$/NLP/BASE/文本分类" />
+        <option value="$PROJECT_DIR$/NLP/BASE/NLP中的中文分词" />
+        <option value="$PROJECT_DIR$/NLP/BASE/结构" />
+        <option value="$PROJECT_DIR$/NLP/BASE/address" />
       </list>
     </option>
   </component>
@@ -128,6 +156,29 @@
             <path>
               <item name="git" type="b2602c69:ProjectViewProjectNode" />
               <item name="git" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="NLP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="NLP" type="462c0819:PsiDirectoryNode" />
+              <item name="BASE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="NLP" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="NLP" type="462c0819:PsiDirectoryNode" />
+              <item name="project_1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="git" type="b2602c69:ProjectViewProjectNode" />
@@ -172,16 +223,16 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rest/app/user" />
+      <recent name="$PROJECT_DIR$/rest/app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/NLP/project_1" />
       <recent name="$PROJECT_DIR$/face" />
       <recent name="$PROJECT_DIR$/txt/keras/算法和原理" />
       <recent name="$PROJECT_DIR$/txt/keras/BASE" />
       <recent name="$PROJECT_DIR$/txt/keras/循环神经网络" />
-      <recent name="$PROJECT_DIR$/txt/keras" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/rest/app/user" />
-      <recent name="$PROJECT_DIR$/rest/app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -196,7 +247,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.VGG">
+  <component name="RunManager" selected="Python.nn">
     <configuration name="VGG" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="git-opencv" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -251,7 +302,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="mlp_regression" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="nn" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="git-opencv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -259,11 +310,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rest/test/keras/deep/chapter18" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NLP" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rest/test/keras/deep/chapter18/mlp_regression.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NLP/project_1/nn.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -289,18 +340,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.lstm_regression" />
-      <item itemvalue="Python.mlp_regression" />
       <item itemvalue="Python.lstm_regression_batchmemory" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.VGG" />
+      <item itemvalue="Python.nn" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.nn" />
         <item itemvalue="Python.VGG" />
         <item itemvalue="Python.lstm_regression" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.lstm_regression_batchmemory" />
-        <item itemvalue="Python.mlp_regression" />
       </list>
     </recent_temporary>
   </component>
@@ -324,13 +375,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27954668" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28691983" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28691983" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
@@ -351,43 +402,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/txt/keras/循环神经网络/循环神经网络理论">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/Dropout">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/json序列化模型">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/keras.utils">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/keras层">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/summary">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/多 GPU">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/名词解释">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/参数">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/YAML序列化模型">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txt/keras/BASE/学习过程">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/txt/keras/BASE/目标">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -619,6 +633,81 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/project_1/nn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/project_1/lstm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="140" selection-end-column="93" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/project_1/cnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/BASE/Word2Vec and Doc2Vec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/BASE/情感分析">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/image/1.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/image/2.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/BASE/文本分类">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1266">
+          <caret line="271" column="33" selection-start-line="271" selection-start-column="33" selection-end-line="271" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/BASE/NLP中的中文分词">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret column="58" selection-start-column="58" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/BASE/结构">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP/BASE/address">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,9 @@
+词性还原
+在wordnet这个语义字典中搜索词形（这个单词的相关变化）
+
+In [18]: from nltk.stem import WordNetLemmatizer
+
+In [19]: wlem = WordNetLemmatizer()
+ wlem.lemmatize("ate")
+
+eat

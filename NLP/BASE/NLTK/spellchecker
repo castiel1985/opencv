@@ -1,0 +1,11 @@
+拼写检查器
+
+spellchecker
+
+通过纯字典查找的方式来创建一个基本的拼写检查器
+常用算法： edit-distance
+
+
+In [31]: from nltk.metrics import edit_distance
+
+In [32]: edit_distance("rain", "shine")

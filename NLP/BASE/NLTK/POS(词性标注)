@@ -1,0 +1,18 @@
+
+NLTK 库中的 pos_tag 方法,得到了一组(词形,词性标签)形式的元组。这就是一个 NLTK 库内置的 POS 标注器。
+
+
+(1)nltk.pos_tag()
+内部方法使用  maxent分类器（训练处理的模型）
+
+>>>import nltk
+>>>from nltk import word_tokenize
+>>>s = "I was watching TV"
+
+>>>print nltk.pos_tag(word_tokenize(s))
+[('I', 'PRP'), ('was', 'VBD'), ('watching', 'VBG'), ('TV', 'NN')]
+
+
+（2）stanford 标注器
+地址下载：http://nlp.stanford.edu/software/stanford-postagger-full-2014-08-27.zip
+stan_tagger.tag(token)

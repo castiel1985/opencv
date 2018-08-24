@@ -1,0 +1,17 @@
+
+停用词移除
+停用词：冠词和代词
+基于相关单词在文档中出现的频率来构建的一个停用词列表
+
+
+In [24]: from nltk.corpus import stopwords
+
+In [25]: s = "this  is just one test"
+
+In [26]: stoplist = stopwords.words('english')
+
+
+In [29]: clean = [ word for word in s.split() if word not in stoplist]
+
+
+

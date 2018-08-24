@@ -1,0 +1,14 @@
+stemming:
+
+词干提取： 比较粗糙的规则处理过程，取得相关分词的各种变化
+
+from nltk.stem.lancaster import LancasterStemmer
+from nltk.stem.snowball import SnowballStemmer
+from nltk.stem import PorterStemmer
+
+
+lst = LancasterStemmer()
+lst.stem("eating")
+ 'eat'
+
+

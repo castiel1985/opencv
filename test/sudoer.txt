@@ -1,0 +1,5 @@
+
+t ALL=(ALL) ALL
+ 59 %admin  ALL=(ALL) ALL
+ 60 
+ 61 castiel ALL=(ALL)NOPASSWD:ALL

@@ -59,3 +59,9 @@ php 新特性 ： https://blog.csdn.net/qq_16885135/article/details/79755713
 
 
  https://blog.csdn.net/sinat_26917383/article/details/72861152
+
+
+
+
+scikit_learn 中文学习文档
+http://cwiki.apachecn.org/pages/viewpage.action?pageId=10030181

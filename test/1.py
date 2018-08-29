@@ -57,7 +57,7 @@ param_grid['units_list'] = [[20], [13, 6]]
 param_grid['optimizer'] = ['rmsprop', 'adam']
 param_grid['init'] = ['glorot_uniform', 'normal']
 param_grid['epochs'] = [100, 200]
-param_grid['patch_size'] = [5, 20]
+param_grid['batch_size'] = [5, 20]
 
 scaler = StandardScaler()
 scaler_x = scaler.fit_transform(x)

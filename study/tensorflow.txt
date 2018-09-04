@@ -1,0 +1,102 @@
+函数：
+（1）tf.placeholder:  产生一个float占位符，默认float32
+（2）tf.multiply:   将两个参数相乘，可以是数字也可以是矩阵
+（3）sess.run():
+    (1)只是计算几个数据，数据必须被赋值 ->  update = tf.assign(state, new_val)  #返回tensor
+    (2)使用feed_dict:使用placeholder创建出来的tensor赋值  ->  sess.run(y, feed_dict={a: 1, b: 2})  #a,b都是placeholder创造出来的值
+
+（4）tf.Variable:定义一个图变量   x = tf.Variable(3, name='x') #在TensorFlow的世界里，变量的定义和初始化是分开的，所有关于图变量的赋值和计算都要通过
+tf.Session的run来进行。参数：
+    initial_value 	所有可以转换为Tensor的类型 	变量的初始值
+    trainable 	bool 	如果为True，会把它加入到GraphKeys.TRAINABLE_VARIABLES，才能对它使用Optimizer
+    collections 	list 	指定该图变量的类型、默认为[GraphKeys.GLOBAL_VARIABLES]
+    validate_shape 	bool 	如果为False，则不进行类型和维度检查
+    name 	string 	变量的名称，如果没有指定则系统会自动分配一个唯一的值
+
+
+
+（5）tf.square  对参数列表内的每一个元素求平方，即点乘
+    tf.matmul   矩阵乘法
+
+(6)tf.global_variables_initializer() :添加节点用于初始化所有的变量(GraphKeys.VARIABLES)。返回一个初始化所有全局变量的操作（Op）,run了 所有global Variable 的 assign op，这就是初始化参数的本来面目。
+
+(7) tf.train.GradientDescentOptimizer(0.01)  对所有步骤中的所有变量使用恒定的学习率, 即 简单随机梯度下降算法
+       例子：cost = tf.square(Y - y_model) # use square error for cost function
+            train_op = tf.train.GradientDescentOptimizer(0.01).minimize(cost)   # 梯度下降优化
+    __init__(
+        learning_rate,
+        use_locking=False,
+        name='GradientDescent'
+    )
+
+（8）tf.train.AdagradOptimizer    适应学习率算法，它独立地适应所有模型参数的学习率。算法维护一个累积平方梯度向量，即对模型的每个参数，累积其历史平方值的总和，以其反比作为权重更新参数
+        __init__(
+            learning_rate, 
+            initial_accumulator_value=0.1, 
+            use_locking=False, 
+            name='Adagrad'
+        )
+
+(9) tf.train.AdamOptimizer      实现 Adam优化算法（  Adam 这个名字来源于 adaptive moment estimation，自适应矩估计。）
+        __init__(
+            learning_rate=0.001,
+            beta1=0.9,
+            beta2=0.999,
+            epsilon=1e-08,
+            use_locking=False,
+            name='Adam'
+        )
+
+(10) tf.train.MomentumOptimizer  实现 动量梯度下降算法 ，动量算法引入了变量v充当速度角色。使用动量的随机梯度下降算法更新规则在原随机梯度下降基础上改进
+    __init__(
+        learning_rate,
+        momentum,
+        use_locking=False,
+        name='Momentum',
+        use_nesterov=False
+    )
+    
+（11）tf.random_normal()函数用于从服从指定正太分布的数值中取出指定个数的值。  
+    例子： w1 = tf.Variable(tf.random_normal([2, 3], stddev=1, seed=1))
+    
+    
+(12) tf.reduce_mean  在某一个维度上求取平均值
+    例子： # 'x' is [[1., 2.]
+          #         [3., 4.]]
+          tf.reduce_mean(x) ==> 2.5 #如果不指定第二个参数，那么就在所有的元素中取平均值
+          tf.reduce_mean(x, 0) ==> [2.,  3.] #指定第二个参数为0，则第一维的元素取平均值，即每一列求平均值
+          tf.reduce_mean(x, 1) ==> [1.5,  3.5] #指定第二个参数为1，则第二维的元素取平均值，即每一行求平均值
+          
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    

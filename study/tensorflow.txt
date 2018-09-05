@@ -68,6 +68,14 @@ tf.Session的run来进行。参数：
           tf.reduce_mean(x, 1) ==> [1.5,  3.5] #指定第二个参数为1，则第二维的元素取平均值，即每一行求平均值
           
           
+(13) tf.nn.softmax_cross_entropy_with_logits  
+            1)求loss，则要做一步tf.reduce_mean;
+            2)求交叉熵, 再做一步tf.reduce_sum操作,就是对向量里面所有元素求和 
+       注明:第一个参数logits：就是神经网络最后一层的输出，如果有batch的话，它的大小就是[batchsize，num_classes]，单样本的话，大小就是num_classes
+            3）返回值并不是一个数，而是一个向量
+第二个参数labels：实际的标签，大小同上。
+tensorflow之所以把softmax和cross entropy放到一个函数里计算，就是为了提高运算速度，虽然这样做让很多刚接触tf的同志难以捉摸，但Google的工程师是不会以“使用者的舒服程度”为第一要素设计程序的。
+          
           
 
 

@@ -1,0 +1,24 @@
+ 安装pyqt4
+2017年09月04日 17:01:00 阅读数：1889
+1、安装SIP 
+从 http://www.riverbankcomputing.co.uk/software/sip/download 下载压缩包 sip-4.19.3tar.gz 
+tar zxvf sip-4.19.3tar.gz -C ~/PyQt 
+cd ~/PyQt/sip-4.19.3 
+sudo python configure.py 
+sudo make install
+
+2、安装Qt4依赖的库 
+sudo apt-get install python-pip python2.7-dev libxext-dev python-qt4 qt4-dev-tools build-essential 
+sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer 
+sudo apt-get install libqwt5-qt4 libqwt5-qt4-dev
+
+3、安装PyQt4 
+从 https://sourceforge.NET/projects/pyqt/files/PyQt4/ 下载压缩包 PyQt4_gpl_x11-4.12.tar.gz 解压 
+tar zxvf PyQt4_gpl_x11-4.12.tar.gz -C ~/PyQt 
+cd ~/PyQt/PyQt4_gpl_x11-4.12 
+sudo python configure.py 
+sudo make 
+sudo make install
+
+pip install PyQt 
+pip install SIP

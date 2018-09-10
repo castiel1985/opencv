@@ -128,7 +128,8 @@ def model(X, w_h, w_h2, w_o, p_keep_input, p_keep_hidden):
                            maxval=W_init_max）  ：
     例子：tf.random_uniform((4, 4), minval=low,maxval=high,dtype=tf.float32)))返回4*4的矩阵，产生于low和high之间，产生的值是均匀分布的。
 
-
+    
+    np.random.shuffle  现场修改序列，改变自身内容。（类似洗牌，打乱顺序）
 
 
 （19）tf.zeros（shape, dtype=tf.float32, name=None）
@@ -161,17 +162,52 @@ def model(X, w_h, w_h2, w_o, p_keep_input, p_keep_hidden):
         [[0. 0. 0. 0.]
          [0. 0. 0. 0.]]
          
- （20）
+ （20） np.random.binomial(n,p,size=None)  返回的是：一个数字或者一组数字,每个样本返回的是n次试验中事件A发生的次数。  
+     例子：  >>> n, p = 2, .5            # 两枚都是正面
+            >>> sum(np.random.binomial(n, p, size=20000)==2)/20000.
+                0.25019999999999998         # 和我们的精确概率值相接近
+            # 其中一个为反面
+            >>> sum(np.random.binomial(n, p, size=20000)==1)/20000.
+                0.49430000000000002
+ 
+ 
+
+    (21)ZIP函数  zip 方法在 Python 2 和 Python3中的不同：在 Python 3.x 中为了减少内存，zip() 返回的是一个对象。如需展示列表，需手动 list() 转换。
+        >>>a = [1,2,3]
+        >>> b = [4,5,6]
+        >>> c = [4,5,6,7,8]
+        >>> zipped = zip(a,b)     # 打包为元组的列表
+        [(1, 4), (2, 5), (3, 6)]
+        >>> zip(a,c)              # 元素个数与最短的列表一致
+        [(1, 4), (2, 5), (3, 6)]
+        >>> zip(*zipped)          # 与 zip 相反，*zipped 可理解为解压，返回二维矩阵式
+        [(1, 2, 3), (4, 5, 6)]
+        
+   （22）range(start, stop[, step])   
+        >>> range(0, 10, 3)  # 步长为 3
+            [0, 3, 6, 9]
+            
+    (23)tf.transpose（x, perm=[0, 2, 1]）   转置，对于低维度的转置问题，很简单；perm=[0,1,2],0代表三维数组的高（即为二维数组的个数），1代表二维数组的行，2代表二维数组的列
+    
+    
+    (24)tf.reshape(tensor, shape, name=None) 
+    # tensor 't' is [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    # tensor 't' has shape [9]
+    reshape(t, [3, 3]) ==> [[1, 2, 3],
+                            [4, 5, 6],
+                            [7, 8, 9]]
+    # tensor 't' is [[[1, 1], [2, 2]],
+    #                [[3, 3], [4, 4]]]
+    # tensor 't' has shape [2, 2, 2]
+    reshape(t, [2, 4]) ==> [[1, 1, 2, 2],
+                            [3, 3, 4, 4]]
+
+
+    (25)tf.nn.embedding_lookup 函数    选取一个张量里面索引对应的元素。tf.nn.embedding_lookup（tensor, id）:tensor就是输入张量，id就是张量对应的索引
 
 
 
-
-
-
-
-
-
-
+    (26)enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。
 
 
 

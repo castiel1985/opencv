@@ -208,6 +208,61 @@ def model(X, w_h, w_h2, w_o, p_keep_input, p_keep_hidden):
 
 
     (26)enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。
+    
+    (27)tf.variable_scope可以让变量有相同的命名，包括tf.get_variable得到的变量，还有tf.Variable的变量
+
+        tf.name_scope可以让变量有相同的命名，只是限于tf.Variable的变量
+        
+     (28)tf.Variable()   
+             W = tf.Variable(<initial-value>, name=<optional-name>)  用于生成一个初始值为initial-value的变量。必须指定初始化值
+         tf.get_variable()
+             W = tf.get_variable(name, shape=None, dtype=tf.float32, initializer=None,regularizer=None, trainable=True, collections=None) 获取已存在的变量（要求不仅名字，而且初始化方法等各个参数都一样），如果不存在，就新建一个。 
+可以用各种初始化方法，不用明确指定值。
+
+        方便共享变量:因为tf.get_variable() 会检查当前命名空间下是否存在同样name的变量，可以方便共享变量。而tf.Variable 每次都会新建一个变量。
+
+需要注意的是tf.get_variable() 要配合reuse和tf.variable_scope() 使用.
+
+
+    (29)f.Variable()和 tf.get_variable() 初始化  
+a1 = tf.Variable(1, name='a1')                                                # 用变量初始化
+a2 = tf.Variable(tf.constant(1), name='a2')                                   # 用变量初始化
+a3 = tf.Variable(tf.random_normal(shape=[2,3], mean=0, stddev=1), name='a3')  # 用随机数初始化 
+a4 = tf.Variable(tf.ones(shape=[2,3]), name='a4')                             # 用one矩阵初始化
+
+# 定义常量
+a5 = tf.get_variable(name='a5', initializer=22) 
+# 定义正态分布的随机变量 
+a6 = tf.get_variable(name='a6', shape=[2,3], initializer=tf.random_normal_initializer(mean=0, stddev=1))  
+# 定义常量向量
+a7 = tf.get_variable(name='a7', shape=[1], initializer=tf.constant_initializer(1))  
+# 全是1的矩阵
+
+init = tf.global_variables_initializer()  #输出数据时必须要全局初始化 
+with tf.Session() as sess:  
+    sess.run(init)  
+    print sess.run(a5)  
+    print sess.run(a6)  
+    print sess.run(a7)  
+    print sess.run(a8
+
+tf.get_variable(name,  shape, initializer): name就是变量的名称，shape是变量的维度，initializer是变量初始化的方式，初始化的方式有以下几种：
+tf.constant_initializer：常量初始化函数
+tf.random_normal_initializer：正态分布
+tf.truncated_normal_initializer：截取的正态分布
+tf.random_uniform_initializer：均匀分布
+tf.zeros_initializer：全部是0
+tf.ones_initializer：全是1
+tf.uniform_unit_scaling_initializer：满足均匀分布，但不影响输出数量级的随机值
+
+
+(30)tf.summary :https://www.cnblogs.com/lyc-seu/p/8647792.html
+
+
+(31)tf.train.Saver()  保存和恢复都需要实例化一个 tf.train.Saver
+    saver.restore(sess, 'tmp/model.ckpt')    #存在就从模型中恢复变量
+    save_path = saver.save(sess, 'tmp/model.ckpt')  #保存模型
+
 
 
 

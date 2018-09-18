@@ -15,7 +15,7 @@ tf.Session的run来进行。参数：
 
 
 
-（5）tf.square  对参数列表内的每一个元素求平方，即点乘
+（5）tf.square  对参数列表内的每一个元素求平方根，即点乘
     tf.matmul   矩阵乘法
 
 (6)tf.global_variables_initializer() :添加节点用于初始化所有的变量(GraphKeys.VARIABLES)。返回一个初始化所有全局变量的操作（Op）,run了 所有global Variable 的 assign op，这就是初始化参数的本来面目。
@@ -58,6 +58,11 @@ tf.Session的run来进行。参数：
     
 （11）tf.random_normal()函数用于从服从指定正太分布的数值中取出指定个数的值。  
     例子： w1 = tf.Variable(tf.random_normal([2, 3], stddev=1, seed=1))
+                #shape:一维的张量，也就是输出的张量
+                #mean:正态分布的均值
+                stddev:正态分布的标准差
+                seed:一个整数，设置之后每次生成的随机数一样
+                #dtype:表示的是输出类型
     
     
 (12) tf.reduce_mean  在某一个维度上求取平均值
@@ -263,6 +268,13 @@ tf.uniform_unit_scaling_initializer：满足均匀分布，但不影响输出数
     saver.restore(sess, 'tmp/model.ckpt')    #存在就从模型中恢复变量
     save_path = saver.save(sess, 'tmp/model.ckpt')  #保存模型
 
+
+
+(32)np.linspace  在指定的间隔内返回均匀间隔的数字。
+    >>> np.linspace(1, 10, 10)
+    array([  1.,   2.,   3.,   4.,   5.,   6.,   7.,   8.,   9.,  10.])
+    >>> np.linspace(1, 10, 10, endpoint = False)
+    array([ 1. ,  1.9,  2.8,  3.7,  4.6,  5.5,  6.4,  7.3,  8.2,  9.1])
 
 
 

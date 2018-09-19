@@ -1,0 +1,4 @@
+卷积层(tf.nn.conv2d)
+非线性变换层(tf.nn.relu)
+池化层(tf.nn.max_pool)
+全连接层(tf.nn.matmul)

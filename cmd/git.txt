@@ -1,0 +1,1 @@
+git reset   只保留源码，回退commit和index信息

@@ -1,0 +1,9 @@
+plt.show()  直接显示所有
+
+ply.imshow()  载入相关图片
+
+plt.xticks([]), plt.yticks([])  去除 X ,Y轴
+
+
+plt.subplot()  一个窗口显示多个图像
+

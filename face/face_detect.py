@@ -8,7 +8,7 @@ def detect():
     # 加载haar级联文件
     face_cascade = cv2.CascadeClassifier('cascades/haarcascade_frontalface_default.xml')
     eye_cascade = cv2.CascadeClassifier('cascades/haarcascade_eye.xml')
-    camera = cv2.VideoCapture(0)
+    camera = cv2.VideoCapture(1)
 
     # 捕获视频帧
     while (True):

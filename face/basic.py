@@ -1,6 +1,6 @@
 import cv2
 
-filename='../结构图/1.jpg'
+filename='../img/123.jpeg'
 
 def detect(filename):
     #用于人脸检测xml

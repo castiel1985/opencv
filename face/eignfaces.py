@@ -101,7 +101,7 @@ def face_rec():
                 cv2.putText(img, names[params[0]], (x, y - 20), cv2.FONT_HERSHEY_SIMPLEX, 1, 255, 2)
             except:
                 continue
-        cv2.imshow("camera", img)
+        cv2.imshow("camera", img)sou
         if cv2.waitKey(33) & 0xFF == ord('q'):
             break
     cv2.destroyAllWindows()
@@ -111,4 +111,4 @@ if __name__ == '__main__':
     # generate()
     # [X, y] = read_image('D:/workspace_pycharm/opencv3_python/data/at')
     face_rec()
-    # generate()
+    generate()

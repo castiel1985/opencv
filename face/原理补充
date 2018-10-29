@@ -1,0 +1,30 @@
+cany 边缘检测
+(1)噪声去除  ： 5*5的高斯滤波器
+
+（2）计算图像梯度:使用 sobel算子计算水平方向和垂直方向的一阶导数
+得到梯度方向 ：垂直，水平，两个对角线
+
+（3）对每一个像素检查，去除非边界上的点，（这个点是不是周围具有相同梯度方向的点中最大的）
+（4）确定哪些边界才是真正的边界：设定两个阕值 minval maxval
+
+
+
+图像金字塔:
+cv2.pyrUp()  从一个高分辨率大尺寸向上构建一个金字塔
+cv2.pyrUp()   从一个低分辩率小尺寸的图像向下构建一个金字塔
+
+
+
+
+轮廓：
+查找轮廓：
+cv2.findContours（）
+cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+cv2.RETR_TREE 会返回所有轮廓，并且创建一个完整的组织结构列表
+cv2.CHAIN_APPROX_SIMPLE  只是存储几个关键点位
+cv2.CHAIN_APPROX_NONE   存储所有点位
+
+
+
+

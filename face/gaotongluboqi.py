@@ -16,9 +16,9 @@ k_5x5= np.array([
     [-1, -1, -1, -1, -1],
 ])
 
-img = cv2.imread('结构图/3.jpg', 0)
-k3 = ndimage.convolve(img , k_3x3)
-k5 = ndimage.convolve(img , k_5x5)
+img = cv2.imread('img/123.jpeg', 0)
+k3 = ndimage.convolve(img, k_3x3)
+k5 = ndimage.convolve(img, k_5x5)
 blurred = cv2.GaussianBlur(img, (11, 11), 0)
 
 g_hpf = img -  blurred

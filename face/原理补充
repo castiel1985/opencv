@@ -27,4 +27,15 @@ cv2.CHAIN_APPROX_NONE   存储所有点位
 
 
 
+直方图：
+cv2.calcHist()
+
+cv2.calcHist(images, channels, mask, histSize, ranges[, hist[, accumulate]])
+1. images: 原图像 图像格式为 uint8 或 float32 。当传入函数时应用中括号 [] 括 来 例如 [img]。
+2. channels: 灰度是0，彩色的话 [0] [1] [2] 对应 B G R
+3. mask: 掩模图像。如果要统计整幅图像就设置为 none
+4. histSize:BIN 的数目。也应 用中括号括 【256】
+5. ranges: 像素值范围 【0，256】
+
+
 

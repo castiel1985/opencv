@@ -41,5 +41,7 @@ mask=np.zeros(img_gray.shape,np.uint8)
 
 #print(mask)
 m = cv2.drawContours(mask, [cnt],0,255,-1)
-plt.imshow(m)
+x,y,w,h =cv2.boundingRect(cnt)
+p = cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
+plt.imshow(p)
 plt.show()

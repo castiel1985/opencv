@@ -47,8 +47,18 @@ cv2.calcHist(images, channels, mask, histSize, ranges[, hist[, accumulate]])
 
 
 2D直方图： 考虑 颜色Hue,饱和度Saturation
-
+（1)先将图像的颜色空间从BGR转为HSV
+（2）使用差cv2.calcHist()
 
 
 直方图反向投影：（用作图像分割）
 输出图像中像素值越高（越白）的点越可能代表我们需要搜索的目标。
+cv2.calcBackProject()
+
+
+
+图像变换：
+（1）傅里叶变换：用来分析不同滤波器的频率特性。
+边界和噪声点再图像中变化非常大，被称为高频分量，没有的则称为低频分量。
+cv2.dft()  cv2.idft()
+

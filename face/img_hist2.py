@@ -8,7 +8,10 @@ img = cv2.imread('img/789.jpeg',0)
 
 # create a mask
 mask = np.zeros(img.shape[:2], np.uint8)
+
+#print(mask)
 mask[30:150, 40:180] = 255
+
 masked_img = cv2.bitwise_and(img,img,mask = mask)
 
 
@@ -25,3 +28,6 @@ plt.xlim([0,256])
 
 
 plt.show()
+
+
+#绘制直方图

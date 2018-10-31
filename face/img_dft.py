@@ -4,8 +4,9 @@ from matplotlib import  pyplot as plt
 
 
 
-img = cv2.imread('img/111.jpeg')
-print(img.size)
+img = cv2.imread('img/123.jpeg',0)
+i,k = img.shape
+print(img.shape)
 
 
 dft = cv2.dft(np.float32(img), flags=cv2.DFT_COMPLEX_OUTPUT)
@@ -22,3 +23,5 @@ plt.subplot(122),plt.imshow(magnitude_spectrum, cmap='gray')
 plt.title('Magnitude Image'), plt.xticks([]), plt.yticks([])
 
 plt.show()
+
+#傅立叶变换-OK

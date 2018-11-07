@@ -9,6 +9,7 @@ img_up = cv2.pyrUp(img)
 
 img_down = cv2.pyrDown(img)
 
+#img2 = cv2.cvtColor(img,cv2.COLOR_RGB2BGR)
 plt.subplot(131),plt.imshow(img)
 plt.title('Original Image'),plt.xticks([]),plt.yticks([])
 

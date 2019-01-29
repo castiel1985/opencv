@@ -1,14 +1,14 @@
-1.ÓÃWerkZeugÊµÏÖÃÜÂëµÄ¼ÓÃÜ´æ´¢
-generate_password_hash(password)ºÍcheck_password_hash(hash,password)¡£Ç°ÕßÓÃÀ´½«Ã÷ÎÄÃÜÂë¼ÓÃÜ£¬·µ»Ø¼ÓÃÜºóµÄÃÜÎÄ£¬ÓÃÀ´½øĞĞÓÃ»§×¢²á¡£
+ï»¿1.ç”¨WerkZeugå®ç°å¯†ç çš„åŠ å¯†å­˜å‚¨
+generate_password_hash(password)å’Œcheck_password_hash(hash,password)ã€‚å‰è€…ç”¨æ¥å°†æ˜æ–‡å¯†ç åŠ å¯†ï¼Œè¿”å›åŠ å¯†åçš„å¯†æ–‡ï¼Œç”¨æ¥è¿›è¡Œç”¨æˆ·æ³¨å†Œã€‚
 
 
 2.flask-login
-(1)flask_login½øĞĞÓÃ»§µÄµÇÂ¼ºÍµÇ³ö¹ÜÀí£¬ĞèÒª½«ÎÒÃÇµÄUserÄ£ĞÍ¼Ì³Ğflask_loginµÄUserMixin»ùÀà
+(1)flask_loginè¿›è¡Œç”¨æˆ·çš„ç™»å½•å’Œç™»å‡ºç®¡ç†ï¼Œéœ€è¦å°†æˆ‘ä»¬çš„Useræ¨¡å‹ç»§æ‰¿flask_loginçš„UserMixinåŸºç±»
 from flask_login import UserMixin  
 class User(db.Model,UserMixin):  
 
 
-(2)ÊµÏÖflask_loginµÄ³õÊ¼»¯,ÒıÈëLoginManager:
+(2)å®ç°flask_loginçš„åˆå§‹åŒ–,å¼•å…¥LoginManager:
 from flask_login import LoginManager  
   
 loginmanager=LoginManager()  
@@ -24,7 +24,7 @@ def create_app(config_name):
 
 
 
-(3)Ê¹ÓÃlogin_userºÍlogout_user½øĞĞÓÃ»§µÄµÇÂ¼ºÍµÇ³ö
+(3)ä½¿ç”¨login_userå’Œlogout_userè¿›è¡Œç”¨æˆ·çš„ç™»å½•å’Œç™»å‡º
 class NameForm(FlaskForm):    
     name=TextField('what is your name?',validators=[DataRequired()])    
     password=PasswordField('what is your password?',validators=[DataRequired()])  
@@ -67,7 +67,7 @@ def login():
 
 
 
-(4)Ê¹ÓÃlogin_requiredÏŞÖÆµÇÂ¼¶ÔÏó
+(4)ä½¿ç”¨login_requiredé™åˆ¶ç™»å½•å¯¹è±¡
 
 @main.route('/loginrq',methods=['GET','POST'])  
 @login_required  
@@ -77,7 +77,7 @@ def loginrq():
 
 
 
-3.ÀûÓÃSQLAlchemy½øĞĞ·ÖÒ³²éÑ¯
+3.åˆ©ç”¨SQLAlchemyè¿›è¡Œåˆ†é¡µæŸ¥è¯¢
 model:
 class Post(db.Model):  
     __tablename__='posts'  
@@ -105,8 +105,8 @@ html:
 https://blog.csdn.net/hyman_c/article/details/54382161
 
 
-4.Flask-pagedownÊµÏÖ²©¿ÍÎÄÕÂÔ¤ÀÀµÄ¹¦ÄÜ
-Ê¹ÓÃMarkDownÊµÏÖ²©¿ÍÎÄÕÂ´æ´¢³É¸»ÎÄ±¾¸ñÊ½
+4.Flask-pagedownå®ç°åšå®¢æ–‡ç« é¢„è§ˆçš„åŠŸèƒ½
+ä½¿ç”¨MarkDownå®ç°åšå®¢æ–‡ç« å­˜å‚¨æˆå¯Œæ–‡æœ¬æ ¼å¼
 
 
 
@@ -114,7 +114,7 @@ https://blog.csdn.net/hyman_c/article/details/54382161
 
 5.RESTFUL
 
-(1)ÔÚPostÄ£ĞÍÖĞÔö¼ÓÁ½¸öº¯Êı£¬·Ö±ğ½«Post¶ÔÏó×ª»»³ÉJSON¸ñÊ½µÄ×ÊÔ´ÒÔ¼°½âÎö½âÎöJSON×Ö·û´®
+(1)åœ¨Postæ¨¡å‹ä¸­å¢åŠ ä¸¤ä¸ªå‡½æ•°ï¼Œåˆ†åˆ«å°†Postå¯¹è±¡è½¬æ¢æˆJSONæ ¼å¼çš„èµ„æºä»¥åŠè§£æè§£æJSONå­—ç¬¦ä¸²
 lassPost(db.Model):  
     __tablename__='posts'  
     id=db.Column(db.Integer,primary_key=True)  
@@ -135,13 +135,13 @@ def to_json(self):
         body=json_post.get('body')  
         return Post(body=body)  
 
-¶¨ÒåÁËto_json³ÉÔ±º¯Êı£¬½«PostÏà¹ØĞÅÏ¢×ª»»³ÉÁËJSON¸ñÊ½µÄ×ÊÔ´×Ö·û´®£¬ÕâÀïÃæurl±íÊ¾»ñÈ¡ÕâÒ»Post¶ÔÏóµÄµØÖ·£¬ÊÇ¸ÃPost¶ÔÏóµÄÎ¨Ò»±êÊ¾¡£¶øÎÒÃÇÖ»×ª»»ÁËbodyºÍhtml_bodyÁ½¸ö×Ö¶Î£¬ÒòÎª¹¹½¨JSONÊ±²»ĞèÒª½«Ä£ĞÍµÄÈ«²¿×Ö¶Î½øĞĞ×ª»»¡£
+å®šä¹‰äº†to_jsonæˆå‘˜å‡½æ•°ï¼Œå°†Postç›¸å…³ä¿¡æ¯è½¬æ¢æˆäº†JSONæ ¼å¼çš„èµ„æºå­—ç¬¦ä¸²ï¼Œè¿™é‡Œé¢urlè¡¨ç¤ºè·å–è¿™ä¸€Postå¯¹è±¡çš„åœ°å€ï¼Œæ˜¯è¯¥Postå¯¹è±¡çš„å”¯ä¸€æ ‡ç¤ºã€‚è€Œæˆ‘ä»¬åªè½¬æ¢äº†bodyå’Œhtml_bodyä¸¤ä¸ªå­—æ®µï¼Œå› ä¸ºæ„å»ºJSONæ—¶ä¸éœ€è¦å°†æ¨¡å‹çš„å…¨éƒ¨å­—æ®µè¿›è¡Œè½¬æ¢ã€‚
 
-        from_json±»¶¨Òå³ÉÁËÒ»¸ö¾²Ì¬º¯Êı£¬ËüµÄ²ÎÊıjson_postÊÇÒ»¸öjson¸ñÊ½µÄ×Ö·û´®£¬½«À´»áÓÉhttpÇëÇó´«¸øÎÒÃÇ¡£
+        from_jsonè¢«å®šä¹‰æˆäº†ä¸€ä¸ªé™æ€å‡½æ•°ï¼Œå®ƒçš„å‚æ•°json_postæ˜¯ä¸€ä¸ªjsonæ ¼å¼çš„å­—ç¬¦ä¸²ï¼Œå°†æ¥ä¼šç”±httpè¯·æ±‚ä¼ ç»™æˆ‘ä»¬ã€‚
 
-(2)Ôö¼ÓREST APIµÄÂ·ÓÉÓ³Éä
-ÏÈÔö¼ÓĞÂÔöÎÄÕÂµÄAPI£º
-@main.route('/posts/',methods=[¡®POST¡¯])  
+(2)å¢åŠ REST APIçš„è·¯ç”±æ˜ å°„
+å…ˆå¢åŠ æ–°å¢æ–‡ç« çš„APIï¼š
+@main.route('/posts/',methods=[â€˜POSTâ€™])  
 def new_post():  
     post=Post.from_json(request.json)  
     db.session.add(post)  
@@ -149,7 +149,7 @@ def new_post():
     return jsonify(post.to_json()) 
 
 
-½ÓÏÂÀ´£¬±àĞ´Í¨¹ıGET·½·¨»ñÈ¡ÎÄÕÂµÄAPI£¬·Ö±ğ»ñÈ¡ËùÓĞµÄÎÄÕÂºÍ°´ÕÕid»ñÈ¡ÎÄÕÂ£º
+æ¥ä¸‹æ¥ï¼Œç¼–å†™é€šè¿‡GETæ–¹æ³•è·å–æ–‡ç« çš„APIï¼Œåˆ†åˆ«è·å–æ‰€æœ‰çš„æ–‡ç« å’ŒæŒ‰ç…§idè·å–æ–‡ç« ï¼š
 @main.route('/posts/',methods=['GET'])  
 def get_posts():  
    post=Post.query.all()  
@@ -161,10 +161,10 @@ def get_post(id):
 returnjsonify(post.to_json())  
 
 
-6.FlaskÖĞÈıÖÖ²âÊÔ·½·¨
-(1)µ¥Ôª²âÊÔ²¢Í³¼Æ²âÊÔµÄ¸²¸ÇÂÊ
-(2)Ê¹ÓÃFlask Web²âÊÔ¿Í»§¶Ë½øĞĞ²âÊÔ
-(3)Ê¹ÓÃselenium½øĞĞ×Ô¶¯»¯²âÊÔ
+6.Flaskä¸­ä¸‰ç§æµ‹è¯•æ–¹æ³•
+(1)å•å…ƒæµ‹è¯•å¹¶ç»Ÿè®¡æµ‹è¯•çš„è¦†ç›–ç‡
+(2)ä½¿ç”¨Flask Webæµ‹è¯•å®¢æˆ·ç«¯è¿›è¡Œæµ‹è¯•
+(3)ä½¿ç”¨seleniumè¿›è¡Œè‡ªåŠ¨åŒ–æµ‹è¯•
 
 https://blog.csdn.net/hyman_c/article/details/54632664
 

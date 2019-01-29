@@ -1,8 +1,8 @@
-Factory��Protocol���ϸ�Ĳ�ͬ��Factory�Ĺ����ǹ��������¼������Ҵ���Protocol������ÿһ���ɹ������ӡ�
-һ�����ӽ�����Protocol����ͽӹ�����Ĺ����ˣ������շ����ݺ;����Ƿ�ر����ӡ�
-Protocol������һ�����Խ���transport�������˵�ǰ����Ӷ���
+﻿Factory和Protocol有严格的不同。Factory的工作是管理连接事件，并且创建Protocol对象处理每一个成功的连接。
+一旦连接建立，Protocol对象就接管下面的工作了，包括收发数据和决定是否关闭连接。
+Protocol对象有一个属性叫做transport，包含了当前活动连接对象。
 
-��1��factory = Factory()   ʵ����һ������
-��2��factory.protocol = DoLogger   ������ protocol���� ָ��̳�Protocol������, DoLogger Ϊ��ز�������
-��3��reactor.listenTCP(7001,factory)  ��Ӧ�ѵļ����˿��¼�ָ��̶��Ķ˿ں�ʵ�����Ĺ���
-��4��reactor.run()
+（1）factory = Factory()   实例化一个工厂
+（2）factory.protocol = DoLogger   工厂的 protocol属性 指向继承Protocol的子类, DoLogger 为相关操作函数
+（3）reactor.listenTCP(7001,factory)  反应堆的监听端口事件指向固定的端口和实例化的工厂
+（4）reactor.run()

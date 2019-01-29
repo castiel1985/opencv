@@ -1,34 +1,34 @@
-import logging	Ïß³Ì°²È«
+ï»¿import logging	çº¿ç¨‹å®‰å…¨
 
-£¨1£©logging.debug('This is debug message')
+ï¼ˆ1ï¼‰logging.debug('This is debug message')
 logging.info('This is info message')
 logging.warning('This is warning message')
 
-£¨2£©logging.basicConfig(level=logging.DEBUG,
+ï¼ˆ2ï¼‰logging.basicConfig(level=logging.DEBUG,
                 format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                 datefmt='%a, %d %b %Y %H:%M:%S',
                 filename='myapp.log',
-                filemode='w')       ½«ÈÕÖ¾±£´æµ½Ïà¹ØÎÄ¼şÖĞ
-²ÎÊıËµÃ÷£º
-format: Ö¸¶¨Êä³öµÄ¸ñÊ½ºÍÄÚÈİ£¬format¿ÉÒÔÊä³öºÜ¶àÓĞÓÃĞÅÏ¢£¬ÈçÉÏÀıËùÊ¾:
- %(levelno)s: ´òÓ¡ÈÕÖ¾¼¶±ğµÄÊıÖµ
- %(levelname)s: ´òÓ¡ÈÕÖ¾¼¶±ğÃû³Æ
- %(pathname)s: ´òÓ¡µ±Ç°Ö´ĞĞ³ÌĞòµÄÂ·¾¶£¬ÆäÊµ¾ÍÊÇsys.argv[0]
- %(filename)s: ´òÓ¡µ±Ç°Ö´ĞĞ³ÌĞòÃû
- %(funcName)s: ´òÓ¡ÈÕÖ¾µÄµ±Ç°º¯Êı
- %(lineno)d: ´òÓ¡ÈÕÖ¾µÄµ±Ç°ĞĞºÅ
- %(asctime)s: ´òÓ¡ÈÕÖ¾µÄÊ±¼ä
- %(thread)d: ´òÓ¡Ïß³ÌID
- %(threadName)s: ´òÓ¡Ïß³ÌÃû³Æ
- %(process)d: ´òÓ¡½ø³ÌID
- %(message)s: ´òÓ¡ÈÕÖ¾ĞÅÏ¢
-datefmt: Ö¸¶¨Ê±¼ä¸ñÊ½£¬Í¬time.strftime()
-level: ÉèÖÃÈÕÖ¾¼¶±ğ£¬Ä¬ÈÏÎªlogging.WARNING
-stream: Ö¸¶¨½«ÈÕÖ¾µÄÊä³öÁ÷£¬¿ÉÒÔÖ¸¶¨Êä³öµ½sys.stderr,sys.stdout»òÕßÎÄ¼ş£¬Ä¬ÈÏÊä³öµ½sys.stderr£¬µ±streamºÍfilenameÍ¬Ê±Ö¸¶¨Ê±£¬stream±»ºöÂÔ
+                filemode='w')       å°†æ—¥å¿—ä¿å­˜åˆ°ç›¸å…³æ–‡ä»¶ä¸­
+å‚æ•°è¯´æ˜ï¼š
+format: æŒ‡å®šè¾“å‡ºçš„æ ¼å¼å’Œå†…å®¹ï¼Œformatå¯ä»¥è¾“å‡ºå¾ˆå¤šæœ‰ç”¨ä¿¡æ¯ï¼Œå¦‚ä¸Šä¾‹æ‰€ç¤º:
+ %(levelno)s: æ‰“å°æ—¥å¿—çº§åˆ«çš„æ•°å€¼
+ %(levelname)s: æ‰“å°æ—¥å¿—çº§åˆ«åç§°
+ %(pathname)s: æ‰“å°å½“å‰æ‰§è¡Œç¨‹åºçš„è·¯å¾„ï¼Œå…¶å®å°±æ˜¯sys.argv[0]
+ %(filename)s: æ‰“å°å½“å‰æ‰§è¡Œç¨‹åºå
+ %(funcName)s: æ‰“å°æ—¥å¿—çš„å½“å‰å‡½æ•°
+ %(lineno)d: æ‰“å°æ—¥å¿—çš„å½“å‰è¡Œå·
+ %(asctime)s: æ‰“å°æ—¥å¿—çš„æ—¶é—´
+ %(thread)d: æ‰“å°çº¿ç¨‹ID
+ %(threadName)s: æ‰“å°çº¿ç¨‹åç§°
+ %(process)d: æ‰“å°è¿›ç¨‹ID
+ %(message)s: æ‰“å°æ—¥å¿—ä¿¡æ¯
+datefmt: æŒ‡å®šæ—¶é—´æ ¼å¼ï¼ŒåŒtime.strftime()
+level: è®¾ç½®æ—¥å¿—çº§åˆ«ï¼Œé»˜è®¤ä¸ºlogging.WARNING
+stream: æŒ‡å®šå°†æ—¥å¿—çš„è¾“å‡ºæµï¼Œå¯ä»¥æŒ‡å®šè¾“å‡ºåˆ°sys.stderr,sys.stdoutæˆ–è€…æ–‡ä»¶ï¼Œé»˜è®¤è¾“å‡ºåˆ°sys.stderrï¼Œå½“streamå’ŒfilenameåŒæ—¶æŒ‡å®šæ—¶ï¼Œstreamè¢«å¿½ç•¥
 
 
 
-£¨3£©logging.config.fileConfig("logger.conf")
+ï¼ˆ3ï¼‰logging.config.fileConfig("logger.conf")
 logger = logging.getLogger("example01")
 
 

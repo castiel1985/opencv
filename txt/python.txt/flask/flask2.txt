@@ -1,8 +1,8 @@
-1.flaskÖĞµÄÊı¾İÄ£ĞÍ¹ØÏµ
-Ò»¶ÔÒ»¹ØÏµ
+ï»¿1.flaskä¸­çš„æ•°æ®æ¨¡å‹å…³ç³»
+ä¸€å¯¹ä¸€å…³ç³»
 class Identification(db.Model):  
     """ 
-    Éí·İÖ¤ 
+    èº«ä»½è¯ 
     """  
     __tablename__='idents'  
     id=db.Column(db.Integer,primary_key=True)  
@@ -14,7 +14,7 @@ class Identification(db.Model):
 
 class User(db.Model):  
     """ 
-    ÓÃ»§ 
+    ç”¨æˆ· 
     """  
     __tablename__='users'  
     id = db.Column(db.Integer,primary_key=True)  
@@ -23,7 +23,7 @@ class User(db.Model):
   
     def __repr__(self):  
         return '<User %s>'%self.name  
-ÑéÖ¤£º
+éªŒè¯ï¼š
 >>> i=Identification(id=123)  
 >>> u=User(name='Hyman')  
 >>> i.user=u  
@@ -33,7 +33,7 @@ class User(db.Model):
 
 
 
-Ò»¶Ô¶à¹ØÏµ
+ä¸€å¯¹å¤šå…³ç³»
 class Role(db.Model):    
       __tablename__='roles'    
       id = db.Column(db.Integer,primary_key=True)    
@@ -50,7 +50,7 @@ class Role(db.Model):
       def __repr__(self):    
           return '<User %s>'%self.name   
 
-ÑéÖ¤£º
+éªŒè¯ï¼š
 >>>from test.py import Role,User  
 >>>r=Role(id=1,name='admin')  
 >>>u=User(id=10,name='Hyman',role_id=1)  
@@ -61,9 +61,9 @@ class Role(db.Model):
 
 
 
-¶à¶Ô¶à¹ØÏµ
-¶à¶Ô¶à¹ØÏµ£¬ĞèÒª½èÖúµÚÈı¸ö±íÀ´ÊµÏÖ¡£Í¨¹ıµÚÈı¸ö±í£¬½«¶à¶Ô¶à¹ØÏµ·Ö½â³ÉÁ½¸öÒ»¶Ô¶à¹ØÏµ¡£ÒÔÎÒÃÇ³£¼ûµÄStudentÀàºÍClassÀàÎªÀı£¬Ò»¸öStudent¿ÉÒÔÑ¡Ôñ¶à¸öClass£¬
-¶øÒ»ÃÅClassÒ²¿ÉÒÔ±»¶à¸öStudentÑ¡Ôñ£¬ÎÒÃÇ´´½¨Ò»¸öRelation±íÀ´¹ØÁªStudentºÍClass¡£
+å¤šå¯¹å¤šå…³ç³»
+å¤šå¯¹å¤šå…³ç³»ï¼Œéœ€è¦å€ŸåŠ©ç¬¬ä¸‰ä¸ªè¡¨æ¥å®ç°ã€‚é€šè¿‡ç¬¬ä¸‰ä¸ªè¡¨ï¼Œå°†å¤šå¯¹å¤šå…³ç³»åˆ†è§£æˆä¸¤ä¸ªä¸€å¯¹å¤šå…³ç³»ã€‚ä»¥æˆ‘ä»¬å¸¸è§çš„Studentç±»å’ŒClassç±»ä¸ºä¾‹ï¼Œä¸€ä¸ªStudentå¯ä»¥é€‰æ‹©å¤šä¸ªClassï¼Œ
+è€Œä¸€é—¨Classä¹Ÿå¯ä»¥è¢«å¤šä¸ªStudenté€‰æ‹©ï¼Œæˆ‘ä»¬åˆ›å»ºä¸€ä¸ªRelationè¡¨æ¥å…³è”Studentå’ŒClassã€‚
 
 relation=db.Table('relations',db.Column('student_id',db.Integer,db.ForeignKey('students.id')),db.Column('class_id',db.Integer,db.ForeignKey('classes.id')))  
     
@@ -84,13 +84,13 @@ class Class(db.Model):
     def __repr__(self):  
         return '<CLass %s>'%self.name  
 
-µÚÒ»ĞĞ£¬ÎÒÃÇ´´½¨ÁËÒ»¸öTable½Ğ×örelation¡£Ö®ËùÒÔÔÚÕâÀï´´½¨£¬ÊÇÒòÎªÎÒ²»Ïë´´½¨Êı¾İ¿â£¬¶øÊÇÀûÓÃdb.Table£¬½«Õâ¸ö±í´´½¨µ½ÄÚ´æÖĞ¡£relation±íÖĞº¬ÓĞÁ½¸ö×Ö¶Î·Ö±ğ×÷ÎªÍâ¼ü¹ØÁªµ½StudentÀàºÍClassÀàµÄÖ÷¼üidÖĞ¡£½ô½Ó×Å´´½¨Á½¸ö±íStudentºÍClass£¬ÔÚStudent±íÖĞÎÒÃÇ´´½¨ÁËÒ»¸ödb.relationship£¬ÓÃbackrefÔÚClassÀàÖĞÌí¼Ó·´ÏòÒıÓÃstudents¡£²¢ÓÃsecondaryÖ¸¶¨×÷ÎªÖĞ¼ä±íµÄrelation¡£
+ç¬¬ä¸€è¡Œï¼Œæˆ‘ä»¬åˆ›å»ºäº†ä¸€ä¸ªTableå«åšrelationã€‚ä¹‹æ‰€ä»¥åœ¨è¿™é‡Œåˆ›å»ºï¼Œæ˜¯å› ä¸ºæˆ‘ä¸æƒ³åˆ›å»ºæ•°æ®åº“ï¼Œè€Œæ˜¯åˆ©ç”¨db.Tableï¼Œå°†è¿™ä¸ªè¡¨åˆ›å»ºåˆ°å†…å­˜ä¸­ã€‚relationè¡¨ä¸­å«æœ‰ä¸¤ä¸ªå­—æ®µåˆ†åˆ«ä½œä¸ºå¤–é”®å…³è”åˆ°Studentç±»å’ŒClassç±»çš„ä¸»é”®idä¸­ã€‚ç´§æ¥ç€åˆ›å»ºä¸¤ä¸ªè¡¨Studentå’ŒClassï¼Œåœ¨Studentè¡¨ä¸­æˆ‘ä»¬åˆ›å»ºäº†ä¸€ä¸ªdb.relationshipï¼Œç”¨backrefåœ¨Classç±»ä¸­æ·»åŠ åå‘å¼•ç”¨studentsã€‚å¹¶ç”¨secondaryæŒ‡å®šä½œä¸ºä¸­é—´è¡¨çš„relationã€‚
 
 https://blog.csdn.net/hyman_c/article/details/53647116
 
 
-2.laskÖĞÊ¹ÓÃFlask_Mail·¢ËÍµç×ÓÓÊ¼ş
-(1)ÅäÖÃSMTP·şÎñÆ÷µÄĞÅÏ¢
+2.laskä¸­ä½¿ç”¨Flask_Mailå‘é€ç”µå­é‚®ä»¶
+(1)é…ç½®SMTPæœåŠ¡å™¨çš„ä¿¡æ¯
      import os
 
      app.config['MAIL_SERVER']='smtp.qq.com'
@@ -103,15 +103,15 @@ https://blog.csdn.net/hyman_c/article/details/53647116
 
      app.config['MAIL_PASSWORD']=os.environ.get('MAIL_PASSWORD')
 
-(2)´´½¨µç×ÓÓÊ¼şMailÊµÀı
+(2)åˆ›å»ºç”µå­é‚®ä»¶Mailå®ä¾‹
 from flask_mail import Mail  
 mail=Mail(app)
 
-(3)ÅäÖÃËùĞèÒªµÄ»·¾³±äÁ¿
+(3)é…ç½®æ‰€éœ€è¦çš„ç¯å¢ƒå˜é‡
 export MAIL_USERNAME=XXX@qq.com  
 export MAIL_PASSWORD=XXXXX  
 
-(4)ÔÚpython shellÖĞ·¢ËÍµç×ÓÓÊ¼ş
+(4)åœ¨python shellä¸­å‘é€ç”µå­é‚®ä»¶
 from flask.ext.mail import Message  
 from test import mail  
 msg=Message('My Subject',sender='879651072@qq.com',recipients=['879651072@qq.com'])  
@@ -122,7 +122,7 @@ with app.app_context():
 
 
 
-3.ÀûÓÃconfig.pyÅäÖÃÎÄ¼ş¶¯Ì¬µÄ´´½¨²»Í¬µÄFlask¶ÔÏó
+3.åˆ©ç”¨config.pyé…ç½®æ–‡ä»¶åŠ¨æ€çš„åˆ›å»ºä¸åŒçš„Flaskå¯¹è±¡
 import os  
 basedir = os.path.abspath(os.path.dirname(__file__))  
   
@@ -162,11 +162,11 @@ config={
         'Production':ProductionConfig,  
         'default':DevelopmentConfig  
         }  
-Ê×ÏÈ¶¨ÒåÁËÒ»¸ö»ùÀàConfig£¬¸ÃÀàÖĞ°üº¬ÁËÔÚ¿ª·¢£¬²âÊÔºÍÉú²úÅäÖÃ¶¼ĞèÒªµÄ»ù±¾ÅäÖÃ£¬ÆäÖĞ°ü°üÀ¨Ô¤·ÀCSRFµÄÃÜÔ¿¡¢ÉèÖÃÊı¾İ¿â×Ô¶¯commitµÄÑ¡ÏîµÈµÈ£¬ÆäËû¿ª·¢¡¢²âÊÔºÍÉú²úÅäÖÃ·Ö±ğ´ÓConfig¼Ì³Ğ£¬Ö÷ÒªÇø±ğÔÚÓÚÅäÖÃµÄÊı¾İ¿âÂ·¾¶²»Ò»Ñù¡£
+é¦–å…ˆå®šä¹‰äº†ä¸€ä¸ªåŸºç±»Configï¼Œè¯¥ç±»ä¸­åŒ…å«äº†åœ¨å¼€å‘ï¼Œæµ‹è¯•å’Œç”Ÿäº§é…ç½®éƒ½éœ€è¦çš„åŸºæœ¬é…ç½®ï¼Œå…¶ä¸­åŒ…åŒ…æ‹¬é¢„é˜²CSRFçš„å¯†é’¥ã€è®¾ç½®æ•°æ®åº“è‡ªåŠ¨commitçš„é€‰é¡¹ç­‰ç­‰ï¼Œå…¶ä»–å¼€å‘ã€æµ‹è¯•å’Œç”Ÿäº§é…ç½®åˆ†åˆ«ä»Configç»§æ‰¿ï¼Œä¸»è¦åŒºåˆ«åœ¨äºé…ç½®çš„æ•°æ®åº“è·¯å¾„ä¸ä¸€æ ·ã€‚
 
-×îºó¶¨ÒåÁËÒ»¸öconfigµÄ×Öµä£¬×÷ÎªÍâ²¿µ÷ÓÃÕâĞ©ÅäÖÃµÄ½Ó¿Ú¡£
+æœ€åå®šä¹‰äº†ä¸€ä¸ªconfigçš„å­—å…¸ï¼Œä½œä¸ºå¤–éƒ¨è°ƒç”¨è¿™äº›é…ç½®çš„æ¥å£ã€‚
 
-¿´ÏÂÔõÃ´È¥µ÷ÓÃÕâĞ©ÅäÖÃ£¬ÕâÀïÎÒÏÈÒıÈëÁËapp/__init__.pyÕâ¸öapp°üµÄ¹¹ÔìÎÄ¼ş£º
+çœ‹ä¸‹æ€ä¹ˆå»è°ƒç”¨è¿™äº›é…ç½®ï¼Œè¿™é‡Œæˆ‘å…ˆå¼•å…¥äº†app/__init__.pyè¿™ä¸ªappåŒ…çš„æ„é€ æ–‡ä»¶ï¼š
 from flask import Flask,render_template  
 from flask.ext.bootstrap import Bootstrap  
 from flask.ext.mail import Mail  
@@ -193,7 +193,7 @@ def create_app(config_name):
     app.register_blueprint(main_blueprint)  
     return app  
 
-µÚÒ»ĞĞÊÇ´ÓÎÒÃÇ¶¨ÒåµÄconfig.pyÖĞÒıÈëconfigÕâ¸ö×Öµä;µÚ¶şĞĞÊÇÍ¨¹ıconfig_name»ñÈ¡²»Í¬µÄConfig×ÓÀà¶ÔÏó£¬app.configµÄfrom_objectº¯Êı»á¶Ô·µ»ØµÄConfig¶ÔÏóµÄ×ÓÀàÌáÈ¡Ïà¹ØÊôĞÔºÍÖµ£¬ÉÔºóÎÒ»áÏêÏ¸·ÖÎöÏÂÕâ¸ö·½·¨;µÚÈıĞĞµ÷ÓÃinit_app()Õâ¸ö¾²Ì¬·½·¨¶Ôapp½øĞĞÆäËûµÄ²Ù×÷£¬µ«ÊÇÎÒÃÇÕâÀïÓÃÁËpass£¬²¢Ã»ÓĞ×öÊµ¼ÊµÄ²Ù×÷¡£
+ç¬¬ä¸€è¡Œæ˜¯ä»æˆ‘ä»¬å®šä¹‰çš„config.pyä¸­å¼•å…¥configè¿™ä¸ªå­—å…¸;ç¬¬äºŒè¡Œæ˜¯é€šè¿‡config_nameè·å–ä¸åŒçš„Configå­ç±»å¯¹è±¡ï¼Œapp.configçš„from_objectå‡½æ•°ä¼šå¯¹è¿”å›çš„Configå¯¹è±¡çš„å­ç±»æå–ç›¸å…³å±æ€§å’Œå€¼ï¼Œç¨åæˆ‘ä¼šè¯¦ç»†åˆ†æä¸‹è¿™ä¸ªæ–¹æ³•;ç¬¬ä¸‰è¡Œè°ƒç”¨init_app()è¿™ä¸ªé™æ€æ–¹æ³•å¯¹appè¿›è¡Œå…¶ä»–çš„æ“ä½œï¼Œä½†æ˜¯æˆ‘ä»¬è¿™é‡Œç”¨äº†passï¼Œå¹¶æ²¡æœ‰åšå®é™…çš„æ“ä½œã€‚
 
 
 
@@ -202,11 +202,11 @@ def create_app(config_name):
 
 
 
-4.ÀûÓÃ³ÌĞò¹¤³§º¯Êı´´½¨Flask³ÌĞò¶ÔÏó²¢×¢²áÀ¶±¾
-__init__.pyµÄ´úÂëÖĞµÄcreate_app()º¯Êı¾ÍÊÇ¹¤³§º¯Êı¡£
+4.åˆ©ç”¨ç¨‹åºå·¥å‚å‡½æ•°åˆ›å»ºFlaskç¨‹åºå¯¹è±¡å¹¶æ³¨å†Œè“æœ¬
+__init__.pyçš„ä»£ç ä¸­çš„create_app()å‡½æ•°å°±æ˜¯å·¥å‚å‡½æ•°ã€‚
 
-¿ªÊ¼´´½¨²¢Ã»ÓĞ´«ÈëappµÄ²ÎÊı£¬¶øÊÇ·Ö±ğ²ÉÓÃBootstrapµÈÎŞ²Î¹¹Ôì·½Ê½£¬È»ºóÔÙcreate_app())ÖĞÀûÓÃinit_app³ÉÔ±º¯Êı½øĞĞaÓëpp¶ÔÏóµÄ¹ØÁª
-²¢ÒıÈëÁËÒ»¸öÀ¶±¾µÄÀà¶ÔÏómain_blueprint 
+å¼€å§‹åˆ›å»ºå¹¶æ²¡æœ‰ä¼ å…¥appçš„å‚æ•°ï¼Œè€Œæ˜¯åˆ†åˆ«é‡‡ç”¨Bootstrapç­‰æ— å‚æ„é€ æ–¹å¼ï¼Œç„¶åå†create_app())ä¸­åˆ©ç”¨init_appæˆå‘˜å‡½æ•°è¿›è¡Œaä¸ppå¯¹è±¡çš„å…³è”
+å¹¶å¼•å…¥äº†ä¸€ä¸ªè“æœ¬çš„ç±»å¯¹è±¡main_blueprint 
     from .main import main as main_blueprint  
     app.register_blueprint(main_blueprint)  
     return app  
@@ -215,13 +215,13 @@ https://blog.csdn.net/hyman_c/article/details/52882256
 
 
 
-5.ÀûÓÃunittest½øĞĞµ¥Ôª²âÊÔ
+5.åˆ©ç”¨unittestè¿›è¡Œå•å…ƒæµ‹è¯•
 
 
 
 
-manager.pyÖĞµ÷ÓÃµ¥Ôª²âÊÔµÄ´úÂë£º
-test_basic.pyµÄ´úÂë£º
+manager.pyä¸­è°ƒç”¨å•å…ƒæµ‹è¯•çš„ä»£ç ï¼š
+test_basic.pyçš„ä»£ç ï¼š
 import unittest  
 from flask import current_app  
 from app import create_app,db  
@@ -259,7 +259,7 @@ https://blog.csdn.net/hyman_c/article/details/52886805
 
 6.
 app/main/__int__.py
-°ü³õÊ¼»¯Ä£¿é£¬¶¨ÒåÁËÒ»¸öÀ¶±¾¶ÔÏómain£¬ÒÔÔÚviews.pyºÍerrors.pyÖĞÊ¹ÓÃ
+åŒ…åˆå§‹åŒ–æ¨¡å—ï¼Œå®šä¹‰äº†ä¸€ä¸ªè“æœ¬å¯¹è±¡mainï¼Œä»¥åœ¨views.pyå’Œerrors.pyä¸­ä½¿ç”¨
 
 
 

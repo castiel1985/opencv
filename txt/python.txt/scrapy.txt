@@ -1,37 +1,37 @@
-spider
+ï»¿spider
 
-¼Ì³ĞÀà:(from scrapy.spiders import Spider)
-ÊôĞÔ£ºname(×Ö·û´®),allowed_domains£¨ÁĞ±í£©,parse(º¯Êı£¬²ÎÊı self,response)
-
-
-
-scrapyÃüÁî
-
-scrapy startproject <project_name>    ´´½¨ÏîÄ¿
-
-scrapy genspider [-t template] <name> <domain>   ´´½¨spiderµÄÒ»ÖÖ¿ì½İ·½·¨¡£¸Ã·½·¨¿ÉÒÔÊ¹ÓÃÌáÇ°¶¨ÒåºÃµÄÄ£°åÀ´Éú³Éspider¡£ÄúÒ²¿ÉÒÔ×Ô¼º´´½¨spiderµÄÔ´ÂëÎÄ¼ş¡£
-
-scrapy crawl <spider>	Ê¹ÓÃspider½øĞĞÅÀÈ¡
-
-scrapy check [-l] <spider> 	ÔËĞĞcontract¼ì²é¡£
+ç»§æ‰¿ç±»:(from scrapy.spiders import Spider)
+å±æ€§ï¼šname(å­—ç¬¦ä¸²),allowed_domainsï¼ˆåˆ—è¡¨ï¼‰,parse(å‡½æ•°ï¼Œå‚æ•° self,response)
 
 
-scrapy list		ÁĞ³öµ±Ç°ÏîÄ¿ÖĞËùÓĞ¿ÉÓÃµÄspider¡£Ã¿ĞĞÊä³öÒ»¸öspider¡£
 
-scrapy view <url>      ÔÚä¯ÀÀÆ÷ÖĞ´ò¿ª¸ø¶¨µÄURL£¬²¢ÒÔScrapy spider»ñÈ¡µ½µÄĞÎÊ½Õ¹ÏÖ¡£ 
+scrapyå‘½ä»¤
+
+scrapy startproject <project_name>    åˆ›å»ºé¡¹ç›®
+
+scrapy genspider [-t template] <name> <domain>   åˆ›å»ºspiderçš„ä¸€ç§å¿«æ·æ–¹æ³•ã€‚è¯¥æ–¹æ³•å¯ä»¥ä½¿ç”¨æå‰å®šä¹‰å¥½çš„æ¨¡æ¿æ¥ç”Ÿæˆspiderã€‚æ‚¨ä¹Ÿå¯ä»¥è‡ªå·±åˆ›å»ºspiderçš„æºç æ–‡ä»¶ã€‚
+
+scrapy crawl <spider>	ä½¿ç”¨spiderè¿›è¡Œçˆ¬å–
+
+scrapy check [-l] <spider> 	è¿è¡Œcontractæ£€æŸ¥ã€‚
 
 
-scrapy parse <url> [options] 		»ñÈ¡¸ø¶¨µÄURL²¢Ê¹ÓÃÏàÓ¦µÄspider·ÖÎö´¦Àí¡£
+scrapy list		åˆ—å‡ºå½“å‰é¡¹ç›®ä¸­æ‰€æœ‰å¯ç”¨çš„spiderã€‚æ¯è¡Œè¾“å‡ºä¸€ä¸ªspiderã€‚
+
+scrapy view <url>      åœ¨æµè§ˆå™¨ä¸­æ‰“å¼€ç»™å®šçš„URLï¼Œå¹¶ä»¥Scrapy spiderè·å–åˆ°çš„å½¢å¼å±•ç°ã€‚ 
 
 
-scrapy settings £¨--get BOT_NAME£©
-
-scrapy runspider <spider_file.py>    ÔÚÎ´´´½¨ÏîÄ¿µÄÇé¿öÏÂ£¬ÔËĞĞÒ»¸ö±àĞ´ÔÚPythonÎÄ¼şÖĞµÄspider¡£
+scrapy parse <url> [options] 		è·å–ç»™å®šçš„URLå¹¶ä½¿ç”¨ç›¸åº”çš„spideråˆ†æå¤„ç†ã€‚
 
 
-scrapy bench		ÔËĞĞbenchmark²âÊÔ¡£
+scrapy settings ï¼ˆ--get BOT_NAMEï¼‰
 
-scrapy deploy [ <target:project> | -l <target> | -L ]			½«ÏîÄ¿²¿Êğµ½Scrapyd·şÎñ¡£
+scrapy runspider <spider_file.py>    åœ¨æœªåˆ›å»ºé¡¹ç›®çš„æƒ…å†µä¸‹ï¼Œè¿è¡Œä¸€ä¸ªç¼–å†™åœ¨Pythonæ–‡ä»¶ä¸­çš„spiderã€‚
+
+
+scrapy bench		è¿è¡Œbenchmarkæµ‹è¯•ã€‚
+
+scrapy deploy [ <target:project> | -l <target> | -L ]			å°†é¡¹ç›®éƒ¨ç½²åˆ°ScrapydæœåŠ¡ã€‚
 
 
 

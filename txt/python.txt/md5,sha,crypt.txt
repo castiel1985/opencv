@@ -1,8 +1,8 @@
-1. md5Ä£¿é
-md5.new([arg])     ·µ»ØÒ»¸ömd5¶ÔÏó£¬Èç¹û¸ø³ö²ÎÊý£¬ÔòÏàµ±ÓÚµ÷ÓÃÁËupdate(arg)
-md5.update(arg)   ÓÃstring²ÎÊýarg¸üÐÂmd5¶ÔÏó
-md5.digest()         ·µ»Ø16×Ö½ÚµÄÕªÒª£¬ÓÉ´«¸øupdateµÄstringÉú³É£¬ÕªÒªÃ»ÓÐascii×Ö·û
-md5.hexdigest()    ÒÔ16½øÖÆµÄÐÎÊ½·µ»ØÕªÒª
+ï»¿1. md5æ¨¡å—
+md5.new([arg])     è¿”å›žä¸€ä¸ªmd5å¯¹è±¡ï¼Œå¦‚æžœç»™å‡ºå‚æ•°ï¼Œåˆ™ç›¸å½“äºŽè°ƒç”¨äº†update(arg)
+md5.update(arg)   ç”¨stringå‚æ•°argæ›´æ–°md5å¯¹è±¡
+md5.digest()         è¿”å›ž16å­—èŠ‚çš„æ‘˜è¦ï¼Œç”±ä¼ ç»™updateçš„stringç”Ÿæˆï¼Œæ‘˜è¦æ²¡æœ‰asciiå­—ç¬¦
+md5.hexdigest()    ä»¥16è¿›åˆ¶çš„å½¢å¼è¿”å›žæ‘˜è¦
 import md5
 a = md5.new('passwd')
 a.digest()
@@ -16,8 +16,8 @@ a.hexdigest()
   'b28366b814c9c6196b01fed8d98fe048'
 
 
-2.sha Ä£¿é
-ÓÃ·¨Í¬md5Ò»Ñù
+2.sha æ¨¡å—
+ç”¨æ³•åŒmd5ä¸€æ ·
 
 import sha
 b=sha.new('passwd')
@@ -34,7 +34,7 @@ b.hexdigest()
 
 
 3.crypt
-cryptÄ£¿éÖÐ¾ÍÒ»¸öº¯Êý£¬crypt(str,salt) --> string
+cryptæ¨¡å—ä¸­å°±ä¸€ä¸ªå‡½æ•°ï¼Œcrypt(str,salt) --> string
 from crypt import crypt
 crypt('passwd','a')
  'aaIslqfNH03LA'

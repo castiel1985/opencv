@@ -1,68 +1,68 @@
-pip install SQLAlchemy
+ï»¿pip install SQLAlchemy
 pip install pymysql
 
 
-# ´´½¨ÊµÀı£¬²¢Á¬½Ótest¿â
+# åˆ›å»ºå®ä¾‹ï¼Œå¹¶è¿æ¥teståº“
 engine = create_engine("mysql+pymysql://root:123456@localhost/test",encoding='utf-8', echo=True)
-# echo=True ÏÔÊ¾ĞÅÏ¢
-ÖĞÎÄÖ¸¶¨£º
+# echo=True æ˜¾ç¤ºä¿¡æ¯
+ä¸­æ–‡æŒ‡å®šï¼š
 engine = create_engine("mysql+pymysql://root:123456@localhost/test?charset=utf8",)
 
-´´½¨±í
+åˆ›å»ºè¡¨
 class User(Base):
-    __tablename__ = 'user'  # ±íÃû
-    id = Column(Integer, primary_key=True)   #È·¶¨Ö÷Ë÷Òı
+    __tablename__ = 'user'  # è¡¨å
+    id = Column(Integer, primary_key=True)   #ç¡®å®šä¸»ç´¢å¼•
     name = Column(String(32))
     password = Column(String(64))
 
 
-(1)²åÈëÒ»ÌõÊı¾İ
-# ´´½¨ÓëÊı¾İ¿âµÄ»á»°session class ,×¢Òâ,ÕâÀï·µ»Ø¸øsessionµÄÊÇ¸öclass,²»ÊÇÊµÀı
-Session_class = sessionmaker(bind=engine)  # ÊµÀıºÍengine°ó¶¨
-Session = Session_class()  # Éú³ÉsessionÊµÀı£¬Ïàµ±ÓÚÓÎ±ê
+(1)æ’å…¥ä¸€æ¡æ•°æ®
+# åˆ›å»ºä¸æ•°æ®åº“çš„ä¼šè¯session class ,æ³¨æ„,è¿™é‡Œè¿”å›ç»™sessionçš„æ˜¯ä¸ªclass,ä¸æ˜¯å®ä¾‹
+Session_class = sessionmaker(bind=engine)  # å®ä¾‹å’Œengineç»‘å®š
+Session = Session_class()  # ç”Ÿæˆsessionå®ä¾‹ï¼Œç›¸å½“äºæ¸¸æ ‡
 
-user_obj = User(id=27,name="fgf",password="123456")  # Éú³ÉÄãÒª´´½¨µÄÊı¾İ¶ÔÏó
-print(user_obj.name,user_obj.id)  # ´ËÊ±»¹Ã»´´½¨¶ÔÏóÄØ£¬²»ĞÅÄã´òÓ¡Ò»ÏÂid·¢ÏÖ»¹ÊÇNone
+user_obj = User(id=27,name="fgf",password="123456")  # ç”Ÿæˆä½ è¦åˆ›å»ºçš„æ•°æ®å¯¹è±¡
+print(user_obj.name,user_obj.id)  # æ­¤æ—¶è¿˜æ²¡åˆ›å»ºå¯¹è±¡å‘¢ï¼Œä¸ä¿¡ä½ æ‰“å°ä¸€ä¸‹idå‘ç°è¿˜æ˜¯None
 
-Session.add(user_obj)  # °ÑÒª´´½¨µÄÊı¾İ¶ÔÏóÌí¼Óµ½Õâ¸ösessionÀï£¬ Ò»»áÍ³Ò»´´½¨
-print(user_obj.name,user_obj.id) #´ËÊ±Ò²ÒÀÈ»»¹Ã»´´½¨
+Session.add(user_obj)  # æŠŠè¦åˆ›å»ºçš„æ•°æ®å¯¹è±¡æ·»åŠ åˆ°è¿™ä¸ªsessioné‡Œï¼Œ ä¸€ä¼šç»Ÿä¸€åˆ›å»º
+print(user_obj.name,user_obj.id) #æ­¤æ—¶ä¹Ÿä¾ç„¶è¿˜æ²¡åˆ›å»º
 
-Session.commit() #ÏÖ´Ë²ÅÍ³Ò»Ìá½»£¬´´½¨Êı¾İ
+Session.commit() #ç°æ­¤æ‰ç»Ÿä¸€æäº¤ï¼Œåˆ›å»ºæ•°æ®
 
-(2)²éÑ¯
-my_user = Session.query(User).filter_by(name="fgf").first()  # ²éÑ¯
+(2)æŸ¥è¯¢
+my_user = Session.query(User).filter_by(name="fgf").first()  # æŸ¥è¯¢
 print(my_user)
 print(my_user.id,my_user.name,my_user.password)
 
-(3)¶àÌõ¼ş²éÑ¯
+(3)å¤šæ¡ä»¶æŸ¥è¯¢
 objs = Session.query(User).filter(User.id>0).filter(User.id<7).all()
 
 
-(4)»Ø¹ö
-Session.rollback() #´ËÊ±ÄãrollbackÒ»ÏÂ
+(4)å›æ»š
+Session.rollback() #æ­¤æ—¶ä½ rollbackä¸€ä¸‹
 
 
-(5)Í³¼ÆºÍ·Ö×é
-Í³¼Æ count
-Session.query(User).filter(User.name.like("f%")).count()  # mysql²»Çø·Ö´óĞ¡Ğ´
+(5)ç»Ÿè®¡å’Œåˆ†ç»„
+ç»Ÿè®¡ count
+Session.query(User).filter(User.name.like("f%")).count()  # mysqlä¸åŒºåˆ†å¤§å°å†™
 
-·Ö×é group_by
+åˆ†ç»„ group_by
 from sqlalchemy import func
 print(Session.query(User.name,func.count(User.name)).group_by(User.name).all() )
 
 
-(6)É¾³ı
+(6)åˆ é™¤
 user = session.query(User).filter_by(name="user1").first()
 session.delete(user)
 session.commit()
 
-(7)Á¬±í
+(7)è¿è¡¨
 ret = session.query(Users, Favor).filter(Users.id == Favor.nid).all()
-# ÒÔÏÂÁ½ÖÖ ±ØĞë±íÖ®¼äÓĞÍâ¼ü¹ØÁª²ÅÄÜ²é
+# ä»¥ä¸‹ä¸¤ç§ å¿…é¡»è¡¨ä¹‹é—´æœ‰å¤–é”®å…³è”æ‰èƒ½æŸ¥
 ret = session.query(Person).join(Favor).all()  
 ret = session.query(Person).join(Favor, isouter=True).all()
 
-(8)Íâ¼ü¹ØÁªÊµÏÖ
+(8)å¤–é”®å…³è”å®ç°
 /*
 class Stu2(Base):
     __tablename__ = "stu2"
@@ -77,16 +77,16 @@ class StudyRecord(Base):
     id = Column(Integer, primary_key=True)
     day = Column(Integer,nullable=False)
     status = Column(String(32),nullable=False)
-    stu_id = Column(Integer,ForeignKey("stu2.id"))  #------Íâ¼ü¹ØÁª------
-    #Õâ¸önb£¬ÔÊĞíÄãÔÚuser±íÀïÍ¨¹ıbackref×Ö¶Î·´Ïò²é³öËùÓĞËüÔÚstu2±íÀïµÄ¹ØÁªÏîÊı¾İ
-    stu2 = relationship("Stu2", backref="my_study_record")  # Ìí¼Ó¹ØÏµ£¬·´²é£¨ÔÚÄÚ´æÀï£©
+    stu_id = Column(Integer,ForeignKey("stu2.id"))  #------å¤–é”®å…³è”------
+    #è¿™ä¸ªnbï¼Œå…è®¸ä½ åœ¨userè¡¨é‡Œé€šè¿‡backrefå­—æ®µåå‘æŸ¥å‡ºæ‰€æœ‰å®ƒåœ¨stu2è¡¨é‡Œçš„å…³è”é¡¹æ•°æ®
+    stu2 = relationship("Stu2", backref="my_study_record")  # æ·»åŠ å…³ç³»ï¼ŒåæŸ¥ï¼ˆåœ¨å†…å­˜é‡Œï¼‰
     def __repr__(self):
         return "<%s day:%s status:%s>" % (self.stu2.name, self.day,self.status)
 
-Base.metadata.create_all(engine)  # ´´½¨±í½á¹¹
+Base.metadata.create_all(engine)  # åˆ›å»ºè¡¨ç»“æ„
 
-Session_class = sessionmaker(bind=engine)  # ´´½¨ÓëÊı¾İ¿âµÄ»á»°session class ,×¢Òâ,ÕâÀï·µ»Ø¸øsessionµÄÊÇ¸öclass,²»ÊÇÊµÀı
-session = Session_class()  # Éú³ÉsessionÊµÀı #cursor
+Session_class = sessionmaker(bind=engine)  # åˆ›å»ºä¸æ•°æ®åº“çš„ä¼šè¯session class ,æ³¨æ„,è¿™é‡Œè¿”å›ç»™sessionçš„æ˜¯ä¸ªclass,ä¸æ˜¯å®ä¾‹
+session = Session_class()  # ç”Ÿæˆsessionå®ä¾‹ #cursor
 
 s1 = Stu2(name="A",register_date="2014-05-21")
 s2 = Stu2(name="J",register_date="2014-03-21")
@@ -98,21 +98,21 @@ study_obj2 = StudyRecord(day=2,status="NO", stu_id=1)
 study_obj3 = StudyRecord(day=3,status="YES", stu_id=1)
 study_obj4 = StudyRecord(day=1,status="YES", stu_id=2)
 
-session.add_all([s1,s2,s3,s4,study_obj1,study_obj2,study_obj3,study_obj4])  # ´´½¨
+session.add_all([s1,s2,s3,s4,study_obj1,study_obj2,study_obj3,study_obj4])  # åˆ›å»º
 session.commit()
 
-stu_obj = session.query(Stu2).filter(Stu2.name=="a").first()  # ²éÑ¯
-# ÔÚstu2±í£¬²éµ½StudyRecord±íµÄ¼ÇÂ¼
-print(stu_obj.my_study_record)  # ²éÑ¯AÒ»¹²ÉÏÁË¼¸½Ú¿Î
+stu_obj = session.query(Stu2).filter(Stu2.name=="a").first()  # æŸ¥è¯¢
+# åœ¨stu2è¡¨ï¼ŒæŸ¥åˆ°StudyRecordè¡¨çš„è®°å½•
+print(stu_obj.my_study_record)  # æŸ¥è¯¢Aä¸€å…±ä¸Šäº†å‡ èŠ‚è¯¾
 */
 
-(9)¶àÍâ¼ü¹ØÁª
+(9)å¤šå¤–é”®å…³è”
 /*
 class Customer(Base):
     __tablename__ = 'customer'
     id = Column(Integer, primary_key=True)
     name = Column(String(64))
-    # ÕËµ¥µØÖ·ºÍÓÊ¼ÄµØÖ· ¶¼¹ØÁªÍ¬Ò»¸öµØÖ·±í
+    # è´¦å•åœ°å€å’Œé‚®å¯„åœ°å€ éƒ½å…³è”åŒä¸€ä¸ªåœ°å€è¡¨
     billing_address_id = Column(Integer, ForeignKey("address.id"))
     shipping_address_id = Column(Integer, ForeignKey("address.id"))
 
@@ -130,15 +130,15 @@ class Address(Base):
 
 engine = create_engine("mysql+pymysql://root:123456@localhost/test",
                                     encoding='utf-8')
-Base.metadata.create_all(engine)  # ´´½¨±í½á¹¹
+Base.metadata.create_all(engine)  # åˆ›å»ºè¡¨ç»“æ„
 
 */
 
 
-(10)¶à¶Ô¶à¹ØÏµ
+(10)å¤šå¯¹å¤šå…³ç³»
 /*
 Base = declarative_base()
-# µÚÈıÕÅ±í ×Ô¼º´´½¨¡£²»ĞèÒªÊÖ¶¯¹ÜÀí£¬orm×Ô¶¯Î¬»¤
+# ç¬¬ä¸‰å¼ è¡¨ è‡ªå·±åˆ›å»ºã€‚ä¸éœ€è¦æ‰‹åŠ¨ç®¡ç†ï¼Œormè‡ªåŠ¨ç»´æŠ¤
 book_m2m_author = Table('book_m2m_author', Base.metadata,
                         Column('book_id',Integer,ForeignKey('books.id')),
                         Column('author_id',Integer,ForeignKey('authors.id')),
@@ -148,7 +148,7 @@ class Book(Base):
     id = Column(Integer,primary_key=True)
     name = Column(String(64))
     pub_date = Column(DATE)
-    # book±í²»ÖªµÀµÚÈıÕÅ±í£¬ËùÒÔ¹ØÁªÒ»ÏÂµÚÈıÕÅ±í
+    # bookè¡¨ä¸çŸ¥é“ç¬¬ä¸‰å¼ è¡¨ï¼Œæ‰€ä»¥å…³è”ä¸€ä¸‹ç¬¬ä¸‰å¼ è¡¨
     authors = relationship('Author',secondary=book_m2m_author,backref='books')
     def __repr__(self):
         return self.name
@@ -163,48 +163,48 @@ class Author(Base):
 
 engine = create_engine("mysql+pymysql://root:123456@localhost/test",
                                     encoding='utf-8')
-Base.metadata.create_all(engine)  # ´´½¨±í½á¹¹
+Base.metadata.create_all(engine)  # åˆ›å»ºè¡¨ç»“æ„
 
 */
 /*
-# Ìí¼ÓÊı¾İ
+# æ·»åŠ æ•°æ®
 import orm_m2m
 from sqlalchemy.orm import sessionmaker
 
-Session_class = sessionmaker(bind=orm_m2m.engine)  # ´´½¨ÓëÊı¾İ¿âµÄ»á»°session class ,×¢Òâ,ÕâÀï·µ»Ø¸øsessionµÄÊÇ¸öclass,²»ÊÇÊµÀı
-session = Session_class()  # Éú³ÉsessionÊµÀı #cursor
-# ´´½¨Êé
+Session_class = sessionmaker(bind=orm_m2m.engine)  # åˆ›å»ºä¸æ•°æ®åº“çš„ä¼šè¯session class ,æ³¨æ„,è¿™é‡Œè¿”å›ç»™sessionçš„æ˜¯ä¸ªclass,ä¸æ˜¯å®ä¾‹
+session = Session_class()  # ç”Ÿæˆsessionå®ä¾‹ #cursor
+# åˆ›å»ºä¹¦
 b1 = orm_m2m.Book(name="learn python with Alex",pub_date="2014-05-2")
 b2= orm_m2m.Book(name="learn Zhangbility with Alex",pub_date="2015-05-2")
 b3 = orm_m2m.Book(name="Learn hook up girls with Alex",pub_date="2016-05-2")
-# ´´½¨×÷Õß
+# åˆ›å»ºä½œè€…
 a1 = orm_m2m.Author(name="Alex")
 a2 = orm_m2m.Author(name="Jack")
 a3 = orm_m2m.Author(name="Rain")
-# ¹ØÁª¹ØÏµ
+# å…³è”å…³ç³»
 b1.authors = [a1,a3]
 b3.authors = [a1,a2,a3]
 
 session.add_all([b1,b2,b3,a1,a2,a3])
 session.commit()
 
-# ÖØÒªÊÇ²éÑ¯
+# é‡è¦æ˜¯æŸ¥è¯¢
 author_obj = session.query(orm_m2m.Author).filter(orm_m2m.Author.name=="alex").first()
 print(author_obj.books[0:])
 book_obj = session.query(orm_m2m.Book).filter(orm_m2m.Book.id==2).first()
 print(book_obj.authors)
 
 
-#¶à¶Ô¶àÉ¾³ı 
-É¾³ıÊı¾İÊ±²»ÓÃ¹Üboo_m2m_authors¡¡£¬ sqlalchemy»á×Ô¶¯°ïÄã°Ñ¶ÔÓ¦µÄÊı¾İÉ¾³ı
+#å¤šå¯¹å¤šåˆ é™¤ 
+åˆ é™¤æ•°æ®æ—¶ä¸ç”¨ç®¡boo_m2m_authorsã€€ï¼Œ sqlalchemyä¼šè‡ªåŠ¨å¸®ä½ æŠŠå¯¹åº”çš„æ•°æ®åˆ é™¤
 
-(one)Í¨¹ıÊéÉ¾³ı×÷Õß
+(one)é€šè¿‡ä¹¦åˆ é™¤ä½œè€…
 author_obj =s.query(Author).filter_by(name="Jack").first()
-book_obj = s.query(Book).filter_by(name="¸úAlexÑ§°ÑÃÃ").first()
-book_obj.authors.remove(author_obj) #´ÓÒ»±¾ÊéÀïÉ¾³ıÒ»¸ö×÷Õß
+book_obj = s.query(Book).filter_by(name="è·ŸAlexå­¦æŠŠå¦¹").first()
+book_obj.authors.remove(author_obj) #ä»ä¸€æœ¬ä¹¦é‡Œåˆ é™¤ä¸€ä¸ªä½œè€…
 s.commit()
 
-(two)Ö±½ÓÉ¾³ı×÷Õß,»á°ÑÕâ¸ö×÷Õß¸úËùÓĞÊéµÄ¹ØÁª¹ØÏµÊı¾İÒ²×Ô¶¯É¾³ı
+(two)ç›´æ¥åˆ é™¤ä½œè€…,ä¼šæŠŠè¿™ä¸ªä½œè€…è·Ÿæ‰€æœ‰ä¹¦çš„å…³è”å…³ç³»æ•°æ®ä¹Ÿè‡ªåŠ¨åˆ é™¤
 author_obj =s.query(Author).filter_by(name="Alex").first()
 # print(author_obj.name , author_obj.books)
 s.delete(author_obj)

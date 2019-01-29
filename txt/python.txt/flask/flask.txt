@@ -1,32 +1,32 @@
-1¡¢´´½¨flask³ÌĞòÊµÀı
+ï»¿1ã€åˆ›å»ºflaskç¨‹åºå®ä¾‹
 from flask import Flask  
 app=Flask(__name__)
 
-2¡¢´´½¨Â·ÓÉÓ³Éä
+2ã€åˆ›å»ºè·¯ç”±æ˜ å°„
 @app.route('/')  
 def index():  
     return 'hello world'
 
-3¡¢¿ªÆôapp
+3ã€å¼€å¯app
 if __name__=='__main__':  
     app.run(debug=True)  
 
-4,FlaskÖĞµÄÇëÇó¶ÔÏórequest
+4,Flaskä¸­çš„è¯·æ±‚å¯¹è±¡request
 from flask import request  
 user_agent=request.headers.get('User_Agent')  
 
-5,flaskÖĞµÄÇëÇóºÍÊÓÍ¼º¯ÊıÓ³Éä
+5,flaskä¸­çš„è¯·æ±‚å’Œè§†å›¾å‡½æ•°æ˜ å°„
 from test import app  
 app.url_map 
 
-6,¼¤»î³ÌĞòÉÏÏÂÎÄ
+6,æ¿€æ´»ç¨‹åºä¸Šä¸‹æ–‡
 from test import app  
 from flask import current_app  
 ctx=app.app_context()  
 ctx.push() 
-»ØÊÕÉÏÏÂÎÄ,ÓÃctx.pop()
+å›æ”¶ä¸Šä¸‹æ–‡,ç”¨ctx.pop()
 
-7,g±äÁ¿×÷Îªflask³ÌĞòÈ«¾ÖµÄÒ»¸öÁÙÊ±±äÁ¿
+7,gå˜é‡ä½œä¸ºflaskç¨‹åºå…¨å±€çš„ä¸€ä¸ªä¸´æ—¶å˜é‡
  from flask import g  
 g.name='Hyman'  
 
@@ -35,23 +35,23 @@ session['name']=form.name.data
 name=session.get('name')
 
 
-9,flaskÖĞµÄËÄÖÖÏìÓ¦ÀàĞÍ
-(1)ÏìÓ¦×Ö·û´®¡£
+9,flaskä¸­çš„å››ç§å“åº”ç±»å‹
+(1)å“åº”å­—ç¬¦ä¸²ã€‚
  return 'bad request',400  
-£¨2£©ÏìÓ¦Response¶ÔÏó
+ï¼ˆ2ï¼‰å“åº”Responseå¯¹è±¡
 from flask import make_response  
     response=make_response('set cookies!')  
     response.set_cookie('hyman','123')  
     return response 
-£¨3£©·µ»ØÖØ¶¨ÏòÀàĞÍredirect
+ï¼ˆ3ï¼‰è¿”å›é‡å®šå‘ç±»å‹redirect
 from flask import redirect  
  return redirect('http://www.baidu.com')  
 
-£¨4£©·µ»Ø´¦Àí´íÎóÂë
+ï¼ˆ4ï¼‰è¿”å›å¤„ç†é”™è¯¯ç 
 from flask import abort 
   abort(404)  
 
-10£¬Îªflask³ÌĞòÌí¼ÓÃüÁîĞĞ½âÊÍÆ÷
+10ï¼Œä¸ºflaskç¨‹åºæ·»åŠ å‘½ä»¤è¡Œè§£é‡Šå™¨
 from flask_script import Manager   
 manager=Manager(app)  
 
@@ -61,7 +61,7 @@ if __name__=='__main__':
 python test.py runserver --host 0.0.0.0  
 
 
- Ôö¼Ó×Ô¶¨ÒåÃüÁî£º
+ å¢åŠ è‡ªå®šä¹‰å‘½ä»¤ï¼š
 @manager.command  
 def print_str():  
     print 'hello world' 
@@ -71,61 +71,61 @@ python test.py print_str
 
 
 
-11£¬flaskÖĞÉèÖÃºÍ»ñÈ¡cookie
-£¨1£©ÉèÖÃcookie
+11ï¼Œflaskä¸­è®¾ç½®å’Œè·å–cookie
+ï¼ˆ1ï¼‰è®¾ç½®cookie
 response=make_response('Hello World');  
     response.set_cookie('Name','Hyman') 
 
-£¨2£©»ñÈ¡cookie
+ï¼ˆ2ï¼‰è·å–cookie
  name=request.cookies.get('Name')  
 
 
-12£¬ flaskÖĞµÄÄ£°å
+12ï¼Œ flaskä¸­çš„æ¨¡æ¿
 from flask import render_template  
 
 return render_template('user.html',name=name)  
 
-13£¬Jinja2Ä£°åÖĞµÄ±äÁ¿
+13ï¼ŒJinja2æ¨¡æ¿ä¸­çš„å˜é‡
     mydict={'key1':'123','key':'hello'}  
     mylist=(123,234,345,789)  
     myintvar=0  
     myobj=Myobj('Hyman')  
     return render_template('param.html',mydict=mydict,mylist=mylist,myintvar=0,myobj=myobj) 
 
-Ìí¼Ó¹ıÂËÆ÷£º
-¸ø±äÁ¿µÄÊı¾İÊ××ÖÄ¸´óĞ´£º{{ name|capitalize }}
-°Ñ±äÁ¿µÄÖµ¸Ä³É´óĞ´ĞÎÊ½£º{{ name|upper }}
+æ·»åŠ è¿‡æ»¤å™¨ï¼š
+ç»™å˜é‡çš„æ•°æ®é¦–å­—æ¯å¤§å†™ï¼š{{ name|capitalize }}
+æŠŠå˜é‡çš„å€¼æ”¹æˆå¤§å†™å½¢å¼ï¼š{{ name|upper }}
 
 
-14£¬Jinja2Ä£°åÖĞµÄ¿ØÖÆ½á¹¹
-Ìõ¼şÅĞ¶ÏifÓï¾ä£º
+14ï¼ŒJinja2æ¨¡æ¿ä¸­çš„æ§åˆ¶ç»“æ„
+æ¡ä»¶åˆ¤æ–­ifè¯­å¥ï¼š
 {% if  condition %}  
      ...  
 {% else %}  
      ...  
 {% endif %}
 
-forÑ­»·Óï¾ä£º
+forå¾ªç¯è¯­å¥ï¼š
 <ul>  
     {% for comment in comments %}  
             <li>{{ comment}}</li>  
     {% endfor %}  
 </ul>  
 
-ºêmacro£º
-¶¨Òå¸ñÊ½ÈçÏÂ£º
+å®macroï¼š
+å®šä¹‰æ ¼å¼å¦‚ä¸‹ï¼š
 {% macro render_comment(comment) %}  
      <li>{{ comment }}</li>  
 {% endmacro %}  
 
-Ê¹ÓÃºê·½·¨ÈçÏÂ£º
+ä½¿ç”¨å®æ–¹æ³•å¦‚ä¸‹ï¼š
 <ul>  
     {% for comment in comments %}  
             {{ render_comment(comment) }}  
     {% endfor %}  
 </ul>  
 
-ºêµÄ¶¨Òå·Åµ½µ¥¶ÀÎÄ¼şÖĞ£¬²¢ÔÚ´úÂëÖĞÒıÓÃ£º
+å®çš„å®šä¹‰æ”¾åˆ°å•ç‹¬æ–‡ä»¶ä¸­ï¼Œå¹¶åœ¨ä»£ç ä¸­å¼•ç”¨ï¼š
 {% import 'macro.html' as macros %}  
 <ul>  
     {% for comment in comments %}  
@@ -134,26 +134,26 @@ forÑ­»·Óï¾ä£º
 </ul>  
 
 
-15£¬ flaskÖĞËÄÖÖÇëÇó¹³×Ó
-£¨1£©before_first_request ×¢²áÒ»¸öº¯Êı,ÔÚ´¦ÀíµÚÒ»¸öÇëÇóÖ®Ç°ÔËĞĞ.
+15ï¼Œ flaskä¸­å››ç§è¯·æ±‚é’©å­
+ï¼ˆ1ï¼‰before_first_request æ³¨å†Œä¸€ä¸ªå‡½æ•°,åœ¨å¤„ç†ç¬¬ä¸€ä¸ªè¯·æ±‚ä¹‹å‰è¿è¡Œ.
 @app.before_first_request  
 def bf_first_request():  
     g.string = 'before_first_request' 
 
 
-£¨2£©before_request   ×¢²áÒ»¸öº¯Êı,ÔÚ´¦ÀíÃ¿´ÎÇëÇóÖ®Ç°ÔËĞĞ.
+ï¼ˆ2ï¼‰before_request   æ³¨å†Œä¸€ä¸ªå‡½æ•°,åœ¨å¤„ç†æ¯æ¬¡è¯·æ±‚ä¹‹å‰è¿è¡Œ.
 @app.before_request  
 def bf_request():  
     g.string = 'before_request'  
 
-£¨3£© after_request   ×¢²áÒ»¸öº¯Êı,ÔÚÃ¿´ÎÇëÇóÖ®ºóÔËĞĞ£¬×¢²áµÄº¯ÊıÖÁÉÙĞèÒªº¬ÓĞÒ»¸ö²ÎÊı,Õâ¸ö²ÎÊıÊµ¼ÊÉÏÎª·şÎñÆ÷µÄÏìÓ¦,ÇÒº¯ÊıÖĞĞèÒª·µ»ØÕâ¸öÏìÓ¦²ÎÊı.
+ï¼ˆ3ï¼‰ after_request   æ³¨å†Œä¸€ä¸ªå‡½æ•°,åœ¨æ¯æ¬¡è¯·æ±‚ä¹‹åè¿è¡Œï¼Œæ³¨å†Œçš„å‡½æ•°è‡³å°‘éœ€è¦å«æœ‰ä¸€ä¸ªå‚æ•°,è¿™ä¸ªå‚æ•°å®é™…ä¸Šä¸ºæœåŠ¡å™¨çš„å“åº”,ä¸”å‡½æ•°ä¸­éœ€è¦è¿”å›è¿™ä¸ªå“åº”å‚æ•°.
 @app.after_request  
 def af_request(param):  
     return param 
 
-£¨4£©teardown_request    ×¢²áÒ»¸öº¯Êı,Í¬ÑùÔÚÃ¿´ÎÇëÇóÖ®ºóÔËĞĞ.×¢²áµÄº¯ÊıÖÁÉÙĞèÒªº¬ÓĞÒ»¸ö²ÎÊı,Õâ¸ö²ÎÊıÊµ¼ÊÉÏÎª·şÎñÆ÷µÄÏìÓ¦,ÇÒº¯ÊıÖĞĞèÒª·µ»ØÕâ¸öÏìÓ¦²ÎÊı.
+ï¼ˆ4ï¼‰teardown_request    æ³¨å†Œä¸€ä¸ªå‡½æ•°,åŒæ ·åœ¨æ¯æ¬¡è¯·æ±‚ä¹‹åè¿è¡Œ.æ³¨å†Œçš„å‡½æ•°è‡³å°‘éœ€è¦å«æœ‰ä¸€ä¸ªå‚æ•°,è¿™ä¸ªå‚æ•°å®é™…ä¸Šä¸ºæœåŠ¡å™¨çš„å“åº”,ä¸”å‡½æ•°ä¸­éœ€è¦è¿”å›è¿™ä¸ªå“åº”å‚æ•°.
 
-16£¬±íµ¥ÀàµÄÊ¹ÓÃ
+16ï¼Œè¡¨å•ç±»çš„ä½¿ç”¨
 from flask_wtf import FlaskForm  
 from wtforms import StringField,SubmitField  
 from wtforms.validators import Required 
@@ -163,7 +163,7 @@ class NameForm(FlaskForm):
     submit=SubmitField('Submit') 
 
 
-htmlÎÄµµÖĞ,ÎÒÃÇ¿ÉÒÔÕâÑùÊ¹ÓÃform:
+htmlæ–‡æ¡£ä¸­,æˆ‘ä»¬å¯ä»¥è¿™æ ·ä½¿ç”¨form:
 <form method="POST">  
     {{form.hidden_tag()}}  
     {{form.name.label}}{{form.name()}}  
@@ -171,14 +171,14 @@ htmlÎÄµµÖĞ,ÎÒÃÇ¿ÉÒÔÕâÑùÊ¹ÓÃform:
 </form>  
 
 
-ÊÓÍ¼º¯ÊıÖĞÕâÑù½øĞĞäÖÈ¾:
+è§†å›¾å‡½æ•°ä¸­è¿™æ ·è¿›è¡Œæ¸²æŸ“:
 @app.route('/', methods=['GET','POST'])  
  def index():  
      form=NameForm()  
      return render_template('index.html',form=form)  
 
 
-17£¬FlashÏûÏ¢
+17ï¼ŒFlashæ¶ˆæ¯
 HTML:
 <form method="POST">    
     {{form.hidden_tag()}}    
@@ -192,7 +192,7 @@ HTML:
         {{ message }}  
     {% endfor %}   
     </p> 
-ÊÓÍ¼º¯Êı£º
+è§†å›¾å‡½æ•°ï¼š
 @app.route('/',methods=['GET','POST'])  
 def index():  
     form = NameForm()  
@@ -207,7 +207,7 @@ def index():
 
 
 
-18£¬Êı¾İ¿âÄ£ĞÍµÄ´´½¨
+18ï¼Œæ•°æ®åº“æ¨¡å‹çš„åˆ›å»º
 from flask_sqlalchemy import SQLAlchemy  
 import os  
 basedir=os.path.abspath(os.path.dirname(__file__))  
@@ -216,8 +216,8 @@ app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///'+os.path.join(basedir+'data.sq
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN']=True  
 db=SQLAlchemy(app)
 
-ÒÔÉÏ¾ÍÊÇÒıÈëÁËÒ»¸öSQLAlchemy¶ÔÏóÊµÀı,ÏÂÃæÒª×öµÄ¾ÍÊÇÀûÓÃ¸ÃÊµÀı¶ÔÊı¾İ¿â½øĞĞ½¨Ä£.ËùÎ½½¨Ä£¾ÍÊÇ½«Êı¾İ¿âµÄ±í¸ñÓ³Éä³ÉÒ»¸öÀà,
-¶øÀàÖĞµÄÊôĞÔ¾ÍÊÇ±íÖĞµÄ×Ö¶Î,Í¬Ê±Õâ¸öÀà±ØĞë´ÓSQLAlchemyµÄModel½øĞĞ¼Ì³Ğ.
+ä»¥ä¸Šå°±æ˜¯å¼•å…¥äº†ä¸€ä¸ªSQLAlchemyå¯¹è±¡å®ä¾‹,ä¸‹é¢è¦åšçš„å°±æ˜¯åˆ©ç”¨è¯¥å®ä¾‹å¯¹æ•°æ®åº“è¿›è¡Œå»ºæ¨¡.æ‰€è°“å»ºæ¨¡å°±æ˜¯å°†æ•°æ®åº“çš„è¡¨æ ¼æ˜ å°„æˆä¸€ä¸ªç±»,
+è€Œç±»ä¸­çš„å±æ€§å°±æ˜¯è¡¨ä¸­çš„å­—æ®µ,åŒæ—¶è¿™ä¸ªç±»å¿…é¡»ä»SQLAlchemyçš„Modelè¿›è¡Œç»§æ‰¿.
 
 class Role(db.Model):  
       __tablename__='roles'  
@@ -232,11 +232,11 @@ class Role(db.Model):
       def __repr__(self):  
           return '<User %s>'%self.name  
 
-ÉÏÃæÁ½¸öÀà·Ö±ğ½¨Á¢roles±íºÍusers±íÁ½¸öÄ£ĞÍ,Á½¸öÄ£ĞÍÖĞ·Ö±ğÉùÃ÷ÁËidºÍnameÁ½¸ö×Ö¶Î,Í¬Ê±ÉèÖÃÁËÖ÷¼üºÍÎ¨Ò»ĞÔÔ¼Êø,ÒÔºó²Ù×÷Role»òÕßUser¶ÔÏó¾ÍÏàµ±Óë²Ù×÷roles±íºÍusers±í.
+ä¸Šé¢ä¸¤ä¸ªç±»åˆ†åˆ«å»ºç«‹rolesè¡¨å’Œusersè¡¨ä¸¤ä¸ªæ¨¡å‹,ä¸¤ä¸ªæ¨¡å‹ä¸­åˆ†åˆ«å£°æ˜äº†idå’Œnameä¸¤ä¸ªå­—æ®µ,åŒæ—¶è®¾ç½®äº†ä¸»é”®å’Œå”¯ä¸€æ€§çº¦æŸ,ä»¥åæ“ä½œRoleæˆ–è€…Userå¯¹è±¡å°±ç›¸å½“ä¸æ“ä½œrolesè¡¨å’Œusersè¡¨.
 
 
 
-19£¬Êı¾İÄ£ĞÍµÄÍâ¼ü¹ØÏµ
+19ï¼Œæ•°æ®æ¨¡å‹çš„å¤–é”®å…³ç³»
 class Role(db.Model):    
       __tablename__='roles'    
       id = db.Column(db.Integer,primary_key=True)    
@@ -257,12 +257,12 @@ class Role(db.Model):
 https://blog.csdn.net/hyman_c/article/details/52729744
 
 
-20£¬ÀûÓÃÄ£ĞÍ´´½¨Êı¾İ¿â
+20ï¼Œåˆ©ç”¨æ¨¡å‹åˆ›å»ºæ•°æ®åº“
 from test import db 
 
-´´½¨±í:db.create_all()  
-É¾³ı±í:db.drop_all()  
-²åÈëĞĞ£º
+åˆ›å»ºè¡¨:db.create_all()  
+åˆ é™¤è¡¨:db.drop_all()  
+æ’å…¥è¡Œï¼š
 >>> from test import Role,User
 >>> admin_role = Role(name='admin',id=1)
 >>> user_hyman = User(name='Hyman',role_id=1)
@@ -271,7 +271,7 @@ from test import db
 >>> db.session.commit()
 >>> db.session.commit()
 
-ĞŞ¸ÄĞĞ£º
+ä¿®æ”¹è¡Œï¼š
 >>> admin_role.name='Adminstrator'
 >>> db.session.add(admin_role)
 >>> db.session.commit()
@@ -279,15 +279,15 @@ from test import db
 Adminstrator
 
 
-²éÑ¯ĞĞ
-²éÑ¯ËùÓĞ:User.query.all()  
-Îª²éÑ¯Ôö¼Ó¹ıÂËÆ÷: User.query.filter_by(name='hyman').all()  
+æŸ¥è¯¢è¡Œ
+æŸ¥è¯¢æ‰€æœ‰:User.query.all()  
+ä¸ºæŸ¥è¯¢å¢åŠ è¿‡æ»¤å™¨: User.query.filter_by(name='hyman').all()  
 
-21 £¬ÔÚÊÓÍ¼º¯ÊıÖĞ²Ù×÷Êı¾İ¿â
+21 ï¼Œåœ¨è§†å›¾å‡½æ•°ä¸­æ“ä½œæ•°æ®åº“
 https://blog.csdn.net/hyman_c/article/details/52740658
 
-22£¬Ê¹ÓÃFlask-MigrateÊµÏÖÊı¾İ¿âµÄ¸üĞÂ
-£¨1£©´´½¨Êı¾İ²Ö¿â
+22ï¼Œä½¿ç”¨Flask-Migrateå®ç°æ•°æ®åº“çš„æ›´æ–°
+ï¼ˆ1ï¼‰åˆ›å»ºæ•°æ®ä»“åº“
 from flask_migrate import Migrate,MigrateCommand
 from fask_script import Manager
 ...
@@ -297,7 +297,7 @@ manager.add_command('db',MigrateCommand)
 
 python test.py db init  
 
-£¨2£©´´½¨Ç¨ÒÆ½Å±¾
+ï¼ˆ2ï¼‰åˆ›å»ºè¿ç§»è„šæœ¬
 class User(db.Model):  
       __tablename__='users'  
       id=db.Column(db.Integer,primary_key=True)  
@@ -307,8 +307,8 @@ class User(db.Model):
 
 python test.py db migrate -m "inition migrate"  
 
-£¨3£©¸üĞÂÊı¾İ
-  Ê¹ÓÃupgradeºÍdowngradeÃüÁî·Ö±ğÏòÊı¾İ¿â¸üĞÂÊı¾İºÍ´ÓÊı¾İ¿â¸üĞÂÊı¾İ,Ê¹ÓÃupgradeÃüÁî½«±¾´ÎµÄ¸Ä¶¯¸üĞÂµ½Êı¾İ¿âÖĞ:
+ï¼ˆ3ï¼‰æ›´æ–°æ•°æ®
+  ä½¿ç”¨upgradeå’Œdowngradeå‘½ä»¤åˆ†åˆ«å‘æ•°æ®åº“æ›´æ–°æ•°æ®å’Œä»æ•°æ®åº“æ›´æ–°æ•°æ®,ä½¿ç”¨upgradeå‘½ä»¤å°†æœ¬æ¬¡çš„æ”¹åŠ¨æ›´æ–°åˆ°æ•°æ®åº“ä¸­:
 python test.py db upgrade  
 
 

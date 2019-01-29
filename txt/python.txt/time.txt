@@ -1,29 +1,29 @@
-import time
+ï»¿import time
 
-´òÓ¡Ê±¼ä´è£º
+æ‰“å°æ—¶é—´ç£‹ï¼š
 time.mktime(time.localtime())
 time.time() 
 
 
 
-´òÓ¡¸ñÊ½»¯Ê±¼ä
+æ‰“å°æ ¼å¼åŒ–æ—¶é—´
 time.strftime('%Y-%m-%d  %X',time.localtime())
 
 
-´òÓ¡±¾µØÊ±¼ä
+æ‰“å°æœ¬åœ°æ—¶é—´
 time.asctime()
 time.ctime()
 
 
 
-Ê±¼ä×ª»»º¯Êı  time.ctime()    ²ÎÊıÎªÊ±¼ä´è£¨Ä¬ÈÏtime.time()Îª²ÎÊı£©£¬½«Ò»¸öÊ±¼ä´Á×ª»»Îª   time.asctime()¸ñÊ½µÄÊ±¼ä
+æ—¶é—´è½¬æ¢å‡½æ•°  time.ctime()    å‚æ•°ä¸ºæ—¶é—´ç£‹ï¼ˆé»˜è®¤time.time()ä¸ºå‚æ•°ï¼‰ï¼Œå°†ä¸€ä¸ªæ—¶é—´æˆ³è½¬æ¢ä¸º   time.asctime()æ ¼å¼çš„æ—¶é—´
 
 
-time.mktime(t)£º½«Ò»¸östruct_time×ª»¯ÎªÊ±¼ä´Á¡£
+time.mktime(t)ï¼šå°†ä¸€ä¸ªstruct_timeè½¬åŒ–ä¸ºæ—¶é—´æˆ³ã€‚
 
 
-time.localtime()  ´òÓ¡Ò»¸östruct_time 
+time.localtime()  æ‰“å°ä¸€ä¸ªstruct_time 
 
 
-time.sleep(n)  ÍÆ³ÙµÄÃëÊı£¬ÓÃÓÚÏß³Ì
+time.sleep(n)  æ¨è¿Ÿçš„ç§’æ•°ï¼Œç”¨äºçº¿ç¨‹
 

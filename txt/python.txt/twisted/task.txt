@@ -1,4 +1,4 @@
-from twisted.internet import task
+ï»¿from twisted.internet import task
 
-task1 = task.LoopingCall(hello, 'ding')    #helloÎªº¯ÊıÃû£¬dingÎªº¯ÊıµÄ²ÎÊı,taskÎª¶¨Ê±ÈÎÎñ
+task1 = task.LoopingCall(hello, 'ding')    #helloä¸ºå‡½æ•°åï¼Œdingä¸ºå‡½æ•°çš„å‚æ•°,taskä¸ºå®šæ—¶ä»»åŠ¡
 task1.start(10)

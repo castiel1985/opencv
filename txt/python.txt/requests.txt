@@ -1,13 +1,13 @@
-pip install requests
+ï»¿pip install requests
 
-·½·¨£º
+æ–¹æ³•ï¼š
 requests.get()
 requests.post()
 requests.put()
 requests.delete()
 requests.head()
 requests.options()
-²ÎÊı£ºparms , timeout ,proxies(´úÀí)
-ÒÔÉÏ·µ»ØÖµ:
-status_code , url , json()Ç°Ìá±ØĞëÒªÒıÈë ,history £¬ headers ,text ,contentÒÔ×Ö½Ú·½Ê½ÏÔÊ¾ £¬encoding 
+å‚æ•°ï¼šparms , timeout ,proxies(ä»£ç†)
+ä»¥ä¸Šè¿”å›å€¼:
+status_code , url , json()å‰æå¿…é¡»è¦å¼•å…¥ ,history ï¼Œ headers ,text ,contentä»¥å­—èŠ‚æ–¹å¼æ˜¾ç¤º ï¼Œencoding 
 

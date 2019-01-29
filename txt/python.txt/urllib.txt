@@ -1,17 +1,17 @@
-urllibºÍurllib2
+ï»¿urllibå’Œurllib2
 
-(1)urllib ºÍurllib2¶¼ÊÇ½ÓÊÜURLÇëÇóµÄÏà¹ØÄ£¿é£¬µ«ÊÇurllib2¿ÉÒÔ½ÓÊÜÒ»¸öRequestÀàµÄÊµÀıÀ´ÉèÖÃURLÇëÇóµÄheaders£¬urllib½ö¿ÉÒÔ½ÓÊÜURL¡£
+(1)urllib å’Œurllib2éƒ½æ˜¯æ¥å—URLè¯·æ±‚çš„ç›¸å…³æ¨¡å—ï¼Œä½†æ˜¯urllib2å¯ä»¥æ¥å—ä¸€ä¸ªRequestç±»çš„å®ä¾‹æ¥è®¾ç½®URLè¯·æ±‚çš„headersï¼Œurllibä»…å¯ä»¥æ¥å—URLã€‚
 
-ÕâÒâÎ¶×Å£¬²»¿ÉÒÔÎ±×°User Agent×Ö·û´®µÈ¡£
+è¿™æ„å‘³ç€ï¼Œä¸å¯ä»¥ä¼ªè£…User Agentå­—ç¬¦ä¸²ç­‰ã€‚
 
-(2)urllibÌá¹©urlencode·½·¨ÓÃÀ´GET²éÑ¯×Ö·û´®µÄ²úÉú£¬¶øurllib2Ã»ÓĞ¡£ÕâÊÇÎªºÎurllib³£ºÍurllib2Ò»ÆğÊ¹ÓÃµÄÔ­Òò¡£
+(2)urllibæä¾›urlencodeæ–¹æ³•ç”¨æ¥GETæŸ¥è¯¢å­—ç¬¦ä¸²çš„äº§ç”Ÿï¼Œè€Œurllib2æ²¡æœ‰ã€‚è¿™æ˜¯ä¸ºä½•urllibå¸¸å’Œurllib2ä¸€èµ·ä½¿ç”¨çš„åŸå› ã€‚
 
-Ä¿Ç°µÄ´ó²¿·ÖhttpÇëÇó¶¼ÊÇÍ¨¹ıurllib2À´·ÃÎÊµÄ
-
-
+ç›®å‰çš„å¤§éƒ¨åˆ†httpè¯·æ±‚éƒ½æ˜¯é€šè¿‡urllib2æ¥è®¿é—®çš„
 
 
-get·½Ê½
+
+
+getæ–¹å¼
 import urllib   
 import urllib2    
 url = 'http://www.baidu.com/s'   
@@ -24,23 +24,23 @@ the_page = response.read()
 print the_page  
 
 
-post·½Ê½
+postæ–¹å¼
 import urllib  
 import urllib2  
 url = 'http://www.someserver.com/cgi-bin/register.cgi'  
-user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)' //½«user_agentĞ´ÈëÍ·ĞÅÏ¢  
-values = {'name' : 'who','password':'123456'}      //postÊı¾İ  
+user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)' //å°†user_agentå†™å…¥å¤´ä¿¡æ¯  
+values = {'name' : 'who','password':'123456'}      //postæ•°æ®  
 headers = { 'User-Agent' : user_agent }  
-data = urllib.urlencode(values)                   //¶ÔpostÊı¾İ½øĞĞurl±àÂë  
+data = urllib.urlencode(values)                   //å¯¹postæ•°æ®è¿›è¡Œurlç¼–ç   
 req = urllib2.Request(url, data, headers)  
 response = urllib2.urlopen(req)  
 the_page = response.read() 
 
-×¢Ã÷1£ºÏÈÍ¨¹ıurllibµÄurlencode()½«²ÎÊı·â×°
-×¢Ã÷2£ºÍ¨¹ıurllib2µÄurlope£¨£©´ò¿ªµØÖ·£¬Èç¹ûÊÇpostµÄ»°¾ÍÒª´ø dataºÍ headers²ÎÊı·â×°µ½requestÖĞÈ¥
-×¢Ã÷3£ºurlopen ºó£¬¶¼ÒªÍ¨¹ıread()½øĞĞ¶ÁÈ¡
-urllibº¯Êı:  urlencode
-urllib2º¯Êı£ºRequest() , urlopen() 
+æ³¨æ˜1ï¼šå…ˆé€šè¿‡urllibçš„urlencode()å°†å‚æ•°å°è£…
+æ³¨æ˜2ï¼šé€šè¿‡urllib2çš„urlopeï¼ˆï¼‰æ‰“å¼€åœ°å€ï¼Œå¦‚æœæ˜¯postçš„è¯å°±è¦å¸¦ dataå’Œ headerså‚æ•°å°è£…åˆ°requestä¸­å»
+æ³¨æ˜3ï¼šurlopen åï¼Œéƒ½è¦é€šè¿‡read()è¿›è¡Œè¯»å–
+urllibå‡½æ•°:  urlencode
+urllib2å‡½æ•°ï¼šRequest() , urlopen() 
 
 
 

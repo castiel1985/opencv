@@ -1,26 +1,26 @@
-app =Flask(__name__)	ÊµÀı»¯ÏîÄ¿APP
+ï»¿app =Flask(__name__)	å®ä¾‹åŒ–é¡¹ç›®APP
 
-@app.route('/user',methods=['GET','POST'])	¸ÄÏÂÃæµÄº¯ÊıÌí¼Ó·ÃÎÊÂ·ÓÉ£¨×°ÊÎÇ½£©£¬Í¬Ê±°üÀ¨¸öGETºÍPOST·½Ê½
+@app.route('/user',methods=['GET','POST'])	æ”¹ä¸‹é¢çš„å‡½æ•°æ·»åŠ è®¿é—®è·¯ç”±ï¼ˆè£…é¥°å¢™ï¼‰ï¼ŒåŒæ—¶åŒ…æ‹¬ä¸ªGETå’ŒPOSTæ–¹å¼
 
-app.config.from_pyfile('flaskr.cfg')	»ñÈ¡ÅäÖÃ²ÎÊıÎÄ¼ş
+app.config.from_pyfile('flaskr.cfg')	è·å–é…ç½®å‚æ•°æ–‡ä»¶
 
-@app.route('/user/<username>')     get·½Ê½²åÈëÏà¹ØÖµ
+@app.route('/user/<username>')     getæ–¹å¼æ’å…¥ç›¸å…³å€¼
 def user(username):
     return 'this user is %s' % username
 
 
-app.run(debug=True,host='0.0.0.0')	¿ªÆô²¢¼àÌı¶Ë¿Ú²¢Éè±¸Îªµ÷ÊÔÄ£Ê½
+app.run(debug=True,host='0.0.0.0')	å¼€å¯å¹¶ç›‘å¬ç«¯å£å¹¶è®¾å¤‡ä¸ºè°ƒè¯•æ¨¡å¼
 
-from flask import Flask,request,url_for	  flask³£ÓÃÈı´óº¯Êı
-abort ¸ø³öÇëÇóÖĞ¶Ï´úÂë501£¬200
+from flask import Flask,request,url_for	  flaskå¸¸ç”¨ä¸‰å¤§å‡½æ•°
+abort ç»™å‡ºè¯·æ±‚ä¸­æ–­ä»£ç 501ï¼Œ200
 
-url_for 	Æ´½ÓÂ·ÓÉº¯Êı
-url_for('index', page=2) µÄ·µ»Ø½á¹ûÊÇ/?page=2
+url_for 	æ‹¼æ¥è·¯ç”±å‡½æ•°
+url_for('index', page=2) çš„è¿”å›ç»“æœæ˜¯/?page=2
 
-redirect£¨£©Ìø×ªº¯Êı
+redirectï¼ˆï¼‰è·³è½¬å‡½æ•°
 
 
-request.method	ÓÃÓÚÅĞ¶Ï ÇëÇó·½Ê½
+request.method	ç”¨äºåˆ¤æ–­ è¯·æ±‚æ–¹å¼
 
 
 

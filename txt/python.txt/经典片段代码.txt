@@ -1,4 +1,4 @@
-(1)with open("log.txt", "w") as logger:           ÓÃ¡°W¡±·½Ê½´ò¿ªÎÄ¼ş±£´æµ½¾ä±úlogger
+ï»¿(1)with open("log.txt", "w") as logger:           ç”¨â€œWâ€æ–¹å¼æ‰“å¼€æ–‡ä»¶ä¿å­˜åˆ°å¥æŸ„logger
     logger.write('Hello ')
     logger.write('World')
  
@@ -14,16 +14,16 @@ print logger.closed
 (3)
 try:
     fh = open("testfile", "w")
-    fh.write("ÕâÊÇÒ»¸ö²âÊÔÎÄ¼ş£¬ÓÃÓÚ²âÊÔÒì³£!!")
+    fh.write("è¿™æ˜¯ä¸€ä¸ªæµ‹è¯•æ–‡ä»¶ï¼Œç”¨äºæµ‹è¯•å¼‚å¸¸!!")
 except IOError:
-    print "Error: Ã»ÓĞÕÒµ½ÎÄ¼ş»ò¶ÁÈ¡ÎÄ¼şÊ§°Ü"
+    print "Error: æ²¡æœ‰æ‰¾åˆ°æ–‡ä»¶æˆ–è¯»å–æ–‡ä»¶å¤±è´¥"
 else:
-    print "ÄÚÈİĞ´ÈëÎÄ¼ş³É¹¦"
+    print "å†…å®¹å†™å…¥æ–‡ä»¶æˆåŠŸ"
     fh.close()
 
 
 
-(4)raise   ÊÖ¶¯Å×³öÒ»¸öÒì³£
+(4)raise   æ‰‹åŠ¨æŠ›å‡ºä¸€ä¸ªå¼‚å¸¸
 try:
     1/0
 except Exception as E:

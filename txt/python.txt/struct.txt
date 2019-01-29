@@ -1,24 +1,24 @@
-import struct
+ï»¿import struct
 import binascii
 
 
 
-£¨1£©
+ï¼ˆ1ï¼‰
 values = (1, 'abc', 2.7)
-s = struct.Struct('I3sf')     ¶¨ÒåÒ»ÖÖ¸ñÊ½      
-packed_data = s.pack(*values)  »ñÈ¡¶ş½øÖÆ´úÂë
-binascii.hexlify(packed_data)  ½«¶ş½øÖÆÊı¾İ×ª»»
+s = struct.Struct('I3sf')     å®šä¹‰ä¸€ç§æ ¼å¼      
+packed_data = s.pack(*values)  è·å–äºŒè¿›åˆ¶ä»£ç 
+binascii.hexlify(packed_data)  å°†äºŒè¿›åˆ¶æ•°æ®è½¬æ¢
 
 
 
-£¨2£©
+ï¼ˆ2ï¼‰
  struct.pack('>I', 10240099)
-	>±íÊ¾×Ö½ÚË³ĞòÊÇbig-endian£¬Ò²¾ÍÊÇÍøÂçĞò£¬I±íÊ¾4×Ö½ÚÎŞ·ûºÅÕûÊı¡£
+	>è¡¨ç¤ºå­—èŠ‚é¡ºåºæ˜¯big-endianï¼Œä¹Ÿå°±æ˜¯ç½‘ç»œåºï¼ŒIè¡¨ç¤º4å­—èŠ‚æ— ç¬¦å·æ•´æ•°ã€‚
 
 
 struct.unpack('<ccIIIIIIHH', s)
 
 
-pack£¨£©´ò°üº¯Êı
-unpack£¨£©½â°üº¯Êı
-Struct()  ¶¨¸ñÊ½
+packï¼ˆï¼‰æ‰“åŒ…å‡½æ•°
+unpackï¼ˆï¼‰è§£åŒ…å‡½æ•°
+Struct()  å®šæ ¼å¼

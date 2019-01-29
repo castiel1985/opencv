@@ -1,14 +1,14 @@
-import sys
+ï»¿import sys
 
 
 
-sys.exit(1) °²È«Àë¿ª
+sys.exit(1) å®‰å…¨ç¦»å¼€
 
-getuid()=0  µ±Ç°ÎªrootÓÃ»§
+getuid()=0  å½“å‰ä¸ºrootç”¨æˆ·
 
-sys.argv[0]   µ±Ç°³ÌĞòÃû
-sys.argv[1]	µÚÒ»¸ö²ÎÊı
-sys.argv[2]	µÚ2¸ö²ÎÊı
+sys.argv[0]   å½“å‰ç¨‹åºå
+sys.argv[1]	ç¬¬ä¸€ä¸ªå‚æ•°
+sys.argv[2]	ç¬¬2ä¸ªå‚æ•°
 
-sys.path 	Ä¿Â¼ÁĞ±í
+sys.path 	ç›®å½•åˆ—è¡¨
 

@@ -1,6 +1,6 @@
+ï»¿
 
-
-(1)Json.dumps()½«»ù±¾Êý¾ÝÀàÐÍ£¬ÁÐ±í£¬×Öµä£¬×ª»»³Éjson×Ö·û´®
+(1)Json.dumps()å°†åŸºæœ¬æ•°æ®ç±»åž‹ï¼Œåˆ—è¡¨ï¼Œå­—å…¸ï¼Œè½¬æ¢æˆjsonå­—ç¬¦ä¸²
 
 import json
  
@@ -16,7 +16,7 @@ print json_str
 
 
 
-(2)Json.loads()    ÓÃÓÚ½âÂë JSON Êý¾Ý¡£¸Ãº¯Êý·µ»Ø Python ×Ö¶ÎµÄÊý¾ÝÀàÐÍ¡£
+(2)Json.loads()    ç”¨äºŽè§£ç  JSON æ•°æ®ã€‚è¯¥å‡½æ•°è¿”å›ž Python å­—æ®µçš„æ•°æ®ç±»åž‹ã€‚
 
 jsonData = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
 

@@ -4,7 +4,7 @@ appnope==0.1.0
 asn1crypto==0.24.0
 astor==0.6.2
 backcall==0.1.0
-bleach==1.5.0
+bleach==3.1.4
 cffi==1.11.5
 click==6.7
 cryptography==2.2.2
